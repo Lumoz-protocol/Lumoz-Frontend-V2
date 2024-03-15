@@ -1,0 +1,190 @@
+@import '@/assets/style/font.less';
+
+.fp-watermark {
+  display: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #1B1B1A;
+  color: white;
+  img {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;  /* Chrome / Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE10+ */
+    user-select: none;          /* Standard */
+  }
+  
+}
+
+* {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+.bg-filter {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.button-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+.icon-box {
+  .icon-light {
+    display: none;
+  }
+}
+
+.icon-box:hover {
+  .icon-light {
+    display:block
+  }
+  .icon-dark {
+    display: none;
+  }
+}
+
+
+.scroll-bar {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: var(--el-text-color-secondary);
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #424242aa;
+    -webkit-border-radius: 2em;
+    border-radius: 2em;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    opacity: 0.5;
+  }
+}
+
+.slideShine{
+  background: -webkit-linear-gradient(top, #FFFFFF, #A18557) no-repeat 0 0;
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes blink{
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes blink {
+ 0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+@-o-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// hover.css
+.hvr-underline-from-center:before {
+  background: #BEFE00 !important;
+  border-radius: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// element
+.el-drawer {
+  background: #00000088 !important;
+  width: 100%;
+}
+.el-collapse-item__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.el-collapse-item__header:hover {
+  color: #BEFE00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//others 
+.typed-out{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(20, end) forwards;
+  width: 0;
+}
+.typed-out-2s{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(20, end) forwards;
+  animation-delay: 2s;
+  width: 0;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+// 隐藏滚动条
+.hide-scroll::-webkit-scrollbar { width: 0 !important }
+.hide-scroll { -ms-overflow-style: none; }
+.hide-scroll { overflow: -moz-scrollbars-none; }
