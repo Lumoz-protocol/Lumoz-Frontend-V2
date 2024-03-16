@@ -1,12 +1,16 @@
 <template>
-  <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-ben-box">
-    <div class="h-full w-full pt-20 overflow-y-auto hide-scroll" id="home-ben" @mousewheel="scrollChange">
-      <div class="container mx-auto">
-        <div class="h-20 flex items-center">
-          <div v-if="active" class="text-2xl lg:text-4xl font-bold animate__animated animate__fadeIn animate__delay-1s pl-4 lg:pl-0">{{ $t('home.ben.title') }}</div>
-        </div>
+<div>
+  <div class="absolute left-0 right-0 top-30">
+      <div v-if="active" class="container mx-auto">
+        <div class="text-2xl lg:text-4xl font-bold pl-4 lg:pl-0 home-arc-1 animate__animated animate__fadeInUp animate__slower">{{ $t('home.ben.title') }}</div>
+        <div class="text-8xl lg:text-12xl xl:text-16xl font-bold text-[#ffffff22] mt-8 home-arc-2 animate__animated animate__fadeInUp animate__delay-1s animate__slower">{{ $t('home.ben.title').toUpperCase() }}</div>
+        <div class="text-8xl lg:text-12xl xl:text-16xl font-bold text-[#ffffffaa] mt-8 home-arc-3 animate__animated animate__fadeInUp animate__delay-2s animate__slower">{{ $t('home.ben.title').toUpperCase() }}</div>
       </div>
-      <div class="mx-25 md:mx-10 lg:mx-20 xl:mx-40 flex justify-end pt-20 pb-40 lg:(pt-40 pb-0)">
+    </div> 
+  <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-ben-box">
+   
+    <div class="h-full w-full pt-20 overflow-y-auto hide-scroll" id="home-ben" @mousewheel="scrollChange">
+      <div class="mx-25 md:mx-10 lg:mx-20 xl:mx-40 flex justify-end pt-30 pb-40 lg:(pt-40 pb-0)">
         <div class="w-full xl:w-3/5">
           <HomeBox class="md:(w-1/2 ml-1/4) lg:(w-2/5 ml-3/5)">
             <div class="flex flex-col text-black justify-between h-full">
@@ -32,6 +36,7 @@
       <CommonFooter />
     </div>
   </div>
+</div>
 </template>
 <script setup lang="ts">
 const props = withDefaults(
@@ -61,7 +66,7 @@ const scrollChange = (e) => {
 </script>
 <style scoped>
 .home-ben-box {
-  background: url('@/assets/img/home/ben.png');
+  background: url('@/assets/img/home/ben.avif');
   background-size: 50%;
   background-position: left center;
   background-repeat: no-repeat;

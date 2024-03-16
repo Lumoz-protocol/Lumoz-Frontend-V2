@@ -1,5 +1,5 @@
 <template>
-  <button class="home-button-corner px-4 py-1.5 text-black text-sm hvr-bounce-in">{{ word }}</button>
+  <button class="home-button-corner px-4 py-1.5 text-black hvr-bounce-in">{{ word }}</button>
 </template>
 <script setup lang="ts">
 withDefaults(

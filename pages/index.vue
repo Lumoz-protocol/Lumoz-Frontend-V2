@@ -1,11 +1,10 @@
 <template>
   <div>
-    <CommonHeader />
     <full-page ref="fullpage" :options="options" id="fullpage" class="z-0">
       <div class="section">
         <HomeBanner :active="now === 0" />
       </div>
-      <div class="section">
+      <div class="section bg-black">
         <HomeArc :active="now === 1" @next="fullpage.api.moveTo(3, 0)"  @before="fullpage.api.moveTo(1, 0)" />
       </div>
       <div class="section">
@@ -33,8 +32,9 @@ const options = ref({
   sectionsColor: [],
   controlArrows: false,
   lockAnchors: false,
-  scrollBar: false,
   recordHistory:false,
+  scrollOverflow: true,
+  scrollingSpeed: 700,
   resize: true,
   beforeLeave: function(origin, destination, direction, trigger){
     now.value = destination.index

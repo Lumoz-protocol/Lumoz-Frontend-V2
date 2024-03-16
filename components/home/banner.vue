@@ -1,4 +1,8 @@
 <template>
+<div>
+  <video v-if="active" class="absolute top-0 bottom-0 left-0 right-0 home-video" id="Id" playsinline="true" autoplay="true" muted="false" loop="true">
+    <source src="@/assets/img/home/banner.mp4" type="video/mp4">
+  </video>
   <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-banner-box">
     <div class="h-full w-full flex justify-center items-start pt-40">
       <div v-if="active" class="flex items-center justify-center flex-col">
@@ -8,6 +12,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 <script setup lang="ts">
 const props = withDefaults(
@@ -23,10 +28,6 @@ const props = withDefaults(
 <style scoped>
 .home-banner-box {
   overflow: hidden;
-  background: url('@/assets/img/home/banner.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+
 }
 </style>

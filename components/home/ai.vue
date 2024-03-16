@@ -1,4 +1,8 @@
 <template>
+<div>
+  <video v-if="active" class="absolute top-0 bottom-0 left-0 right-0 home-video" id="Id" playsinline="true" autoplay="true" muted="false" loop="true">
+    <source src="@/assets/img/home/ai.mp4" type="video/mp4">
+  </video>
   <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-ai-box">
     <div class="h-full w-full pt-20">
       <div v-if="active" class="lg:(w-1/2 ml-1/2) 2xl:ml-2/3 flex items-center lg:items-start lg:justify-center h-full flex-col mt-8 lg:mt-0">
@@ -9,6 +13,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 <script setup lang="ts">
 const props = withDefaults(
@@ -23,10 +28,5 @@ const props = withDefaults(
 <style scoped>
 .home-ai-box {
   overflow: hidden;
-  background: url('@/assets/img/home/ai.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 </style>

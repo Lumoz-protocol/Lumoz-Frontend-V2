@@ -47,10 +47,17 @@ export default {
       c3: 'Through the decentralizedLumoz Depin network,enhancing the robustness andstability of the rollup and AI.'
     }
   },
-
-
-
   footer: {
     find: 'Find Us'
+  },
+  rollups: {
+    title1: 'The world‘s frist Rass with operation',
+    title2: 'ZK-Rollups on the mainnet',
+    main: 'Mainnet',
+    test: 'Testnet',
+    tvl: 'Peak TVL',
+    transactions: 'Transactions',
+    users: 'Unique Users',
+    count: 'Rollups'
   }
 }

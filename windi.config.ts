@@ -8,6 +8,9 @@ export default defineConfig({
           500: '#DBFF34',
           900: '#BEFE00'
         },
+        text: {
+          dark: '#AAAAAA'
+        },
         border: {
           300: 'rgba(255, 255, 255, 0.2)'
         }

@@ -7,6 +7,14 @@ const getDataUrl = (url: string) => {
   return `${DATA_API}${url}`
 }
 
+export async function getAvaliableRollupList() {
+  try {
+    return (await request.get(getDataUrl(`rollup/available/list`))).result
+  } catch {
+    return []
+  }
+}
+
 // export async function getSailDashBoard() {
 //   return await request.get(getDataUrl(`dashboard`))
 // }

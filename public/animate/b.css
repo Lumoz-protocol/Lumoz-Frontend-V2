@@ -1,0 +1,183 @@
+.b-animation {
+    background-image: url("./b/b_00000.avif");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: left 30% top 20%;
+    background-attachment: fixed;
+    animation-name: keyframes-b;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: steps(1);
+}
+
+@media (max-width: 1024px) {
+    .b-animation {
+        background-size: cover;
+        background-position: cemter;
+    }
+  }
+
+@keyframes keyframes-b {
+    0% {
+        background-image: url("./b/b_00000.avif");
+    }
+
+    2.50% {
+        background-image: url("./b/b_00001.avif");
+    }
+
+    5.00% {
+        background-image: url("./b/b_00002.avif");
+    }
+
+    7.50% {
+        background-image: url("./b/b_00003.avif");
+    }
+
+    10.00% {
+        background-image: url("./b/b_00004.avif");
+    }
+
+    12.50% {
+        background-image: url("./b/b_00005.avif");
+    }
+
+    15.00% {
+        background-image: url("./b/b_00006.avif");
+    }
+
+    17.50% {
+        background-image: url("./b/b_00007.avif");
+    }
+
+    20.00% {
+        background-image: url("./b/b_00008.avif");
+    }
+
+    22.50% {
+        background-image: url("./b/b_00009.avif");
+    }
+
+    25.00% {
+        background-image: url("./b/b_00010.avif");
+    }
+
+    27.50% {
+        background-image: url("./b/b_00011.avif");
+    }
+
+    30.00% {
+        background-image: url("./b/b_00012.avif");
+    }
+
+    32.50% {
+        background-image: url("./b/b_00013.avif");
+    }
+
+    35.00% {
+        background-image: url("./b/b_00014.avif");
+    }
+
+    37.50% {
+        background-image: url("./b/b_00015.avif");
+    }
+
+    40.00% {
+        background-image: url("./b/b_00016.avif");
+    }
+
+    42.50% {
+        background-image: url("./b/b_00017.avif");
+    }
+
+    45.00% {
+        background-image: url("./b/b_00018.avif");
+    }
+
+    47.50% {
+        background-image: url("./b/b_00019.avif");
+    }
+
+    50.00% {
+        background-image: url("./b/b_00020.avif");
+    }
+
+    52.50% {
+        background-image: url("./b/b_00021.avif");
+    }
+
+    55.00% {
+        background-image: url("./b/b_00022.avif");
+    }
+
+    57.50% {
+        background-image: url("./b/b_00023.avif");
+    }
+
+    60.00% {
+        background-image: url("./b/b_00024.avif");
+    }
+
+    62.50% {
+        background-image: url("./b/b_00025.avif");
+    }
+
+    65.00% {
+        background-image: url("./b/b_00026.avif");
+    }
+
+    67.50% {
+        background-image: url("./b/b_00027.avif");
+    }
+
+    70.00% {
+        background-image: url("./b/b_00028.avif");
+    }
+
+    72.50% {
+        background-image: url("./b/b_00029.avif");
+    }
+
+    75.00% {
+        background-image: url("./b/b_00030.avif");
+    }
+
+    77.50% {
+        background-image: url("./b/b_00031.avif");
+    }
+
+    80.00% {
+        background-image: url("./b/b_00032.avif");
+    }
+
+    82.50% {
+        background-image: url("./b/b_00033.avif");
+    }
+
+    85.00% {
+        background-image: url("./b/b_00034.avif");
+    }
+
+    87.50% {
+        background-image: url("./b/b_00035.avif");
+    }
+
+    90.00% {
+        background-image: url("./b/b_00036.avif");
+    }
+
+    92.50% {
+        background-image: url("./b/b_00037.avif");
+    }
+
+    95.00% {
+        background-image: url("./b/b_00038.avif");
+    }
+
+    97.50%,
+    100% {
+        background-image: url("./b/b_00039.avif");
+    }
+}

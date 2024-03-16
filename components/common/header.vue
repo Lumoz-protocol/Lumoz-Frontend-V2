@@ -54,7 +54,7 @@
             >
             </CommonNavItem>
           </CommonNavItems>
-          <div class="mt-4 text-sm">
+          <div class="mt-4">
             {{ $t('header.touch') }}
             <CommonMedia class="mt-2" />
           </div>

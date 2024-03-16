@@ -2,7 +2,7 @@
   <div>
     <div class="hidden lg:block">
       <div
-        class="mr-10 text-sm items-center hover:text-primary-900 cursor-pointer hvr-bounce-in hvr-underline-from-center py-4"
+        class="mr-10 items-center hover:text-primary-900 cursor-pointer hvr-bounce-in hvr-underline-from-center py-4"
         :class="highLight"
         @click="goToLink"
       >
@@ -11,7 +11,7 @@
     </div>
     <div class="lg:hidden">
       <div
-        class="mr-10 text-sm items-center hover:text-primary-900 cursor-pointer py-4"
+        class="mr-10 items-center hover:text-primary-900 cursor-pointer py-4"
         :class="highLight"
         @click="goToLink"
       >

@@ -16,4 +16,4 @@ const getZkFairNetwork = () => {
 
 export const ZKFAIR = getZkFairNetwork()
 
-export const DATA_API = 'https://api.zkfair.io/dragon/api/'
+export const DATA_API = 'https://lumoz.org/api/'

@@ -6,7 +6,7 @@
         <div class="footer-linear-1 h-0.5 w-1/2"></div>
         <div class="footer-linear-2 h-0.5 w-1/2"></div>
       </div>
-      <div class="bg-[#000000aa] py-16 px-4 lg:px-32 lg:flex justify-between">
+      <div class="bg-[#000000] py-16 px-4 lg:px-32 lg:flex justify-between">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-16">
           <div class="flex flex-col" v-for="item, index in footer" :key="index">
             <div class="text-primary-900 text-lg mb-4 text-center lg:text-left">{{ item.name }}</div>
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-[#000000aa]">
+    <div class="bg-[#000000]">
       <div class="mx-4 lg:mx-32 py-4 border-t border-[#ffffff40] text-[#ffffff40] text-center">
         © 2024 Lumoz Org, Inc
       </div>
