@@ -1,4 +1,4 @@
-import { hasInjectionContext, inject, version, unref, defineComponent, ref, provide, createElementBlock, h, getCurrentInstance, onUnmounted, computed, shallowReactive, watch, Suspense, nextTick, Transition, Fragment, mergeProps, useSSRContext, createApp, effectScope, reactive, shallowRef, defineAsyncComponent, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, isReadonly, Text, markRaw, isRef, isShallow, isReactive, toRaw, withCtx } from 'vue';
+import { hasInjectionContext, inject, version, unref, defineComponent, ref, provide, createElementBlock, h, getCurrentInstance, onUnmounted, computed, shallowReactive, watch, Suspense, nextTick, Transition, Fragment, mergeProps, useSSRContext, createApp, effectScope, reactive, isRef, isReactive, toRaw, shallowRef, getCurrentScope, onScopeDispose, defineAsyncComponent, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, isReadonly, toRefs, markRaw, Text, isShallow, withCtx } from 'vue';
 import { d as useRuntimeConfig$1, $ as $fetch, h as createError$1, l as defu, m as sanitizeStatusCode, n as createHooks, o as klona, p as parse$1, q as getRequestHeader, r as getRequestHeaders, t as destr, v as isEqual$1, w as setCookie, x as getCookie, y as deleteCookie } from '../runtime.mjs';
 import { getActiveHead } from 'unhead';
 import { defineHeadPlugin } from '@unhead/shared';
@@ -865,12 +865,44 @@ function toArray(value) {
 }
 const _routes = [
   {
+    name: "ecosystems",
+    path: "/ecosystems",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./index-DYUOPl-4.mjs').then((m) => m.default || m)
+  },
+  {
     name: "index",
     path: "/",
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./index-B54N8dcZ.mjs').then((m) => m.default || m)
+    component: () => import('./index-Dr0mSs1J.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "lumoz-points",
+    path: "/lumoz-points",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./index-Cm7M-qmV.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "raas",
+    path: "/raas",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./index-D5E67JK_.mjs').then((m) => m.default || m)
+  },
+  {
+    name: "rollups",
+    path: "/rollups",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./index-CzEDHJNl.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -1159,10 +1191,15 @@ const isVue2 = false;
  * (c) 2023 Eduardo San Martin Morote
  * @license MIT
  */
+let activePinia;
+const setActivePinia = (pinia) => activePinia = pinia;
 const piniaSymbol = (
   /* istanbul ignore next */
   Symbol()
 );
+function isPlainObject$1(o) {
+  return o && typeof o === "object" && Object.prototype.toString.call(o) === "[object Object]" && typeof o.toJSON !== "function";
+}
 var MutationType;
 (function(MutationType2) {
   MutationType2["direct"] = "direct";
@@ -1176,6 +1213,7 @@ function createPinia() {
   let toBeInstalled = [];
   const pinia = markRaw({
     install(app) {
+      setActivePinia(pinia);
       {
         pinia._a = app;
         app.provide(piniaSymbol, pinia);
@@ -1201,6 +1239,295 @@ function createPinia() {
     state
   });
   return pinia;
+}
+const noop = () => {
+};
+function addSubscription(subscriptions, callback, detached, onCleanup = noop) {
+  subscriptions.push(callback);
+  const removeSubscription = () => {
+    const idx = subscriptions.indexOf(callback);
+    if (idx > -1) {
+      subscriptions.splice(idx, 1);
+      onCleanup();
+    }
+  };
+  if (!detached && getCurrentScope()) {
+    onScopeDispose(removeSubscription);
+  }
+  return removeSubscription;
+}
+function triggerSubscriptions(subscriptions, ...args) {
+  subscriptions.slice().forEach((callback) => {
+    callback(...args);
+  });
+}
+const fallbackRunWithContext = (fn) => fn();
+function mergeReactiveObjects(target, patchToApply) {
+  if (target instanceof Map && patchToApply instanceof Map) {
+    patchToApply.forEach((value, key) => target.set(key, value));
+  }
+  if (target instanceof Set && patchToApply instanceof Set) {
+    patchToApply.forEach(target.add, target);
+  }
+  for (const key in patchToApply) {
+    if (!patchToApply.hasOwnProperty(key))
+      continue;
+    const subPatch = patchToApply[key];
+    const targetValue = target[key];
+    if (isPlainObject$1(targetValue) && isPlainObject$1(subPatch) && target.hasOwnProperty(key) && !isRef(subPatch) && !isReactive(subPatch)) {
+      target[key] = mergeReactiveObjects(targetValue, subPatch);
+    } else {
+      target[key] = subPatch;
+    }
+  }
+  return target;
+}
+const skipHydrateSymbol = (
+  /* istanbul ignore next */
+  Symbol()
+);
+function shouldHydrate(obj) {
+  return !isPlainObject$1(obj) || !obj.hasOwnProperty(skipHydrateSymbol);
+}
+const { assign: assign$2 } = Object;
+function isComputed(o) {
+  return !!(isRef(o) && o.effect);
+}
+function createOptionsStore(id, options, pinia, hot) {
+  const { state, actions, getters } = options;
+  const initialState = pinia.state.value[id];
+  let store;
+  function setup() {
+    if (!initialState && (!("production" !== "production") )) {
+      {
+        pinia.state.value[id] = state ? state() : {};
+      }
+    }
+    const localState = toRefs(pinia.state.value[id]);
+    return assign$2(localState, actions, Object.keys(getters || {}).reduce((computedGetters, name) => {
+      computedGetters[name] = markRaw(computed(() => {
+        setActivePinia(pinia);
+        const store2 = pinia._s.get(id);
+        return getters[name].call(store2, store2);
+      }));
+      return computedGetters;
+    }, {}));
+  }
+  store = createSetupStore(id, setup, options, pinia, hot, true);
+  return store;
+}
+function createSetupStore($id, setup, options = {}, pinia, hot, isOptionsStore) {
+  let scope;
+  const optionsForPlugin = assign$2({ actions: {} }, options);
+  const $subscribeOptions = {
+    deep: true
+    // flush: 'post',
+  };
+  let isListening;
+  let isSyncListening;
+  let subscriptions = [];
+  let actionSubscriptions = [];
+  let debuggerEvents;
+  const initialState = pinia.state.value[$id];
+  if (!isOptionsStore && !initialState && (!("production" !== "production") )) {
+    {
+      pinia.state.value[$id] = {};
+    }
+  }
+  ref({});
+  let activeListener;
+  function $patch(partialStateOrMutator) {
+    let subscriptionMutation;
+    isListening = isSyncListening = false;
+    if (typeof partialStateOrMutator === "function") {
+      partialStateOrMutator(pinia.state.value[$id]);
+      subscriptionMutation = {
+        type: MutationType.patchFunction,
+        storeId: $id,
+        events: debuggerEvents
+      };
+    } else {
+      mergeReactiveObjects(pinia.state.value[$id], partialStateOrMutator);
+      subscriptionMutation = {
+        type: MutationType.patchObject,
+        payload: partialStateOrMutator,
+        storeId: $id,
+        events: debuggerEvents
+      };
+    }
+    const myListenerId = activeListener = Symbol();
+    nextTick().then(() => {
+      if (activeListener === myListenerId) {
+        isListening = true;
+      }
+    });
+    isSyncListening = true;
+    triggerSubscriptions(subscriptions, subscriptionMutation, pinia.state.value[$id]);
+  }
+  const $reset = isOptionsStore ? function $reset2() {
+    const { state } = options;
+    const newState = state ? state() : {};
+    this.$patch(($state) => {
+      assign$2($state, newState);
+    });
+  } : (
+    /* istanbul ignore next */
+    noop
+  );
+  function $dispose() {
+    scope.stop();
+    subscriptions = [];
+    actionSubscriptions = [];
+    pinia._s.delete($id);
+  }
+  function wrapAction(name, action) {
+    return function() {
+      setActivePinia(pinia);
+      const args = Array.from(arguments);
+      const afterCallbackList = [];
+      const onErrorCallbackList = [];
+      function after(callback) {
+        afterCallbackList.push(callback);
+      }
+      function onError(callback) {
+        onErrorCallbackList.push(callback);
+      }
+      triggerSubscriptions(actionSubscriptions, {
+        args,
+        name,
+        store,
+        after,
+        onError
+      });
+      let ret;
+      try {
+        ret = action.apply(this && this.$id === $id ? this : store, args);
+      } catch (error) {
+        triggerSubscriptions(onErrorCallbackList, error);
+        throw error;
+      }
+      if (ret instanceof Promise) {
+        return ret.then((value) => {
+          triggerSubscriptions(afterCallbackList, value);
+          return value;
+        }).catch((error) => {
+          triggerSubscriptions(onErrorCallbackList, error);
+          return Promise.reject(error);
+        });
+      }
+      triggerSubscriptions(afterCallbackList, ret);
+      return ret;
+    };
+  }
+  const partialStore = {
+    _p: pinia,
+    // _s: scope,
+    $id,
+    $onAction: addSubscription.bind(null, actionSubscriptions),
+    $patch,
+    $reset,
+    $subscribe(callback, options2 = {}) {
+      const removeSubscription = addSubscription(subscriptions, callback, options2.detached, () => stopWatcher());
+      const stopWatcher = scope.run(() => watch(() => pinia.state.value[$id], (state) => {
+        if (options2.flush === "sync" ? isSyncListening : isListening) {
+          callback({
+            storeId: $id,
+            type: MutationType.direct,
+            events: debuggerEvents
+          }, state);
+        }
+      }, assign$2({}, $subscribeOptions, options2)));
+      return removeSubscription;
+    },
+    $dispose
+  };
+  const store = reactive(partialStore);
+  pinia._s.set($id, store);
+  const runWithContext = pinia._a && pinia._a.runWithContext || fallbackRunWithContext;
+  const setupStore = runWithContext(() => pinia._e.run(() => (scope = effectScope()).run(setup)));
+  for (const key in setupStore) {
+    const prop = setupStore[key];
+    if (isRef(prop) && !isComputed(prop) || isReactive(prop)) {
+      if (!isOptionsStore) {
+        if (initialState && shouldHydrate(prop)) {
+          if (isRef(prop)) {
+            prop.value = initialState[key];
+          } else {
+            mergeReactiveObjects(prop, initialState[key]);
+          }
+        }
+        {
+          pinia.state.value[$id][key] = prop;
+        }
+      }
+    } else if (typeof prop === "function") {
+      const actionValue = wrapAction(key, prop);
+      {
+        setupStore[key] = actionValue;
+      }
+      optionsForPlugin.actions[key] = prop;
+    } else ;
+  }
+  {
+    assign$2(store, setupStore);
+    assign$2(toRaw(store), setupStore);
+  }
+  Object.defineProperty(store, "$state", {
+    get: () => pinia.state.value[$id],
+    set: (state) => {
+      $patch(($state) => {
+        assign$2($state, state);
+      });
+    }
+  });
+  pinia._p.forEach((extender) => {
+    {
+      assign$2(store, scope.run(() => extender({
+        store,
+        app: pinia._a,
+        pinia,
+        options: optionsForPlugin
+      })));
+    }
+  });
+  if (initialState && isOptionsStore && options.hydrate) {
+    options.hydrate(store.$state, initialState);
+  }
+  isListening = true;
+  isSyncListening = true;
+  return store;
+}
+function defineStore(idOrOptions, setup, setupOptions) {
+  let id;
+  let options;
+  const isSetupStore = typeof setup === "function";
+  if (typeof idOrOptions === "string") {
+    id = idOrOptions;
+    options = isSetupStore ? setupOptions : setup;
+  } else {
+    options = idOrOptions;
+    id = idOrOptions.id;
+  }
+  function useStore(pinia, hot) {
+    const hasContext = hasInjectionContext();
+    pinia = // in test mode, ignore the argument provided as we can always retrieve a
+    // pinia instance with getActivePinia()
+    (pinia) || (hasContext ? inject(piniaSymbol, null) : null);
+    if (pinia)
+      setActivePinia(pinia);
+    pinia = activePinia;
+    if (!pinia._s.has(id)) {
+      if (isSetupStore) {
+        createSetupStore(id, setup, options, pinia);
+      } else {
+        createOptionsStore(id, options, pinia);
+      }
+    }
+    const store = pinia._s.get(id);
+    return store;
+  }
+  useStore.$id = id;
+  return useStore;
 }
 const useStateKeyPrefix = "$s";
 function useState(...args) {
@@ -1330,6 +1657,7 @@ const __nuxt_component_6 = defineComponent({
 const plugin = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
   const pinia = createPinia();
   nuxtApp.vueApp.use(pinia);
+  setActivePinia(pinia);
   {
     nuxtApp.payload.pinia = pinia.state.value;
   }
@@ -5265,7 +5593,7 @@ const localeCodes = [];
 const localeLoaders = {};
 const vueI18nConfigs = [
   () => import(
-    './i18n.config-fU20EpUV.mjs'
+    './i18n.config-8sreRa_d.mjs'
     /* webpackChunkName: "__i18n_config_ts_bffaebcb" */
   )
 ];
@@ -6728,7 +7056,7 @@ const plugins = [
   lumoz_common_wdbZBAKBrT
 ];
 const layouts = {
-  default: () => import('./default-CzhehjuM.mjs').then((m) => m.default || m)
+  default: () => import('./default-DjzPuLdZ.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -6742,7 +7070,7 @@ const LayoutLoader = defineComponent({
     return () => h(LayoutComponent, props.layoutProps, context.slots);
   }
 });
-const __nuxt_component_0$1 = defineComponent({
+const __nuxt_component_0 = defineComponent({
   name: "NuxtLayout",
   inheritAttrs: false,
   props: {
@@ -6860,7 +7188,7 @@ const RouteProvider = defineComponent({
     };
   }
 });
-const __nuxt_component_0 = defineComponent({
+const __nuxt_component_1 = defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -6979,8 +7307,8 @@ const _export_sfc = (sfc, props) => {
 };
 const _sfc_main$2 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_NuxtLayout = __nuxt_component_0$1;
-  const _component_NuxtPage = __nuxt_component_0;
+  const _component_NuxtLayout = __nuxt_component_0;
+  const _component_NuxtPage = __nuxt_component_1;
   const _component_client_only = __nuxt_component_6;
   _push(`<div${ssrRenderAttrs(_attrs)}>`);
   _push(ssrRenderComponent(_component_NuxtLayout, null, {
@@ -7026,7 +7354,7 @@ const _sfc_main$1 = {
     const statusMessage = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-C2igEu0N.mjs').then((r) => r.default || r));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-BXhyxfZD.mjs').then((r) => r.default || r));
     const _Error = defineAsyncComponent(() => import('./error-500-TRr4mEWl.mjs').then((r) => r.default || r));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
@@ -7107,5 +7435,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { _export_sfc as _, useRouter as a, useRoute as b, createError as c, __nuxt_component_6 as d, entry$1 as default, parseQuery as e, useRuntimeConfig as f, navigateTo as g, hasProtocol as h, injectHead as i, joinURL as j, withoutTrailingSlash as k, __nuxt_component_0 as l, nuxtLinkDefaults as n, parseURL as p, resolveUnrefHeadInput as r, useIdInjection as u, withTrailingSlash as w };
+export { _export_sfc as _, parseQuery as a, useRuntimeConfig as b, createError as c, navigateTo as d, entry$1 as default, withoutTrailingSlash as e, __nuxt_component_6 as f, defineStore as g, hasProtocol as h, injectHead as i, joinURL as j, useIdInjection as k, useRoute as l, __nuxt_component_1 as m, nuxtLinkDefaults as n, parseURL as p, resolveUnrefHeadInput as r, useRouter as u, withTrailingSlash as w };
 //# sourceMappingURL=server.mjs.map

@@ -14,7 +14,7 @@
         fill="white"
       />
     </svg>
-    <span v-if="name" class="ml-1.5 text-text-200">{{ name }}</span>
+    <span v-if="name" class="ml-1.5">{{ name }}</span>
   </a>
 </template>
 

@@ -7,7 +7,7 @@
     <div class="w-7 h-7 rounded bg-[#292929] hover:bg-[#e93620] flex items-center justify-center">
       <img src="@/assets/img/icon/youtube.svg" class="w-4" />
     </div>
-    <span v-if="name" class="ml-1.5 text-text-200">Youtube</span>
+    <span v-if="name" class="ml-1.5">Youtube</span>
   </a>
 </template>
 <script setup lang="ts">

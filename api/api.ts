@@ -15,16 +15,11 @@ export async function getAvaliableRollupList() {
   }
 }
 
-// export async function getSailDashBoard() {
-//   return await request.get(getDataUrl(`dashboard`))
-// }
-
-// export async function getUserInfo(address: string, phase:number, timestamp: string, signature: string) {
-//   const headers = {
-//     'API-SIGNATURE': signature,
-//     'TIMESTAMP': timestamp
-//   }
-//   const { data } = await axios.get(getDataUrl(`dragon-slayer-info?address=${address}&phase=${phase}`), { headers })
-//   return data
-// }
-
+export const getAchieveInfo = async (address: string, timestamp: string, signature: string) => {
+  const headers = {
+    'API-SIGNATURE': signature,
+    'TIMESTAMP': timestamp
+  };
+  const { data } = await axios.get(getDataUrl(`lumoz-points?address=${address}`), { headers })
+  return data.lumoz_points
+}

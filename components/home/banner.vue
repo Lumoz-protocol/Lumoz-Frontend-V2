@@ -8,7 +8,7 @@
       <div v-if="active" class="flex items-center justify-center flex-col">
         <div class="typed-out text-3xl md:text-4xl lg:text-6xl py-4 font-bold text-center">{{ $t('home.banner.title') }}</div>
         <div class="typed-out-2s text-2xl py-4 text-primary-900 text-center">{{ $t('home.banner.content') }}</div>
-        <HomeButton :word="$t('home.banner.start')" class="mt-4 w-40 animate__animated animate__fadeIn animate__delay-3s" />
+        <HomeButton @click="to" :word="$t('home.banner.start')" class="mt-4 w-40 animate__animated animate__fadeIn animate__delay-3s" />
       </div>
     </div>
   </div>
@@ -23,6 +23,10 @@ const props = withDefaults(
     active: false
   }
 )
+
+const to = () => {
+  window.open('https://docs.lumoz.org')
+}
 </script>
 
 <style scoped>

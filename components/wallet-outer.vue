@@ -6,31 +6,46 @@ const projectId = 'f84f8b1354cd3805ef4253caaadbe45f'
 
 const { disconnect } = useDisconnect()
 
-const mainnet = {
-  chainId: 42766,
-  name: 'ZKFair',
-  currency: 'USDT',
-  explorerUrl: 'https://scan.zkfair.io',
-  rpcUrl: 'https://rpc.zkfair.io'
-}
+const networks = [
+  {
+    chainId: 51178,
+    name: 'Lumoz',
+    currency: 'MOZ',
+    explorerUrl: 'https://lumoz.info',
+    rpcUrl: 'https://alpha-us-http-geth.lumoz.org'
+  },
+  {
+    chainId: 42766,
+    name: 'ZKFair',
+    currency: 'USDT',
+    explorerUrl: 'https://scan.zkfair.io',
+    rpcUrl: 'https://rpc.zkfair.io'
+  },
+  {
+    chainId: 4200,
+    name: 'Merlin',
+    currency: 'BTC',
+    explorerUrl: 'https://scan.merlinchain.io',
+    rpcUrl: 'https://rpc.merlinchain.io'
+  },
+]
 
 const metadata = {
-  name: 'Dragon Slayer',
-  description: 'Dragon Slayer',
-  url: 'https://dragon-slayer.zkfair.io/',
+  name: 'Lumoz',
+  description: 'Lumoz',
+  url: 'https://lumoz.org',
   icons: []
 }
 
 const modal = createWeb3Modal({
   ethersConfig: defaultConfig({
     metadata,
-    defaultChainId: 42766,
     enableEIP6963: true,
     enableInjected: true,
     enableCoinbase: false,
-    rpcUrl: 'https://rpc.zkfair.io'
+    rpcUrl: 'https://alpha-us-http-geth.lumoz.org'
   }),
-  chains: [mainnet],
+  chains: networks,
   projectId,
   enableAnalytics: false
 })

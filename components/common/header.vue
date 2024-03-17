@@ -18,7 +18,7 @@
       <div class="px-2 2xl:px-5 border-l border-r border-border-300">
         <CommonMedia />
       </div>
-      <HomeButton class="ml-8" :word="$t('header.launch')" />
+      <HomeButton @click="toLaunch" class="ml-8" :word="$t('header.launch')" />
     </div>
     <div class="lg:hidden relative">
       <img
@@ -31,7 +31,7 @@
         <el-drawer v-model="menuShow" :with-header="false" :append-to-body="true" :size="400">
           <div class="flex items-center justify-between mb-4">
             <CommonLogo />
-            <HomeButton :word="$t('header.launch')" />
+            <HomeButton @click="toLaunch" :word="$t('header.launch')" />
           </div>
 
           <CommonSingleNavItem
@@ -64,19 +64,27 @@
   </div>
 </template>
 <script setup lang="ts">
+import { IFRAME_PREFIX } from '@/constants/networks'
 const vm = getCurrentInstance()?.proxy
 const router = useRouter()
 const menuShow = ref(false)
 const navHide = ref(false)
 
 const singleMenus = ref([
-  { name: 'Leaderboard', link: '', img: '' },
+  { name: vm.$t('header.raas'), link: '/raas' },
+  { name: vm.$t('header.rollups'), link: '/rollups' },
+  { name: vm.$t('header.points'), link: '/lumoz-points' },
 ])
 
 const menus = ref([
   {
     name: vm.$t('header.community.title'),
     list: [
+      {
+        name: vm.$t('header.community.ecosystems'),
+        local: true,
+        url: '/ecosystems'
+      },
       {
         name: vm.$t('header.community.developer'),
         local: false,
@@ -107,6 +115,10 @@ const hideMenu = () => {
 }
 const hideItems = () => {
   navHide.value = !navHide.value
+}
+
+const toLaunch = () => {
+  window.open(IFRAME_PREFIX+'rollup/create')
 }
 </script>
 <style class="ra-borders">

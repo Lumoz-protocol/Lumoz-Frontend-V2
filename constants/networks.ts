@@ -16,4 +16,6 @@ const getZkFairNetwork = () => {
 
 export const ZKFAIR = getZkFairNetwork()
 
-export const DATA_API = 'https://lumoz.org/api/'
+export const DATA_API = 'https://lumoz.org/lumoz-rollup/api/'
+
+export const IFRAME_PREFIX = 'https://lumoz.org/'

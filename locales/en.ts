@@ -1,13 +1,29 @@
 export default {
-  testaaa: '11111',
   header: {
+    raas: 'Rollup As A Service',
+    rollups: 'Rollups',
+    points: 'Lumoz Points',
     community: {
       title: 'Community',
+      ecosystems: 'Ecosystems',
       developer: 'Developer',
       blog: 'Blog'
     },
     touch: 'Get In Touch',
     launch: 'Launch a ZK-Rollup'
+  },
+  footer: {
+    solutions: 'Solutions',
+    s1: 'Computer Layer',
+    s2: 'Rollup as a Service',
+    s3: 'Rollups',
+    community: 'Community',
+    c1: 'Lumoz Points',
+    c2: 'Ecosystems',
+    c3: 'Blog',
+    c4: 'Developer Docs',
+    c5: 'Media Kit',
+    find: 'Find Us'
   },
   home: {
     banner: {
@@ -47,17 +63,75 @@ export default {
       c3: 'Through the decentralizedLumoz Depin network,enhancing the robustness andstability of the rollup and AI.'
     }
   },
-  footer: {
-    find: 'Find Us'
-  },
+
   rollups: {
-    title1: 'The world‘s frist Rass with operation',
+    title1: 'The world‘s frist RaaS with operation',
     title2: 'ZK-Rollups on the mainnet',
     main: 'Mainnet',
     test: 'Testnet',
     tvl: 'Peak TVL',
     transactions: 'Transactions',
     users: 'Unique Users',
-    count: 'Rollups'
+    count: 'Rollups',
+    base: 'Base Layer',
+    zkType: 'zkEVM Type',
+    da: 'Data Availiability',
+    token: 'Gas Token',
+    bridge: 'Bridge',
+    add: "Add Network"
+  },
+  raas: {
+    title1: 'ZK-Rollup as a Service with',
+    title2: 'Modular Sequencing, DA and',
+    title3: 'Compute Layer',
+    building: 'Start Building',
+    more: 'See More',
+    content: 'The world\'s first RaaS with operational ZK-Rollups on the mainnet.',
+    arc: {
+      title: 'Architecture',
+      t1: 'Layer1',
+      t2: 'zkEVM',
+      t3: 'Data Availability',
+      t4: 'Sequencer',
+      t5: 'Prover',
+      c1: 'Costomized  Gas Token',
+      c2: 'Automatic Deployed Bridge',
+      c3: 'Automatic Deployed Explorer',
+      c4: 'Automatic Deployed Faucet',
+      c5: 'Lumoz Decentralized Compute Layer',
+      c6: 'ZK-Raas stack'
+    },
+    why: {
+      title: 'Why Choose Lumoz?',
+      t1: 'Easily own a Rollup',
+      t2: 'Scale your tokenomics',
+      t3: 'Low-cost ZKP generation',
+      t4: 'Safer& Faster',
+      t5: 'Native Cross-Rollup Communication',
+      t6: 'Automatic Deployment',
+      c1: 'Create a ZK-Rollup in few steps, No tech expertise needed.',
+      c2: 'Customize the gas tokens brings excellent scalability to youreconomic model.',
+      c3: 'DePlN with ZK-PoW incentivizes Miners to generate ZK Proofs to reduce costs.',
+      c4: 'ZK-Rollups have trustless security, safe bridges and fastewithdrawals.',
+      c5: 'More interoperability and composability writh shared liguidityfor all rollups.',
+      c6: 'Upon successful launch of your rollup, all infrastructureincluding bridges and browsers will be automaticallydeployed.',
+    }
+  },
+  points: {
+    points: 'Lumoz Points',
+    pcontent: 'To earn Lumoz points, become a loyal Lumoz supporter, and receive promising rewards in the future.',
+    connect: 'Connect Wallet to Check your Points',
+    total: 'Total Points',
+    dragon: 'Dragon Slayer',
+    p: 'Points',
+    final: 'Final Wave',
+    user: 'User Rewards',
+    d: 'Alpha & Pre Alpha',
+    validator: 'Validator Rewards',
+    miner: 'Miner Rewards',
+    more: 'Get More'
+  },
+  wallet: {
+    connect: 'Connect Wallet'
   }
 }

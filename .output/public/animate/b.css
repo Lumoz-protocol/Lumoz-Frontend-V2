@@ -1,8 +1,8 @@
 .b-animation {
     background-image: url("./b/b_00000.avif");
-    background-size: 100%;
+    background-size: 60%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left 30% top 20%;
     background-attachment: fixed;
     animation-name: keyframes-b;
     animation-duration: 2s;
@@ -11,6 +11,13 @@
     animation-fill-mode: forwards;
     animation-timing-function: steps(1);
 }
+
+@media (max-width: 1024px) {
+    .b-animation {
+        background-size: cover;
+        background-position: cemter;
+    }
+  }
 
 @keyframes keyframes-b {
     0% {

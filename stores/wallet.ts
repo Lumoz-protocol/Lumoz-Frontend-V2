@@ -66,6 +66,28 @@ export const useWalletStore = defineStore('wallet', {
         params: [params.join(''), this.account]
       })
       return signature
+    },
+    async addNetwork(network: any) {
+      try {
+        await bridge.provider.request({
+          method: 'wallet_addEthereumChain',
+          params: [
+            {
+              chainId: network.idHex,
+              chainName: network.name,
+              nativeCurrency: {
+                name: network.symbol,
+                symbol: network.symbol,
+                decimals: network.decimals
+              },
+              rpcUrls: [network.rpcUrl],
+              blockExplorerUrls: [network.explorer]
+            }
+          ]
+        })
+      } catch (e) {
+        return false
+      }
     }
   }
 })

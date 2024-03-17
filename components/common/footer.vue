@@ -6,12 +6,12 @@
         <div class="footer-linear-1 h-0.5 w-1/2"></div>
         <div class="footer-linear-2 h-0.5 w-1/2"></div>
       </div>
-      <div class="bg-[#000000] py-16 px-4 lg:px-32 lg:flex justify-between">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-16">
+      <div class="bg-[#000000aa] py-16 px-4 lg:px-32 lg:flex justify-between">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
           <div class="flex flex-col" v-for="item, index in footer" :key="index">
             <div class="text-primary-900 text-lg mb-4 text-center lg:text-left">{{ item.name }}</div>
-            <div class="mt-2 mx-auto" v-for="_item, _index in item.list" :key="_index">
-              <a class="cursor-pointer text-[#ffffffaa] hover:(text-primary-900) hvr-pulse" @click="to(_item.url)">Leaderboard</a>
+            <div class="mt-2" v-for="_item, _index in item.list" :key="_index">
+              <a class="cursor-pointer text-[#ffffffaa] hover:(text-primary-900) hvr-pulse" @click="to(_item.url)">{{ _item.name }}</a>
             </div>
           </div>
         </div>
@@ -44,105 +44,48 @@
   </div>
 </template>
 <script setup lang="ts">
+const vm = getCurrentInstance()?.proxy
 const router = useRouter()
 const footer = ref([
   {
-    name: 'Lumoz',
+    name: vm.$t('footer.solutions'),
     list: [
       {
-        name: 'Leaderboard',
-        url: '/leaderboard'
+        name: vm.$t('footer.s1'),
+        url: '/'
       },
       {
-        name: 'Leaderboard',
-        url: '/leaderboard'
+        name: vm.$t('footer.s2'),
+        url: '/raas'
       },
       {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
+        name: vm.$t('footer.s3'),
+        url: '/rollups'
+      }
     ]
   },
   {
-    name: 'Lumoz',
+    name: vm.$t('footer.community'),
     list: [
       {
-        name: 'Leaderboard',
-        url: '/leaderboard'
+        name: vm.$t('footer.c1'),
+        url: '/lumoz-points'
       },
       {
-        name: 'Leaderboard',
-        url: '/leaderboard'
+        name: vm.$t('footer.c2'),
+        url: '/ecosystems'
       },
       {
-        name: 'Leaderboard',
-        url: '/leaderboard'
+        name: vm.$t('footer.c3'),
+        url: 'https://mirror.xyz/lumozorg.eth'
       },
       {
-        name: 'Leaderboard',
-        url: '/leaderboard'
+        name: vm.$t('footer.c4'),
+        url: 'https://docs.lumoz.org/'
       },
       {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-    ]
-  },
-  {
-    name: 'Lumoz',
-    list: [
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-    ]
-  },
-  {
-    name: 'Lumoz',
-    list: [
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
-      },
-      {
-        name: 'Leaderboard',
-        url: '/leaderboard'
+        name: vm.$t('footer.c5'),
+        url: 'https://lumoz.org/admin/file/files/LUMOZ_MEDIA_KIT_2.zip'
       },
     ]
   }

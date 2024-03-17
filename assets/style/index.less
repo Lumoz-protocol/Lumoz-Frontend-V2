@@ -71,7 +71,7 @@ html, body {
 }
 
 .slideShine{
-  background: -webkit-linear-gradient(top, #FFFFFF, #A18557) no-repeat 0 0;
+  background: -webkit-linear-gradient(left, #20FFBC, #BFFE00) no-repeat 0 0;
   background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -200,12 +200,36 @@ html, body {
   background-position: bottom;
 }
 .phase-box {
-  background: url('@/assets/img/share/phase.avif') no-repeat;
+  background:
+    url('@/assets/img/share/phase-bg1.avif') no-repeat;
   background-size: 100% 100%;
   background-position: center;
 }
 .phase-inner1:hover {
-  background: url('@/assets/img/share/phase-inner1.avif') no-repeat;
+  background:
+    url('@/assets/img/share/phase-top.avif') no-repeat,
+    url('@/assets/img/share/phase-bottom.avif') no-repeat
+  ;
+  background-size: 30% 30%, 30% 30%;
+  background-position: top 0% right 20%, bottom 0% left 20%;
+}
+
+.phase-inner1:hover .phase-box-left {
+  background:
+    url('@/assets/img/share/phase-left.avif') no-repeat;
   background-size: 100% 100%;
   background-position: center;
+  mix-blend-mode: lighten;
+}
+.phase-inner1:hover .phase-box-right {
+  background:
+    url('@/assets/img/share/phase-right.avif') no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  mix-blend-mode: lighten;
+}
+
+.shadow-inner-box {
+  background: linear-gradient(180deg, #333332 -12.32%, #22242A 105.82%);
+  box-shadow: -11px -21px 60px 0px #252524; 
 }

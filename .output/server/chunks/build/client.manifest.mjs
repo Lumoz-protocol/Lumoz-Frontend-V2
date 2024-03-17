@@ -1,10 +1,70 @@
 const client_manifest = {
-  "_index.BW1UrhAj.js": {
+  "_button.vue.!~{007}~.js": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "button.DqmOrJ6L.css",
+    "src": "_button.vue.!~{007}~.js"
+  },
+  "_button.vue.CW9LDwdj.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.BW1UrhAj.js",
+    "file": "button.vue.CW9LDwdj.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "button.DqmOrJ6L.css"
+    ]
+  },
+  "button.DqmOrJ6L.css": {
+    "file": "button.DqmOrJ6L.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "_footer.!~{00e}~.js": {
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true,
+    "file": "footer.Chp6S7z6.css",
+    "src": "_footer.!~{00e}~.js"
+  },
+  "_footer.DttHfylX.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "footer.DttHfylX.js",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [
+      "footer.Chp6S7z6.css"
+    ],
+    "assets": [
+      "footer.BJqA6y1w.avif"
+    ]
+  },
+  "footer.Chp6S7z6.css": {
+    "file": "footer.Chp6S7z6.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "footer.BJqA6y1w.avif": {
+    "file": "footer.BJqA6y1w.avif",
+    "resourceType": "video",
+    "prefetch": true
+  },
+  "_index.OmLdcbiw.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "index.OmLdcbiw.js",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
@@ -13,23 +73,34 @@ const client_manifest = {
       "node_modules/@walletconnect/modal-ui/dist/index.js"
     ]
   },
-  "_nuxt-link.DTM68bSn.js": {
+  "_nuxt-link.BaovmxD_.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "nuxt-link.DTM68bSn.js",
+    "file": "nuxt-link.BaovmxD_.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_vue.f36acd1f.qEwU_C4k.js": {
+  "_vue.f36acd1f.DRCNeA1B.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "vue.f36acd1f.qEwU_C4k.js",
+    "file": "vue.f36acd1f.DRCNeA1B.js",
     "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
+  "_wallet.vue.CduN-GV1.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "wallet.vue.CduN-GV1.js",
+    "imports": [
+      "_button.vue.CW9LDwdj.js",
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
@@ -93,18 +164,95 @@ const client_manifest = {
     "file": "logo.ODMGqaVg.svg",
     "src": "assets/img/logo/logo.svg"
   },
+  "assets/img/networks/merlin.jpg": {
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/jpeg",
+    "file": "merlin.Bkbi66L5.jpg",
+    "src": "assets/img/networks/merlin.jpg"
+  },
+  "assets/img/networks/zkf.png": {
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png",
+    "file": "zkf.Ccxd1MoM.png",
+    "src": "assets/img/networks/zkf.png"
+  },
+  "assets/img/points/bg.png": {
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png",
+    "file": "bg.D_92N4RX.png",
+    "src": "assets/img/points/bg.png"
+  },
+  "assets/img/points/dragon.avif": {
+    "resourceType": "video",
+    "prefetch": true,
+    "file": "dragon.CGHxEp4p.avif",
+    "src": "assets/img/points/dragon.avif"
+  },
+  "assets/img/raas/banner.avif": {
+    "resourceType": "video",
+    "prefetch": true,
+    "file": "banner.hAh5zkcw.avif",
+    "src": "assets/img/raas/banner.avif"
+  },
+  "assets/img/raas/box.avif": {
+    "resourceType": "video",
+    "prefetch": true,
+    "file": "box.mdnXa70Y.avif",
+    "src": "assets/img/raas/box.avif"
+  },
+  "assets/img/raas/grid.png": {
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png",
+    "file": "grid.C1hTM2kc.png",
+    "src": "assets/img/raas/grid.png"
+  },
+  "assets/img/raas/w5.png": {
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png",
+    "file": "w5.CLhqwI4D.png",
+    "src": "assets/img/raas/w5.png"
+  },
+  "assets/img/share/bottom-light.avif": {
+    "resourceType": "video",
+    "prefetch": true,
+    "file": "bottom-light.aeEu3bIe.avif",
+    "src": "assets/img/share/bottom-light.avif"
+  },
   "assets/img/share/footer.avif": {
     "resourceType": "video",
     "prefetch": true,
     "file": "footer.BJqA6y1w.avif",
     "src": "assets/img/share/footer.avif"
   },
+  "assets/img/share/phase-bg1.avif": {
+    "resourceType": "video",
+    "prefetch": true,
+    "file": "phase-bg1.CFGOVKdn.avif",
+    "src": "assets/img/share/phase-bg1.avif"
+  },
+  "assets/img/share/phase-bottom.avif": {
+    "resourceType": "video",
+    "prefetch": true,
+    "file": "phase-bottom.s1Xurcic.avif",
+    "src": "assets/img/share/phase-bottom.avif"
+  },
+  "assets/img/share/phase-top.avif": {
+    "resourceType": "video",
+    "prefetch": true,
+    "file": "phase-top.BkEhplES.avif",
+    "src": "assets/img/share/phase-top.avif"
+  },
   "i18n.config.ts?hash=bffaebcb&config=1": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "i18n.config.Q57_yTBa.js",
+    "file": "i18n.config.cnR0ZzBR.js",
     "src": "i18n.config.ts?hash=bffaebcb&config=1",
     "isDynamicEntry": true
   },
@@ -113,24 +261,45 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "default.D5gg4LU5.js",
+    "file": "default.CqEnejgz.js",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
-      "node_modules/nuxt/dist/app/entry.js"
+      "_nuxt-link.BaovmxD_.js",
+      "node_modules/nuxt/dist/app/entry.js",
+      "_button.vue.CW9LDwdj.js",
+      "_footer.DttHfylX.js"
+    ],
+    "css": [
+      "default.DwZTG1S8.css"
+    ],
+    "assets": [
+      "logo.ODMGqaVg.svg"
     ]
+  },
+  "default.DwZTG1S8.css": {
+    "file": "default.DwZTG1S8.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "logo.ODMGqaVg.svg": {
+    "file": "logo.ODMGqaVg.svg",
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/svg+xml"
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "error-404.PHUcpxHK.js",
+    "file": "error-404.XoZgyErA.js",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_nuxt-link.DTM68bSn.js",
-      "_vue.f36acd1f.qEwU_C4k.js",
+      "_nuxt-link.BaovmxD_.js",
+      "_vue.f36acd1f.DRCNeA1B.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": []
@@ -146,11 +315,11 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "error-500.CM23CKc0.js",
+    "file": "error-500.CwRkWUzl.js",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_vue.f36acd1f.qEwU_C4k.js",
+      "_vue.f36acd1f.DRCNeA1B.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "css": []
@@ -166,11 +335,11 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.Br7hMDS-.js",
+    "file": "index.KV4p1GKX.js",
     "src": "node_modules/@walletconnect/modal-ui/dist/index.js",
     "isDynamicEntry": true,
     "imports": [
-      "_index.BW1UrhAj.js",
+      "_index.OmLdcbiw.js",
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
@@ -179,7 +348,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.rVIffVjL.js",
+    "file": "index.BMCpD_5N.js",
     "src": "node_modules/@web3modal/siwe/dist/esm/exports/index.js",
     "isDynamicEntry": true,
     "imports": [
@@ -191,7 +360,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "entry.BSEJjf-F.js",
+    "file": "entry.DWEB--NH.js",
     "src": "node_modules/nuxt/dist/app/entry.js",
     "isEntry": true,
     "dynamicImports": [
@@ -201,12 +370,16 @@ const client_manifest = {
       "node_modules/@web3modal/siwe/dist/esm/exports/index.js",
       "node_modules/@web3modal/siwe/dist/esm/exports/index.js",
       "node_modules/@web3modal/siwe/dist/esm/exports/index.js",
-      "_index.BW1UrhAj.js",
+      "_index.OmLdcbiw.js",
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
     "css": [
       "entry.CLmNjs2H.css"
+    ],
+    "assets": [
+      "zkf.Ccxd1MoM.png",
+      "merlin.Bkbi66L5.jpg"
     ],
     "_globalCSS": true
   },
@@ -216,28 +389,51 @@ const client_manifest = {
     "prefetch": true,
     "preload": true
   },
+  "zkf.Ccxd1MoM.png": {
+    "file": "zkf.Ccxd1MoM.png",
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png"
+  },
+  "merlin.Bkbi66L5.jpg": {
+    "file": "merlin.Bkbi66L5.jpg",
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/jpeg"
+  },
+  "pages/ecosystems/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "index.UTK6gBbC.js",
+    "src": "pages/ecosystems/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js"
+    ]
+  },
   "pages/index.vue": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.DkFFbZWk.js",
+    "file": "index.C8eY_6wP.js",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_nuxt-link.DTM68bSn.js",
-      "node_modules/nuxt/dist/app/entry.js"
+      "_button.vue.CW9LDwdj.js",
+      "node_modules/nuxt/dist/app/entry.js",
+      "_footer.DttHfylX.js"
     ],
     "css": [
-      "index.ClDCrXYz.css"
+      "index.CmsXQk-3.css"
     ],
     "assets": [
-      "logo.ODMGqaVg.svg",
       "banner.Db47GLQq.mp4",
       "icon1.CrlCNNOB.png",
       "icon2.DaLPAlH1.png",
       "ai.C8bREhnv.mp4",
-      "footer.BJqA6y1w.avif",
       "b_00000.C3RlLfcd.avif",
       "b_00002.C6X-N-pZ.avif",
       "b_00003.4w6kmQ0D.avif",
@@ -333,17 +529,11 @@ const client_manifest = {
       "ben.CSdM6DZS.avif"
     ]
   },
-  "index.ClDCrXYz.css": {
-    "file": "index.ClDCrXYz.css",
+  "index.CmsXQk-3.css": {
+    "file": "index.CmsXQk-3.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
-  },
-  "logo.ODMGqaVg.svg": {
-    "file": "logo.ODMGqaVg.svg",
-    "resourceType": "image",
-    "prefetch": true,
-    "mimeType": "image/svg+xml"
   },
   "banner.Db47GLQq.mp4": {
     "file": "banner.Db47GLQq.mp4",
@@ -364,11 +554,6 @@ const client_manifest = {
   },
   "ai.C8bREhnv.mp4": {
     "file": "ai.C8bREhnv.mp4",
-    "resourceType": "video",
-    "prefetch": true
-  },
-  "footer.BJqA6y1w.avif": {
-    "file": "footer.BJqA6y1w.avif",
     "resourceType": "video",
     "prefetch": true
   },
@@ -839,6 +1024,113 @@ const client_manifest = {
     "file": "ben.CSdM6DZS.avif",
     "resourceType": "video",
     "prefetch": true
+  },
+  "pages/lumoz-points/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "index.CdBqie3q.js",
+    "src": "pages/lumoz-points/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_wallet.vue.CduN-GV1.js",
+      "_button.vue.CW9LDwdj.js",
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [],
+    "assets": [
+      "dragon.CGHxEp4p.avif",
+      "bg.D_92N4RX.png"
+    ]
+  },
+  "index.CA00K8tw.css": {
+    "file": "index.CA00K8tw.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "dragon.CGHxEp4p.avif": {
+    "file": "dragon.CGHxEp4p.avif",
+    "resourceType": "video",
+    "prefetch": true
+  },
+  "bg.D_92N4RX.png": {
+    "file": "bg.D_92N4RX.png",
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png"
+  },
+  "pages/raas/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "index.UZ5m0hDj.js",
+    "src": "pages/raas/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_button.vue.CW9LDwdj.js",
+      "node_modules/nuxt/dist/app/entry.js"
+    ],
+    "css": [],
+    "assets": [
+      "w5.CLhqwI4D.png",
+      "banner.hAh5zkcw.avif",
+      "grid.C1hTM2kc.png",
+      "box.mdnXa70Y.avif"
+    ]
+  },
+  "index.CEoU4Kao.css": {
+    "file": "index.CEoU4Kao.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
+  },
+  "w5.CLhqwI4D.png": {
+    "file": "w5.CLhqwI4D.png",
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png"
+  },
+  "banner.hAh5zkcw.avif": {
+    "file": "banner.hAh5zkcw.avif",
+    "resourceType": "video",
+    "prefetch": true
+  },
+  "grid.C1hTM2kc.png": {
+    "file": "grid.C1hTM2kc.png",
+    "resourceType": "image",
+    "prefetch": true,
+    "mimeType": "image/png"
+  },
+  "box.mdnXa70Y.avif": {
+    "file": "box.mdnXa70Y.avif",
+    "resourceType": "video",
+    "prefetch": true
+  },
+  "pages/rollups/index.vue": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "file": "index.BOS5wOM_.js",
+    "src": "pages/rollups/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.js",
+      "_wallet.vue.CduN-GV1.js",
+      "_button.vue.CW9LDwdj.js"
+    ],
+    "css": [
+      "index.BHrc0U_d.css"
+    ]
+  },
+  "index.BHrc0U_d.css": {
+    "file": "index.BHrc0U_d.css",
+    "resourceType": "style",
+    "prefetch": true,
+    "preload": true
   },
   "public/animate/b/b_00000.avif": {
     "resourceType": "video",

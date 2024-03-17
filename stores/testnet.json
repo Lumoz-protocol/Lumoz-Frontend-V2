@@ -1,0 +1,130 @@
+[
+  {
+      "name": "Lumoz Public zkEVM V2",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927783550.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "MOZ"
+  },
+  {
+      "name": "CB zkEVM",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927791950.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "MOZ"
+  },
+  {
+      "name": "LAW Chain",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927803717.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "MOZ"
+  },
+  {
+      "name": "XThrill",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927811298.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "MOZ"
+  },
+  {
+      "name": "SoQuest zkEVM",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927818345.jpeg",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "MOZ"
+  },
+  {
+      "name": "ReadON Content Test Chain",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927826865.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "READ"
+  },
+  {
+      "name": "Relation",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927834174.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "MOZ"
+  },
+  {
+      "name": "VIP3",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927840742.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "MOZ"
+  },
+  {
+      "name": "DeBox",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927852291.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "MOZ"
+  },
+  {
+      "name": "ODX zkEVM Testnet",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927860275.png",
+      "layer1": "Goerli",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Goerli",
+      "gasToken": "ETH"
+  },
+  {
+      "name": "aaww",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927870426.png",
+      "layer1": "Goerli",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Goerli",
+      "gasToken": "ETH"
+  },
+  {
+      "name": "Public zkSync V2",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927946984.png",
+      "layer1": "Goerli",
+      "zkevmType": "zkSync",
+      "da": "Goerli",
+      "gasToken": "ETH"
+  },
+  {
+      "name": "Decibling",
+      "img": "https://lumoz.org/admin/file/2023-10-10-1696927940562.jpeg",
+      "layer1": "Goerli",
+      "zkevmType": "zkSync",
+      "da": "Goerli",
+      "gasToken": "ETH"
+  },
+  {
+      "name": "Polygon CDK DEMO",
+      "img": "https://lumoz.org/admin/file/2023-10-18-1697596346142.png",
+      "layer1": "Goerli",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Goerli",
+      "gasToken": "ETH"
+  },
+  {
+      "name": "StarkSport Rollup",
+      "img": "https://lumoz.org/admin/file/2023-10-12-1697106379207.png",
+      "layer1": "Lumoz",
+      "zkevmType": "Polygon zkEVM",
+      "da": "Lumoz Testnet",
+      "gasToken": "SFN"
+  },
+  {
+      "name": "Public Scroll",
+      "img": "https://lumoz.org/admin/file/2023-10-26-1698289010503.png",
+      "layer1": "Goerli",
+      "zkevmType": "Scroll",
+      "da": "Goerli",
+      "gasToken": "ETH"
+  }
+]

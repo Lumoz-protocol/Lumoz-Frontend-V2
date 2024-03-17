@@ -6,7 +6,7 @@
     <div class="w-7 h-7 rounded bg-[#292929] hover:bg-[#34d399] flex items-center justify-center">
       <img src="@/assets/img/icon/email.svg" class="w-4" />
     </div>
-    <span v-if="name" class="ml-1.5 text-text-200">Email</span>
+    <span v-if="name" class="ml-1.5">Email</span>
   </a>
 </template>
 
