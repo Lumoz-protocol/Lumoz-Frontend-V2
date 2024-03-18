@@ -1,7 +1,7 @@
 <template>
   <div class="fixed z-1 top-0 left-0 right-0 h-20 bg-filter flex items-center justify-between px-4">
     <CommonLogo />
-    <div class="hidden lg:flex items-center h-full">
+    <div class="hidden xl:flex items-center h-full">
       <CommonSingleNavItem v-for="item in singleMenus" :key="item.name" :item="item" @click="hideMenu" />
       <CommonNavItems v-for="item in menus" :key="item.name" :name="item.name" :hide-status="navHide">
         <CommonNavItem
@@ -20,7 +20,7 @@
       </div>
       <HomeButton @click="toLaunch" class="ml-8" :word="$t('header.launch')" />
     </div>
-    <div class="lg:hidden relative">
+    <div class="xl:hidden relative">
       <img
         src="@/assets/img/icon/menu.svg"
         class="w-6 mr-2 cursor-pointer hvr-bounce-in"
@@ -38,7 +38,6 @@
             v-for="item in singleMenus"
             :key="item.name"
             :item="item"
-            class="mt-4"
             @click.native="hideMenu"
           />
           <CommonNavItems v-for="item in menus" :key="item.name" :name="item.name" :hide-status="navHide">

@@ -4,7 +4,7 @@
       <div class="section">
         <HomeBanner :active="now === 0" />
       </div>
-      <div class="section bg-black full-lock-scroll">
+      <div class="section bg-[#000000] full-lock-scroll">
         <HomeArc :active="now === 1" @next="fullpage.api.moveTo(3, 0)"  @before="fullpage.api.moveTo(1, 0)" />
       </div>
       <div class="section">
@@ -35,7 +35,7 @@ const options = ref({
   recordHistory:false,
   scrollOverflow: false,
   normalScrollElements: '.full-lock-scroll',
-  scrollingSpeed: 700,
+  scrollingSpeed: 400,
   resize: true,
   beforeLeave: function(origin, destination, direction, trigger){
     now.value = destination.index

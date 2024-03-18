@@ -1,15 +1,15 @@
 <template>
 <div>
-  <div class="absolute left-0 right-0 top-30 z-0 full-lock-scroll">
-    <div v-if="active" class="container mx-auto">
-      <div class="text-2xl lg:text-4xl font-bold pl-4 lg:pl-0 home-arc-1 animate__animated animate__fadeInUp animate__slower">{{ $t('home.arc.title') }}</div>
-      <div class="text-6xl lg:text-8xl xl:text-9xl font-bold text-[#ffffff22] mt-8 home-arc-2 animate__animated animate__fadeInUp animate__delay-1s animate__slower">{{ $t('home.arc.title').toUpperCase() }}</div>
-      <div class="text-6xl lg:text-8xl xl:text-9xl font-bold mt-8 home-arc-3 animate__animated animate__fadeInUp animate__delay-2s animate__slower">{{ $t('home.arc.title').toUpperCase() }}</div>
+  <div class="absolute left-0 right-0 top-20 bottom-0 z-0 full-lock-scroll flex flex-col">
+    <div class="px-8 py-10 text-2xl lg:text-4xl font-bold home-arc-1 animate__animated animate__fadeIn animate__slower">{{ $t('home.arc.title') }}</div>
+    <div v-show="active" class="px-8 2xl:px-40 hidden lg:block w-full font-blinker">
+      <div class="mt-24 text-left text-6xl lg:text-8xl xl:text-10xl 2xl:text-10xl font-bold text-[#ffffff22] home-arc-2 animate__animated animate__fadeInLeft animate__slower">{{ $t('home.arc.title').toUpperCase() }}</div>
+      <div class="z-0 text-right mt-24 text-6xl lg:text-8xl xl:text-10xl 2xl:text-10xl font-bold text-[#e3e3e3] home-arc-3 animate__animated animate__fadeInRight animate__delay-1s animate__slower">{{ $t('home.arc.title').toUpperCase() }}</div>
     </div>
   </div> 
-  <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-arc-box z-10 full-lock-scroll" id="b-animation">
-    <div class="h-full w-full pt-20 overflow-y-auto hide-scroll full-lock-scroll" id="home-arc" @mousewheel="scrollChange">
-      <div class="mx-25 md:mx-10 lg:mx-20 xl:mx-40 flex justify-end pt-30 pb-40 lg:(pt-40 pb-0)">
+  <div v-show="active" class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-arc-box z-10 full-lock-scroll" id="b-animation">
+    <div  class="h-full w-full pt-20 overflow-y-auto hide-scroll full-lock-scroll" id="home-arc" @mousewheel="scrollChange">
+      <!-- <div class="mx-25 md:mx-10 lg:mx-20 xl:mx-40 flex justify-end pt-30 pb-40 lg:(pt-40 pb-0)">
         <div class="w-full xl:w-3/5">
           <HomeBox class="md:(w-1/2 ml-1/4) lg:(w-2/5 ml-3/5)">
             <div class="flex flex-col text-black justify-between h-full">
@@ -37,7 +37,7 @@
           </HomeBox>
         </div>
       </div>
-      <div class="h-40"></div>
+      <div class="h-40"></div> -->
     </div>
   </div>
 </div>
@@ -87,7 +87,9 @@ onMounted(() => {
   }
 
   preloadImage(["b_00000.avif","b_00001.avif","b_00002.avif","b_00003.avif","b_00004.avif","b_00005.avif","b_00006.avif","b_00007.avif","b_00008.avif","b_00009.avif","b_00010.avif","b_00011.avif","b_00012.avif","b_00013.avif","b_00014.avif","b_00015.avif","b_00016.avif","b_00017.avif","b_00018.avif","b_00019.avif","b_00020.avif","b_00021.avif","b_00022.avif","b_00023.avif","b_00024.avif","b_00025.avif","b_00026.avif","b_00027.avif","b_00028.avif","b_00029.avif","b_00030.avif","b_00031.avif","b_00032.avif","b_00033.avif","b_00034.avif","b_00035.avif","b_00036.avif","b_00037.avif","b_00038.avif","b_00039.avif"], function() {
-    document.getElementById('b-animation').className += " b-animation"
+    setTimeout(() => {
+      document.getElementById('b-animation').className += " b-animation"
+    }, 2000)
   }, "/animate/b/")
 })
 

@@ -9,7 +9,7 @@
         <div>
           <h1 class="text-2xl lg:text-6xl font-bold typed-out">{{ $t('home.ai.title') }}</h1>
         </div>
-        <p class="px-4 md:(w-1/2 px-0) lg:(w-full pr-16) 2xl:(w-2/3 px-0 pr-16) mt-8 animate__animated animate__fadeIn animate__delay-2s">{{ $t('home.ai.content') }}</p>
+        <p class="px-4 md:(w-1/2 px-0) lg:(w-full pr-16) 2xl:(w-2/3 px-0 pr-16) mt-8 animate__animated animate__fadeIn animate__delay-1s text-lg">{{ $t('home.ai.content') }}</p>
       </div>
     </div>
   </div>

@@ -5,11 +5,11 @@
         <div v-if="active">
           <h1 class="text-2xl lg:text-6xl font-bold typed-out">{{ $t('home.data.title1') }}</h1>
           <div class="flex justify-center">
-            <h1 class="text-2xl lg:text-6xl font-bold typed-out-2s text-center">{{ $t('home.data.title2') }}</h1>
+            <h1 class="text-2xl lg:text-6xl font-bold typed-out-1s text-center">{{ $t('home.data.title2') }}</h1>
           </div>
         </div>
         <div class="home-data-data-box rounded-lg lg:rounded-full mt-12 grid grid-cols-2 w-full lg:w-2/3 xl:w-1/2 relative">
-          <div v-if="active" class="home-data-grid-1 flex flex-col items-center justify-center">
+          <div v-if="active" class="home-data-grid-1 flex flex-col items-center justify-center lg:(ml-10 mt-10)">
             <CountUp
               :end-val="Number(28403 || 0)"
               :duration="2"
@@ -19,7 +19,7 @@
             ></CountUp>
             <div class="mt-4 text-[#999]">{{ $t('home.data.nodes') }}</div>
           </div>
-          <div v-if="active" class="flex flex-col items-center justify-center">
+          <div v-if="active" class="flex flex-col items-center justify-center lg:(mr-10 mt-10)">
             <CountUp
               :end-val="Number(16 || 0)"
               :duration="2"
@@ -29,7 +29,7 @@
             ></CountUp>
             <div class="mt-4 text-[#999]">{{ $t('home.data.ser') }}</div>
           </div>
-          <div v-if="active" class="flex flex-col items-center justify-center">
+          <div v-if="active" class="flex flex-col items-center justify-center lg:(ml-10 mb-10)">
             <CountUp
               :end-val="Number(20002146 || 0)"
               :duration="2"
@@ -39,7 +39,7 @@
             ></CountUp>
             <div class="mt-4 text-[#999]">{{ $t('home.data.trans') }}</div>
           </div>
-          <div v-if="active" class="home-data-grid-2 flex flex-col items-center justify-center">
+          <div v-if="active" class="home-data-grid-2 flex flex-col items-center justify-center lg:(mr-10 mb-10)">
             <CountUp
               :end-val="Number(4791671 || 0)"
               :duration="2"
@@ -57,7 +57,7 @@
               <div class="circle2 w-10 h-10 z-0"></div>
               <div class="circle3 w-10 h-10 z-0"></div>
               <div class="w-28 h-28 border absolute rounded-full border-[#99999944]"></div>
-              <div class="w-40 h-40 border absolute rounded-full border-[#99999944]"></div>
+              <div class="hidden lg:block w-40 h-40 border absolute rounded-full border-[#99999944]"></div>
           </div>
         </div>
       </div>
@@ -91,21 +91,20 @@ const scrollChange = (e) => {
 <style scoped>
 .home-data-data-box {
   background: url('@/assets/img/home/light.png');
-  background-size: 100% 100%;
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow:inset #befe0040 1px 1px 30px 1px;
   aspect-ratio: 2;
 }
 .home-data-grid-1 {
   background: url('@/assets/img/home/grid-1.png');
-  background-size: 100% 100%;
+  background-size: 100% 130%;
   background-position: center;
   background-repeat: no-repeat;
 }
 .home-data-grid-2 {
   background: url('@/assets/img/home/grid-2.png');
-  background-size: 100% 100%;
+  background-size: 100% 130%;
   background-position: center;
   background-repeat: no-repeat;
 }

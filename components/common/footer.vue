@@ -10,7 +10,7 @@
         <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
           <div class="flex flex-col" v-for="item, index in footer" :key="index">
             <div class="text-primary-900 text-lg mb-4 text-center lg:text-left">{{ item.name }}</div>
-            <div class="mt-2" v-for="_item, _index in item.list" :key="_index">
+            <div class="mt-2 flex justify-center lg:justify-start" v-for="_item, _index in item.list" :key="_index">
               <a class="cursor-pointer text-[#ffffffaa] hover:(text-primary-900) hvr-pulse" @click="to(_item.url)">{{ _item.name }}</a>
             </div>
           </div>

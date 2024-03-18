@@ -10,8 +10,7 @@
 </template>
 <script lang="ts" setup>
 const id = ref('home-box'+Number(new Date())+Math.floor(Math.random() * 1000))
-const multiple = 30;
-
+const multiple = 30
 
 onMounted(() => {
   const mouseOverContainer = document.getElementById('outer'+id.value)
@@ -22,18 +21,18 @@ onMounted(() => {
   });
 
   mouseOverContainer.addEventListener("mouseleave", (e) => {
-      const element = document.getElementById(id.value);
-      window.requestAnimationFrame(function () {
-          element.style.transform = "rotateX(0) rotateY(0)";
-      });
+    const element = document.getElementById(id.value);
+    window.requestAnimationFrame(function () {
+        element.style.transform = "rotateX(0) rotateY(0)";
+    });
   });
 })
 function transformElement(x, y) {
-    const element = document.getElementById(id.value);
-    let box = element.getBoundingClientRect();
-    const calcX = ( x - box.width / 2) / multiple;
-    const calcY = (box.height / 2 - y ) / multiple;
-    element.style.transform = "rotateX(" + calcY + "deg) " + "rotateY(" + calcX + "deg)";
+    const element = document.getElementById(id.value)
+    let box = element.getBoundingClientRect()
+    const calcX = ( x - box.width / 2) / multiple
+    const calcY = (box.height / 2 - y ) / multiple
+    element.style.transform = "rotateX(" + calcY + "deg) " + "rotateY(" + calcX + "deg)"
 }
 
 
@@ -47,7 +46,7 @@ function transformElement(x, y) {
 .home-box {
   background: url('@/assets/img/home/box.avif') no-repeat;
   background-size:100% 100% ;
-  aspect-ratio: 0.64 / 1;
+  aspect-ratio: 1;
   transform-style: preserve-3d;
   transition: all .1s;
 }
