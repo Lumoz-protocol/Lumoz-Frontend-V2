@@ -1,6 +1,6 @@
 export default {
   header: {
-    raas: 'Rollup As A Service',
+    raas: 'Modular Compute Layer',
     rollups: 'Rollups',
     points: 'Lumoz Points',
     community: {
@@ -14,9 +14,8 @@ export default {
   },
   footer: {
     solutions: 'Solutions',
-    s1: 'Computer Layer',
-    s2: 'Rollup as a Service',
-    s3: 'Rollups',
+    s1: 'Modular Compute Layer',
+    s2: 'Rollups',
     community: 'Community',
     c1: 'Lumoz Points',
     c2: 'Ecosystems',
@@ -81,9 +80,8 @@ export default {
     add: "Add Network"
   },
   raas: {
-    title1: 'ZK-Rollup as a Service with',
-    title2: 'Modular Sequencing, DA and',
-    title3: 'Compute Layer',
+    title1: 'Modular Compute Layer',
+    title2: 'for ZK-RaaS and More',
     building: 'Start Building',
     more: 'See More',
     content: 'The world\'s first RaaS with operational ZK-Rollups on the mainnet.',
@@ -98,15 +96,14 @@ export default {
       c2: 'Automatic Deployed Bridge',
       c3: 'Automatic Deployed Explorer',
       c4: 'Automatic Deployed Faucet',
-      c5: 'Lumoz Decentralized Compute Layer',
-      c6: 'ZK-Raas stack'
+      c5: 'Lumoz Decentralized Compute Layer'
     },
     why: {
       title: 'Why Choose Lumoz?',
       t1: 'Easily own a Rollup',
       t2: 'Scale your tokenomics',
       t3: 'Low-cost ZKP generation',
-      t4: 'Safer& Faster',
+      t4: 'Safer & Faster',
       t5: 'Native Cross-Rollup Communication',
       t6: 'Automatic Deployment',
       c1: 'Create a ZK-Rollup in few steps, No tech expertise needed.',

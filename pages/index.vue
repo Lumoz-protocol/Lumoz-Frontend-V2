@@ -43,6 +43,10 @@ const options = ref({
   css3: true
 })
 
+onMounted(() => {
+  fullpage.value.api.moveTo(1, 0)
+})
+
 const t = () => {}
 </script>
 <style scoped></style>

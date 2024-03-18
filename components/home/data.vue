@@ -55,7 +55,6 @@
               </div>
               <div class="circle1 w-10 h-10 z-0"></div>
               <div class="circle2 w-10 h-10 z-0"></div>
-              <div class="circle3 w-10 h-10 z-0"></div>
               <div class="w-28 h-28 border absolute rounded-full border-[#99999944]"></div>
               <div class="hidden lg:block w-40 h-40 border absolute rounded-full border-[#99999944]"></div>
           </div>
@@ -117,7 +116,7 @@ const scrollChange = (e) => {
 }
 .circle1, .circle2, .circle3  {
   animation-name: circleChange;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }

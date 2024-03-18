@@ -2,7 +2,7 @@
   <div class="mt-16 lg:mt-32">
     <h1 class="text-4xl font-bold text-center mb-12">{{ $t('raas.arc.title') }}</h1>
     <div class="lg:grid lg:grid-cols-3 gap-4 lg:gap-8">
-      <div class="lg:col-span-2 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between">
+      <div class="lg:col-span-3 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between">
         <div class="text-2xl slideShine font-bold">{{ $t('raas.arc.t1') }}</div>
         <div class="flex items-center">
           <RaasNet type="btc" />
@@ -13,11 +13,11 @@
           <RaasNet type="more" class="ml-4" />
         </div>
       </div>
-      <div class="raas-arc-shadow-right flex items-center justify-center text-lg font-bold rounded-2xl py-6 lg:py-0 mx-auto w-1/2 lg:w-full mt-4 lg:mt-0">
+      <!-- <div class="raas-arc-shadow-right flex items-center justify-center text-lg font-bold rounded-2xl py-6 lg:py-0 mx-auto w-1/2 lg:w-full mt-4 lg:mt-0">
         {{ $t('raas.arc.c1') }}
-      </div>
+      </div> -->
 
-      <div class="col-span-2 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between mt-4 lg:mt-0">
+      <div class="col-span-3 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between mt-4 lg:mt-0">
         <div class="text-2xl slideShine font-bold">{{ $t('raas.arc.t2') }}</div>
         <div class="flex items-center">
           <RaasNet type="polygon" />
@@ -28,11 +28,11 @@
           <RaasNet type="more" class="ml-4" />
         </div>
       </div>
-      <div class="raas-arc-shadow-right flex items-center justify-center text-lg font-bold rounded-2xl py-6 lg:py-0 mx-auto w-1/2 lg:w-full mt-4 lg:mt-0">
+      <!-- <div class="raas-arc-shadow-right flex items-center justify-center text-lg font-bold rounded-2xl py-6 lg:py-0 mx-auto w-1/2 lg:w-full mt-4 lg:mt-0">
         {{ $t('raas.arc.c2') }}
-      </div>
+      </div> -->
 
-      <div class="col-span-2 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between mt-4 lg:mt-0">
+      <div class="col-span-3 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between mt-4 lg:mt-0">
         <div class="text-2xl slideShine font-bold">{{ $t('raas.arc.t3') }}</div>
         <div class="flex items-center">
           <RaasNet type="eth" />
@@ -43,11 +43,11 @@
           <RaasNet type="more" class="ml-4" />
         </div>
       </div>
-      <div class="raas-arc-shadow-right flex items-center justify-center text-lg font-bold rounded-2xl py-6 lg:py-0 mx-auto w-1/2 lg:w-full mt-4 lg:mt-0">
+      <!-- <div class="raas-arc-shadow-right flex items-center justify-center text-lg font-bold rounded-2xl py-6 lg:py-0 mx-auto w-1/2 lg:w-full mt-4 lg:mt-0">
         {{ $t('raas.arc.c3') }}
-      </div>
+      </div> -->
 
-      <div class="col-span-2 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between mt-4 lg:mt-0">
+      <div class="col-span-3 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between mt-4 lg:mt-0">
         <div class="text-2xl slideShine font-bold">{{ $t('raas.arc.t4') }}</div>
         <div class="flex items-center">
           <RaasNet type="lumoz" />
@@ -56,9 +56,9 @@
           <RaasNet type="more" class="ml-4" />
         </div>
       </div>
-      <div class="raas-arc-shadow-right flex items-center justify-center text-lg font-bold rounded-2xl py-6 lg:py-0 mx-auto w-1/2 lg:w-full mt-4 lg:mt-0">
+      <!-- <div class="raas-arc-shadow-right flex items-center justify-center text-lg font-bold rounded-2xl py-6 lg:py-0 mx-auto w-1/2 lg:w-full mt-4 lg:mt-0">
         {{ $t('raas.arc.c4') }}
-      </div>
+      </div> -->
 
       <div class="col-span-3 raas-arc-shadow p-8 rounded-2xl flex items-center justify-between mt-4 lg:mt-0">
         <div class="text-2xl slideShine font-bold">{{ $t('raas.arc.t5') }}</div>

@@ -8,7 +8,7 @@
   </div> 
   <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-ben-box full-lock-scroll">
     <div class="h-full w-full pt-20 overflow-y-auto hide-scroll full-lock-scroll" id="home-ben" @mousewheel="scrollChange">
-    <div class="px-8 py-10 text-2xl lg:text-4xl font-bold home-arc-1 animate__animated animate__fadeIn animate__slower">{{ $t('home.ben.title') }}</div>
+      <div class="px-8 py-10 text-2xl lg:text-4xl font-bold home-arc-1 animate__animated animate__fadeIn animate__slower">{{ $t('home.ben.title') }}</div>
       <div class="mt-10 lg:mt-30 px-30 md:px-20 lg:px-40 xl:px-20">
         <div class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           <div class="flex items-center justify-center">
