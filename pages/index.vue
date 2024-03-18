@@ -4,7 +4,7 @@
       <div class="section">
         <HomeBanner :active="now === 0" />
       </div>
-      <div class="section bg-black">
+      <div class="section bg-black full-lock-scroll">
         <HomeArc :active="now === 1" @next="fullpage.api.moveTo(3, 0)"  @before="fullpage.api.moveTo(1, 0)" />
       </div>
       <div class="section">
@@ -14,10 +14,10 @@
         <HomeAi :active="now === 3" />
       </div>
       <div class="section">
-        <HomeData :active="now === 4" @next="fullpage.api.moveTo(6, 0)"  @before="fullpage.api.moveTo(4, 0)" />
+        <HomeData :active="now === 4" />
       </div>
-      <div class="section">
-        <HomeBenifit :active="now === 5" />
+      <div class="section full-lock-scroll">
+        <HomeBenifit :active="now === 5" @next="t"  @before="fullpage.api.moveTo(5, 0)" />
       </div>
     </full-page>
   </div>
@@ -28,12 +28,13 @@ const fullpage = ref(null)
 const options = ref({
   licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
   navigation: false,
-  anchors: ['','','','','','','','','',''],
+  anchors: ['','','','','','','','',],
   sectionsColor: [],
-  controlArrows: false,
+  controlArrows: true,
   lockAnchors: false,
   recordHistory:false,
-  scrollOverflow: true,
+  scrollOverflow: false,
+  normalScrollElements: '.full-lock-scroll',
   scrollingSpeed: 700,
   resize: true,
   beforeLeave: function(origin, destination, direction, trigger){
@@ -41,5 +42,7 @@ const options = ref({
   },
   css3: true
 })
+
+const t = () => {}
 </script>
 <style scoped></style>

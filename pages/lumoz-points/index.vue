@@ -164,7 +164,7 @@ watch(() => walletStore.account, () => {
   if (walletStore.account) {
     getData()
   } else {
-    info.value = data
+    info.value = JSON.parse(JSON.stringify(data))
   }
 })
 
@@ -186,9 +186,9 @@ const getData = async() => {
 
 const user = computed(() => {
   const _info = info.value
-  return  info.galxe_pre_alpha +
-          info.galxe_alpha +
-          info.alpha_extra_pk_team
+  return  _info.galxe_pre_alpha +
+          _info.galxe_alpha +
+          _info.alpha_extra_pk_team
 })
 
 const validator = computed(() => {

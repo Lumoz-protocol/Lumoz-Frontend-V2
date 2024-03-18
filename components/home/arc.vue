@@ -1,14 +1,14 @@
 <template>
 <div>
-  <div class="absolute left-0 right-0 top-30">
+  <div class="absolute left-0 right-0 top-30 z-0 full-lock-scroll">
     <div v-if="active" class="container mx-auto">
       <div class="text-2xl lg:text-4xl font-bold pl-4 lg:pl-0 home-arc-1 animate__animated animate__fadeInUp animate__slower">{{ $t('home.arc.title') }}</div>
       <div class="text-6xl lg:text-8xl xl:text-9xl font-bold text-[#ffffff22] mt-8 home-arc-2 animate__animated animate__fadeInUp animate__delay-1s animate__slower">{{ $t('home.arc.title').toUpperCase() }}</div>
       <div class="text-6xl lg:text-8xl xl:text-9xl font-bold mt-8 home-arc-3 animate__animated animate__fadeInUp animate__delay-2s animate__slower">{{ $t('home.arc.title').toUpperCase() }}</div>
     </div>
   </div> 
-  <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-arc-box" id="b-animation">
-    <div class="h-full w-full pt-20 overflow-y-auto hide-scroll" id="home-arc" @mousewheel="scrollChange">
+  <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-arc-box z-10 full-lock-scroll" id="b-animation">
+    <div class="h-full w-full pt-20 overflow-y-auto hide-scroll full-lock-scroll" id="home-arc" @mousewheel="scrollChange">
       <div class="mx-25 md:mx-10 lg:mx-20 xl:mx-40 flex justify-end pt-30 pb-40 lg:(pt-40 pb-0)">
         <div class="w-full xl:w-3/5">
           <HomeBox class="md:(w-1/2 ml-1/4) lg:(w-2/5 ml-3/5)">
@@ -43,6 +43,7 @@
 </div>
 </template>
 <script setup lang="ts">
+const emit = defineEmits(['before', 'next'])
 const props = withDefaults(
   defineProps<{
     active: boolean
@@ -52,39 +53,19 @@ const props = withDefaults(
   }
 )
 
-let lock = true
-let timer = null
-
-watch(() => props.active, () => {
-  if (timer) {
-    clearTimeout(timer)
-  }
-  if (props.active) {
-    lock = true
-    timer = setTimeout(() => {
-      lock = false
-    }, 2000)
-  } else {
-    lock = false
-  }
-})
-
 const scrollChange = (e) => {
-  if (lock) {
-    e.stopImmediatePropagation()
-    return
-  }
+  e.stopImmediatePropagation()
   const dom = document.getElementById('home-arc')
   const scrollTop = dom.scrollTop
   const height = dom.clientHeight
   const scrollHeight = dom.scrollHeight
 
-  if (scrollTop === 0) {
+  if (e.deltaY < 0 && scrollTop === 0) {
     dom.scrollTop = 1
-  } else if (scrollTop + height >= scrollHeight - 0.5) {
+    emit('before')
+  } else if (e.deltaY > 0 && scrollTop + height >= scrollHeight - 0.5) {
     dom.scrollTop = scrollTop + height - 1
-  } else {
-    e.stopImmediatePropagation()
+    emit('next')
   }
 }
 
