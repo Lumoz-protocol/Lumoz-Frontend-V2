@@ -4,7 +4,7 @@
       <div class="section">
         <HomeBanner :active="now === 0" />
       </div>
-      <div class="section bg-[#000000] full-lock-scroll">
+      <!-- <div class="section bg-[#000000] full-lock-scroll">
         <HomeArc :active="now === 1" @next="fullpage.api.moveTo(3, 0)"  @before="fullpage.api.moveTo(1, 0)" />
       </div>
       <div class="section">
@@ -18,7 +18,7 @@
       </div>
       <div class="section full-lock-scroll">
         <HomeBenifit :active="now === 5" @next="t"  @before="fullpage.api.moveTo(5, 0)" />
-      </div>
+      </div> -->
     </full-page>
   </div>
 </template>

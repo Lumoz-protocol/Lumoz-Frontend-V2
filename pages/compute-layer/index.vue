@@ -1,12 +1,13 @@
 <template>
   <div class="container mx-auto px-2 lg:px-0">
-    <div class="flex items-center justify-between raas-banner">
+    <div class="flex items-center justify-between raas-banner mt-12 lg:mt-0">
       <div class="w-full mt-16 lg:(mt-0) flex flex-col items-center lg:items-start text-3xl xl:text-4xl 2xl:text-5xl font-bold">
         <h1>{{ $t('raas.title1') }}</h1>
         <h1 class="mt-4">{{ $t('raas.title2') }}</h1>
         <HomeButton @click="to('https://docs.zkfair.io/')" class="mt-16 text-base w-40" :word="$t('raas.building')" />
       </div>
-      <img src="@/assets/img/raas/banner.avif" class="hidden lg:block w-1/2 xl:w-1/2">
+      
+      <img src="@/assets/img/raas/banner.svg" class="hidden lg:block xl:w-1/2 my-12">
     </div>
     <div class="raas-box rounded-2xl flex flex-col items-center justify-between py-8 lg:py-32 mt-16 lg:mt-0">
       <div class="text-3xl lg:text-4xl lg:w-1/2 text-center font-bold px-4 lg:px-0">{{ $t('raas.content') }}</div>
@@ -87,7 +88,7 @@ const info = computed(() => {
 <style scoped>
 @media (max-width: 1024px) {
   .raas-banner {
-    background: url(@/assets/img/raas/banner.avif) no-repeat;
+    background: url(@/assets/img/raas/banner.svg) no-repeat;
     background-size: auto 100%;
     background-position: center;
   }

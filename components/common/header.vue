@@ -70,7 +70,7 @@ const menuShow = ref(false)
 const navHide = ref(false)
 
 const singleMenus = ref([
-  { name: vm.$t('header.raas'), link: '/computer-layer' },
+  { name: vm.$t('header.raas'), link: '/compute-layer' },
   { name: vm.$t('header.rollups'), link: '/rollups' },
   { name: vm.$t('header.points'), link: '/lumoz-points' },
 ])

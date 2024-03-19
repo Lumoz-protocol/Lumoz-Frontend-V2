@@ -52,7 +52,7 @@ const footer = ref([
     list: [
       {
         name: vm.$t('footer.s1'),
-        url: '/computer-layer'
+        url: '/compute-layer'
       },
       {
         name: vm.$t('footer.s2'),

@@ -15,6 +15,7 @@
 </div>
 </template>
 <script setup lang="ts">
+const router = useRouter()
 const props = withDefaults(
   defineProps<{
     active: boolean
@@ -25,7 +26,8 @@ const props = withDefaults(
 )
 
 const to = () => {
-  window.open('https://docs.lumoz.org')
+  // window.open('https://docs.lumoz.org')
+  router.push('/compute-layer')
 }
 </script>
 
