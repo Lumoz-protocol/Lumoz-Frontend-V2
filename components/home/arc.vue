@@ -9,7 +9,7 @@
   </div> 
   <div v-show="active" class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-arc-box z-10 full-lock-scroll" id="b-animation">
     <div class="h-full w-full pt-20 overflow-y-auto hide-scroll full-lock-scroll flex items-center justify-center" id="home-arc" @mousewheel="scrollChange">
-      <img :src="src" alt="" class="w-2/3">
+      <img :src="src" alt="" class="h-full">
       <!-- <div class="mx-25 md:mx-10 lg:mx-20 xl:mx-40 flex justify-end pt-30 pb-40 lg:(pt-40 pb-0)">
         <div class="w-full xl:w-3/5">
           <HomeBox class="md:(w-1/2 ml-1/4) lg:(w-2/5 ml-3/5)">
