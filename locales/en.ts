@@ -25,6 +25,7 @@ export default {
     find: 'Find Us'
   },
   home: {
+    service: 'SERVICE FOR',
     banner: {
       title: 'Modular Compute Layer For',
       content: 'RaaS, AI, And More...',

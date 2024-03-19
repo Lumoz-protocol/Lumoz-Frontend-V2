@@ -27,13 +27,16 @@
           <div class="text-text-500 mt-4">{{ $t('rollups.transactions') }}</div>
         </div>
         <div class="flex flex-col items-center justify-center border-r border-[#ffffff44]">
-          <CountUp
-            :end-val="2.22"
-            :duration="2"
-            :decimal-places="0"
-            :delay="2"
-            class="text-xl lg:text-4xl font-bold"
-          ></CountUp>
+          <div class="text-xl lg:text-4xl font-bold flex items-center">
+            <span class="mr-1">$</span>
+            <CountUp
+              :end-val="3.73"
+              :duration="2"
+              :decimal-places="2"
+              :delay="2"
+            ></CountUp>
+            <span class="ml-1">B</span>
+          </div>
           <div class="text-text-500 mt-4">{{ $t('rollups.tvl') }}</div>
         </div>
         <div class="flex flex-col items-center justify-center">

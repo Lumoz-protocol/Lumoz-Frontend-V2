@@ -8,8 +8,8 @@
             <h1 class="text-2xl lg:text-6xl font-bold typed-out-1s text-center">{{ $t('home.data.title2') }}</h1>
           </div>
         </div>
-        <div class="home-data-data-box rounded-lg lg:rounded-full mt-12 grid grid-cols-2 w-full lg:w-2/3 xl:w-1/2 relative">
-          <div v-if="active" class="home-data-grid-1 flex flex-col items-center justify-center lg:(ml-10 mt-10)">
+        <div class="home-data-data-box rounded-lg lg:rounded-full mt-12 grid grid-cols-2 w-full lg:w-2/3 xl:w-2/3 relative">
+          <div v-if="active" class="home-data-grid-1 flex flex-col items-center justify-center lg:(ml-20 mt-20)">
             <CountUp
               :end-val="Number(28403 || 0)"
               :duration="2"
@@ -19,7 +19,7 @@
             ></CountUp>
             <div class="mt-4 text-[#999]">{{ $t('home.data.nodes') }}</div>
           </div>
-          <div v-if="active" class="flex flex-col items-center justify-center lg:(mr-10 mt-10)">
+          <div v-if="active" class="flex flex-col items-center justify-center lg:(mr-20 mt-20)">
             <CountUp
               :end-val="Number(16 || 0)"
               :duration="2"
@@ -29,7 +29,7 @@
             ></CountUp>
             <div class="mt-4 text-[#999]">{{ $t('home.data.ser') }}</div>
           </div>
-          <div v-if="active" class="flex flex-col items-center justify-center lg:(ml-10 mb-10)">
+          <div v-if="active" class="flex flex-col items-center justify-center lg:(ml-20 mb-20)">
             <CountUp
               :end-val="Number(20002146 || 0)"
               :duration="2"
@@ -39,7 +39,7 @@
             ></CountUp>
             <div class="mt-4 text-[#999]">{{ $t('home.data.trans') }}</div>
           </div>
-          <div v-if="active" class="home-data-grid-2 flex flex-col items-center justify-center lg:(mr-10 mb-10)">
+          <div v-if="active" class="home-data-grid-2 flex flex-col items-center justify-center lg:(mr-20 mb-20)">
             <CountUp
               :end-val="Number(4791671 || 0)"
               :duration="2"
@@ -89,10 +89,7 @@ const scrollChange = (e) => {
 </script>
 <style scoped>
 .home-data-data-box {
-  background: url('@/assets/img/home/light.png');
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
+  background:-webkit-radial-gradient(#BEFE0022 0%, #1B1B1A 60%);
   aspect-ratio: 2;
 }
 .home-data-grid-1 {
