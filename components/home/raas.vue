@@ -46,7 +46,7 @@ watch(() => props.active, () => {
         })
     }
 
-    preloadImage(["c_00000.avif","c_00001.avif","c_00002.avif","c_00003.avif","c_00004.avif","c_00005.avif","c_00006.avif","c_00007.avif","c_00008.avif","c_00009.avif","c_00010.avif","c_00011.avif","c_00012.avif","c_00013.avif","c_00014.avif","c_00015.avif","c_00016.avif","c_00017.avif","c_00018.avif","c_00019.avif","c_00020.avif","c_00021.avif","c_00022.avif","c_00023.avif","c_00024.avif","c_00025.avif","c_00026.avif","c_00027.avif","c_00028.avif","c_00029.avif","c_00030.avif","c_00031.avif","c_00032.avif","c_00033.avif","c_00034.avif","c_00035.avif","c_00036.avif","c_00037.avif","c_00038.avif","c_00039.avif"], async() => {
+    preloadImage(["c_00000.avif","c_00001.avif","c_00002.avif","c_00003.avif","c_00004.avif","c_00005.avif","c_00006.avif","c_00007.avif","c_00008.avif","c_00009.avif","c_00010.avif","c_00011.avif","c_00012.avif","c_00013.avif","c_00014.avif","c_00015.avif","c_00016.avif","c_00017.avif","c_00018.avif","c_00019.avif","c_00020.avif","c_00021.avif","c_00022.avif","c_00023.avif","c_00024.avif","c_00025.avif","c_00026.avif","c_00027.avif","c_00028.avif","c_00029.avif","c_00030.avif","c_00031.avif","c_00032.avif","c_00033.avif","c_00034.avif","c_00035.avif","c_00036.avif","c_00037.avif","c_00038.avif","c_00039.avif","c_00040.avif","c_00041.avif","c_00042.avif","c_00043.avif","c_00044.avif","c_00045.avif","c_00046.avif","c_00047.avif","c_00048.avif","c_00049.avif"], async() => {
       await nextTick()
       // document.getElementById('b-animation').className += " b-animation"
       show()
@@ -61,7 +61,7 @@ const show = () => {
       src.value = `/animate/c/c_000${index.value < 10 ? '0' + index.value : index.value}.avif`
       index.value = index.value + 1
       show()
-    }, 50)
+    }, 20)
   }
 }
 </script>
