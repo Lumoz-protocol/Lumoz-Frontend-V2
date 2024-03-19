@@ -8,7 +8,8 @@
     </div>
   </div> 
   <div v-show="active" class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-arc-box z-10 full-lock-scroll" id="b-animation">
-    <div  class="h-full w-full pt-20 overflow-y-auto hide-scroll full-lock-scroll" id="home-arc" @mousewheel="scrollChange">
+    <div class="h-full w-full pt-20 overflow-y-auto hide-scroll full-lock-scroll flex items-center justify-center" id="home-arc" @mousewheel="scrollChange">
+      <img :src="src" alt="" class="w-2/3">
       <!-- <div class="mx-25 md:mx-10 lg:mx-20 xl:mx-40 flex justify-end pt-30 pb-40 lg:(pt-40 pb-0)">
         <div class="w-full xl:w-3/5">
           <HomeBox class="md:(w-1/2 ml-1/4) lg:(w-2/5 ml-3/5)">
@@ -53,6 +54,9 @@ const props = withDefaults(
   }
 )
 
+const src = ref('/animate/b/b_00000.avif')
+const index = ref(0)
+
 const scrollChange = (e) => {
   e.stopImmediatePropagation()
   const dom = document.getElementById('home-arc')
@@ -69,29 +73,44 @@ const scrollChange = (e) => {
   }
 }
 
-onMounted(() => {
-  function preloadImage(names, cb, prefix){
-      window.gkaCache = window.gkaCache || [];
-      var n = 0,img,imgs = {};
-      names.forEach(function(name) {
-          img = new Image();
-          window.gkaCache.push(img);
-          img.onload = (function(name, img) {
-              return function() {
+watch(() => props.active, () => {
+  if (props.active) {
+    src.value = '/animate/b/b_00000.avif'
+    index.value = 0
+    function preloadImage(names, cb, prefix){
+        window.gkaCache = window.gkaCache || [];
+        var n = 0,img,imgs = {};
+        names.forEach(function(name) {
+            img = new Image();
+            window.gkaCache.push(img);
+            img.onload = (function(name, img) {
+                return function() {
                   imgs[name] = img;
                   (++n === names.length) && cb && cb(imgs);
-              }
-          })(name, img);
-          img.src = (prefix || '') + name;
-      })
-  }
+                }
+            })(name, img);
+            img.src = (prefix || '') + name;
+        })
+    }
 
-  preloadImage(["b_00000.avif","b_00001.avif","b_00002.avif","b_00003.avif","b_00004.avif","b_00005.avif","b_00006.avif","b_00007.avif","b_00008.avif","b_00009.avif","b_00010.avif","b_00011.avif","b_00012.avif","b_00013.avif","b_00014.avif","b_00015.avif","b_00016.avif","b_00017.avif","b_00018.avif","b_00019.avif","b_00020.avif","b_00021.avif","b_00022.avif","b_00023.avif","b_00024.avif","b_00025.avif","b_00026.avif","b_00027.avif","b_00028.avif","b_00029.avif","b_00030.avif","b_00031.avif","b_00032.avif","b_00033.avif","b_00034.avif","b_00035.avif","b_00036.avif","b_00037.avif","b_00038.avif","b_00039.avif"], function() {
-    setTimeout(() => {
-      document.getElementById('b-animation').className += " b-animation"
-    }, 2000)
-  }, "/animate/b/")
+    preloadImage(["b_00000.avif","b_00001.avif","b_00002.avif","b_00003.avif","b_00004.avif","b_00005.avif","b_00006.avif","b_00007.avif","b_00008.avif","b_00009.avif","b_00010.avif","b_00011.avif","b_00012.avif","b_00013.avif","b_00014.avif","b_00015.avif","b_00016.avif","b_00017.avif","b_00018.avif","b_00019.avif","b_00020.avif","b_00021.avif","b_00022.avif","b_00023.avif","b_00024.avif","b_00025.avif","b_00026.avif","b_00027.avif","b_00028.avif","b_00029.avif","b_00030.avif","b_00031.avif","b_00032.avif","b_00033.avif","b_00034.avif","b_00035.avif","b_00036.avif","b_00037.avif","b_00038.avif","b_00039.avif"], async() => {
+      await nextTick()
+      // document.getElementById('b-animation').className += " b-animation"
+      show()
+    }, "/animate/b/")
+  }
 })
+
+
+const show = () => {
+  if (index.value < 39) {
+    setTimeout(() => {
+      src.value = `/animate/b/b_000${index.value < 10 ? '0' + index.value : index.value}.avif`
+      index.value = index.value + 1
+      show()
+    }, 50)
+  }
+}
 
 </script>
 <style scoped>

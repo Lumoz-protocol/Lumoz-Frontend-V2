@@ -1,6 +1,6 @@
 <template>
 <div>
-  <video v-if="active" class="absolute top-0 bottom-0 left-0 right-0 home-video" id="Id" playsinline="true" autoplay="true" muted="false" loop="true">
+  <video v-if="active" class="absolute top-0 bottom-0 left-0 right-0 home-video" playsinline="true" autoplay="true" muted="false" loop="true">
     <source src="@/assets/img/home/banner.mp4" type="video/mp4">
   </video>
   <div class="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center home-banner-box">
