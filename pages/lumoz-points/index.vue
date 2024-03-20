@@ -1,7 +1,11 @@
 <template>
   <div class="container mx-auto">
-    <a href="https://dragon-slayer.zkfair.io" class="w-full lg:w-2/3 lg:ml-1/6 cursor-pointer hvr-grow">
+    <a href="https://dragon-slayer.zkfair.io" target="_blank" class="w-full lg:w-2/3 lg:ml-1/6 cursor-pointer hvr-grow relative">
       <img src="@/assets/img/points/dragon.avif" class="w-full" alt="">
+      <div class="absolute bottom-8 left-8 lg:(bottom-15 left-15)">
+        <div class="lg:text-2xl font-bold">{{ $t('points.dragon') }}</div>
+        <div>{{ $t('points.dragont') }}</div>
+      </div>
     </a>
     <div class="points-box mt-8">
       <div class="text-cnter h-1/4 flex items-center justify-center text-xs md:text-2xl font-bold text-primary-900">{{ $t('points.points') }}</div>

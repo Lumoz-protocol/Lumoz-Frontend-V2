@@ -134,6 +134,7 @@ export default {
     connect: 'Connect Wallet to Check your Points',
     total: 'Total Points',
     dragon: 'Dragon Slayer',
+    dragont: 'Earn 30M Lumoz Points+ 50000 USDC',
     p: 'Points',
     final: 'Final Wave',
     user: 'User Rewards',
