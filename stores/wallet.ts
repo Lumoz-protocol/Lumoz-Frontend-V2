@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ethers } from 'ethers'
-import { ZKFAIR } from '~~/constants/networks'
+import { LUMOZ } from '~~/constants/networks'
 
 export type Bridge = {
   provider: any
@@ -32,7 +32,7 @@ export const useWalletStore = defineStore('wallet', {
         bridge.provider = provider
         this.account = account
         if (bridge.provider) {
-          bridge.web3Provider = new ethers.providers.Web3Provider(provider, { name: provider.name, chainId: ZKFAIR.chainId })
+          bridge.web3Provider = new ethers.providers.Web3Provider(provider, { name: provider.name, chainId: LUMOZ.chainId })
           bridge.signer = bridge.web3Provider.getSigner()
         }
       } catch (error) {

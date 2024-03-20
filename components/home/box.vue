@@ -12,20 +12,27 @@
 const id = ref('home-box'+Number(new Date())+Math.floor(Math.random() * 1000))
 const multiple = 30
 
-onMounted(() => {
-  const mouseOverContainer = document.getElementById('outer'+id.value)
-  mouseOverContainer.addEventListener("mousemove", (e) => {
-      window.requestAnimationFrame(function () {
-          transformElement(e.offsetX, e.offsetY);
-      });
-  });
 
-  mouseOverContainer.addEventListener("mouseleave", (e) => {
-    const element = document.getElementById(id.value);
-    window.requestAnimationFrame(function () {
-        element.style.transform = "rotateX(0) rotateY(0)";
+onMounted(() => {
+  try {
+    const mouseOverContainer = document.getElementById('outer'+id.value)
+    console.log(mouseOverContainer)
+    mouseOverContainer.addEventListener("mousemove", (e) => {
+        window.requestAnimationFrame(function () {
+            transformElement(e.offsetX, e.offsetY);
+        });
     });
-  });
+
+    mouseOverContainer.addEventListener("mouseleave", (e) => {
+      const element = document.getElementById(id.value);
+      window.requestAnimationFrame(function () {
+          element.style.transform = "rotateX(0) rotateY(0)";
+      });
+    });
+  } catch {
+
+  }
+ 
 })
 function transformElement(x, y) {
     const element = document.getElementById(id.value)

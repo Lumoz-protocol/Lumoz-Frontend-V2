@@ -46,8 +46,7 @@ export default {
       content: 'The decentralized computing layer of Lumoz can providestable and affordable computational power for the Web3AI platform, enabling AI projects to focus on businessdevelopment. Meanwhile, Lumoz, as a public chain, canseamlessly integrate with Web3 AI, facilitating the sharingand exchange of data and resources. This integrationoffers AI projects a broader space for development.'
     },
     data: {
-      title1: 'Decentralized, efficient,',
-      title2: 'and reliable.',
+      title: 'Decentralized, efficient, and reliable.',
       nodes: 'Nodes',
       ser: 'Servicing Rollups',
       trans: 'Process Transactions',
@@ -80,12 +79,24 @@ export default {
     bridge: 'Bridge',
     add: "Add Network"
   },
-  raas: {
-    title1: 'Modular Compute Layer',
-    title2: 'for ZK-RaaS and More',
-    building: 'Start Building',
-    more: 'See More',
-    content: 'The world\'s first RaaS with operational ZK-Rollups on the mainnet.',
+  com: {
+    title1: 'The First Modular Prover Network',
+    building: 'Get In Touch',
+    content1: 'Lumoz is a modular compute network',
+    content2: 'that allows anyone to easily and quickly launch their own zk-rollup.',
+    t1: 'Compute for ZK-Rollup',
+    c1: 'Lumoz provides cloud infrastructure for ZKP computation that is compatible with most types of ZK-Rollups (such as Polygon CDK, zkSync, StarkNet, Scroll, etc.). The ZK-PoW algorithm combines miners\' computational resources with cloud infrastructure to provide ZKP computation capabilities for various ZK-Rollups.',
+    t2: 'Optimized ZKP Network',
+    c2: 'Lumoz has made significant efforts and improvements in ZKP computation and submission. By supporting parallel computation and sequential submission of ZKP, as well as optimizing ZKP recursive aggregation algorithms and improving network communication, they have enhanced the performance and efficiency of ZKP computation while reducing computational costs.',
+    how: {
+      title: 'How it Works?',
+      t1: 'Optimizing ZKP computation and submission mechanism.',
+      t2: 'The high-performance prover component.',
+      t3: 'Two-step submission.',
+      c1: 'Supporting parallel computation and sequential submission of ZKP, while optimizing the ZKP recursive aggregation algorithm.',
+      c2: 'The Aggregator is an important component of the Prover, responsible for receiving, submitting, and managing ZKP proof tasks.',
+      c3: 'Adopting a pattern of first submission + later verification, eliminating the need for unnecessary aggregation calculation of proof and addresses, achieving parallel computation of multiple tasks and sequential submission of ZKP.'
+    },
     arc: {
       title: 'Architecture',
       t1: 'Layer1',
