@@ -1,7 +1,7 @@
 <template>
-  <div class="rounded-full raas-net-box h-8 lg:h-14 cursor-pointer hvr-float">
+  <div class="rounded-full raas-net-box h-8 xl:h-10 cursor-pointer hvr-float">
     <div class="w-full h-full flex items-center justify-center ">
-      <img :src="img" class="h-4 lg:h-8" />
+      <img :src="img" class="h-4 xl:h-6" />
     </div>
   </div>
 </template>

@@ -7,7 +7,7 @@
         </div>
         <div class="home-data-data-box rounded-lg lg:rounded-full grid grid-cols-2 w-full relative">
           <div class="home-data-grid-1 flex flex-col items-center justify-center lg:(pr-25 pb-15 items-end justify-end) xl:(pr-50 pb-30)">
-            <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center justify-center flex-col w-40">
               <CountUp
                 :end-val="Number(28403 || 0)"
                 :duration="2"
@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="flex flex-col items-center justify-center lg:(pl-25 pb-15 items-start justify-end) xl:(pl-50 pb-30)">
-            <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center justify-center flex-col w-40">
               <CountUp
                 :end-val="Number(16 || 0)"
                 :duration="2"
@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="flex flex-col items-center justify-center lg:(pr-25 mt-15 items-end justify-start) xl:(pr-50 mt-30)">
-            <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center justify-center flex-col w-40">
               <CountUp
                 :end-val="Number(20002146 || 0)"
                 :duration="2"
@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="home-data-grid-2 flex flex-col items-center justify-center lg:(pl-25 pt-15 items-start justify-start) xl:(pl-50 pt-30)">
-            <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center justify-center flex-col w-40">
               <CountUp
                 :end-val="Number(4791671 || 0)"
                 :duration="2"

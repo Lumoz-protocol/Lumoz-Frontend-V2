@@ -99,8 +99,8 @@ export default {
     },
     arc: {
       title: 'Architecture',
-      t1: 'Layer1',
-      t2: 'zkEVM',
+      t1: 'Layer 1',
+      t2: 'zkEVM Stack',
       t3: 'Data Availability',
       t4: 'Sequencer',
       t5: 'Prover',
@@ -108,7 +108,9 @@ export default {
       c2: 'Automatic Deployed Bridge',
       c3: 'Automatic Deployed Explorer',
       c4: 'Automatic Deployed Faucet',
-      c5: 'Lumoz Decentralized Compute Layer'
+      c5: 'Lumoz Decentralized Compute Layer',
+      des1: 'The First and Only Prover Network',
+      des2: 'In addition to common modules like Settlement, Data Availability, and Sequencer, a modular ZK-Rollup consists of a crucial component: the prover responsible for generating ZKPs (Zero Knowledge Proofs). Currently, Lumoz is the only provider in the modular rollup space offering a modular prover network.'
     },
     why: {
       title: 'Why Choose Lumoz?',

@@ -6,7 +6,7 @@
       <div class="mt-10">
         <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div class="flex items-center justify-center">
-            <HomeBox class="px-20 xl:(w-96 px-0)" a>
+            <HomeBox class="px-20 xl:(w-96 px-0)">
               <div class="flex flex-col text-black h-full">
                 <div class="text-2xl h-12 pl-4 font-bold">{{ $t('home.ben.t1') }}</div>
                 <div class="text-xl px-4 mb-8 xl:text-xl mt-8">{{ $t('home.ben.c1') }}</div>
