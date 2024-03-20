@@ -4,7 +4,9 @@
       <h1 class="text-3xl lg:text-5xl font-bold">{{ $t('com.title1') }}</h1>
       <p class="mt-4 text-sm lg:text-xl">{{ $t('com.content1') }}</p>
       <p class="text-sm lg:text-xl">{{ $t('com.content2') }}</p>
-      <HomeButton @click="to('https://docs.lumoz.org/')" class="mt-8 text-base w-40" :word="$t('com.building')" />
+      <a href="mailto:contact@lumoz.org">
+        <HomeButton @click="to('https://docs.lumoz.org/')" class="mt-8 text-base w-40" :word="$t('com.building')" />
+      </a>
     </div>
     <div class="h-30"></div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 container mx-auto pb-10 lg:pb-20">
