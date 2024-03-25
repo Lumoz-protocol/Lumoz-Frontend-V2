@@ -44,15 +44,14 @@
               <HomeButton @click="to('https://dragon-slayer.zkfair.io')" light class="w-32" :word="$t('points.more')" />
             </div>
             <div class="flex items-center">
-              <div class="text-xl lg:text-3xl mr-4 font-bold points-text">-</div>
-              <!-- <CountUp
-                :end-val="Number(info.total_points || 0)"
+              <CountUp
+                :end-val="Number(dragon || 0)"
                 :duration="2"
                 :decimal-places="0"
                 :delay="2"
-                class="text-2xl lg:text-4xl text-primary-900 font-bold"
-              ></CountUp> -->
-              <!-- <div class="text-text-dark">{{ $t('points.p') }}</div> -->
+                class="text-xl lg:text-3xl font-bold mr-4"
+              ></CountUp>
+              <div class="text-text-dark">{{ $t('points.p') }}</div>
             </div>
           </div>
         </div>
@@ -150,6 +149,9 @@ const data = {
   alpha_extra_validator_rank_11: 0,
   alpha_extra_validator_rank_12: 0,
   alpha_extra_validator_rank_9: 70,
+  dragon_slayer_phase_1: 0,
+  dragon_slayer_phase_2: 0,
+  dragon_slayer_phase_3: 0,
   galxe_alpha: 0,
   galxe_pre_alpha: 0,
   miner_alpha_cpu: 0,
@@ -203,6 +205,13 @@ const validator = computed(() => {
           _info.alpha_extra_validator_rank_10+
           _info.alpha_extra_validator_rank_11+
           _info.alpha_extra_validator_rank_12
+})
+
+const dragon = computed(() => {
+  const _info = info.value
+  return  _info.dragon_slayer_phase_1 +
+          _info.dragon_slayer_phase_2 +
+          _info.dragon_slayer_phase_3
 })
 
 const miner = computed(() => {

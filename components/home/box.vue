@@ -53,7 +53,7 @@ function transformElement(x, y) {
 .home-box {
   background: url('@/assets/img/home/box.avif') no-repeat;
   background-size:100% 100% ;
-  aspect-ratio: 1;
+  aspect-ratio: 4/5;
   transform-style: preserve-3d;
   transition: all .1s;
 }

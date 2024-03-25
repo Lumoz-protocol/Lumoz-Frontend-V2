@@ -1,9 +1,9 @@
 <template>
-  <div class="home-data-box mt-32">
+  <div class="home-data-box mt-12 lg:mt-32">
     <div class="h-full w-full pt-20 overflow-y-auto hide-scroll flex items-center justify-center">
       <div class="flex items-center flex-col w-full px-4 lg:px-0">
         <div>
-          <h1 class="text-3xl lg:text-4xl font-bold">{{ $t('home.data.title') }}</h1>
+          <h1 class="text-3xl lg:text-6xl font-bold text-center">{{ $t('home.data.title') }}</h1>
         </div>
         <div class="home-data-data-box rounded-lg lg:rounded-full grid grid-cols-2 w-full relative">
           <div class="home-data-grid-1 flex flex-col items-center justify-center lg:(pr-25 pb-15 items-end justify-end) xl:(pr-50 pb-30)">

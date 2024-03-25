@@ -80,10 +80,9 @@ export default {
     add: "Add Network"
   },
   com: {
-    title1: 'The First Modular Prover Network',
+    title: 'The First Modular Prover Network',
     building: 'Get In Touch',
-    content1: 'Lumoz is a modular compute network',
-    content2: 'that allows anyone to easily and quickly launch their own zk-rollup.',
+    content: 'Lumoz is a modular compute network that allows anyone to easily and quickly launch their own zk-rollup.',
     t1: 'Compute for ZK-Rollup',
     c1: 'Lumoz provides cloud infrastructure for ZKP computation that is compatible with most types of ZK-Rollups (such as Polygon CDK, zkSync, StarkNet, Scroll, etc.). The ZK-PoW algorithm combines miners\' computational resources with cloud infrastructure to provide ZKP computation capabilities for various ZK-Rollups.',
     t2: 'Optimized ZKP Network',
