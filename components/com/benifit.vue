@@ -6,7 +6,7 @@
   </div>
   <div class="flex items-center justify-center container mx-auto home-ben-box full-lock-scroll pb-30 z-1">
     <div class="h-full w-full overflow-y-auto hide-scroll full-lock-scroll" id="home-ben">
-      <div class="px-8 py-4 lg:(py-10 pb-20) text-3xl lg:text-4xl font-bold home-arc-1">{{ $t('home.ben.title') }}</div>
+      <div class="py-4 lg:(py-10 pb-20) text-3xl lg:text-4xl font-bold home-arc-1">{{ $t('home.ben.title') }}</div>
       <div class="mt-10">
         <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div class="flex items-center justify-center">

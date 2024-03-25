@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-16 lg:mt-32 container mx-auto">
+  <div class="mt-16 container mx-auto">
     <div class="">
       <div class="text-center">
         <div class="text-xl lg:text-3xl font-bold">{{ $t('com.arc.des1') }}</div>

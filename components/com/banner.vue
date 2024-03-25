@@ -1,15 +1,18 @@
 <template>
-  <div>
-    <div class="container mx-auto flex items-center justify-between mt-12 lg:mt-24">
-      <div class="w-3/5 lg:w-1/2">
-        <h1 class="text-xl lg:text-5xl font-bold">{{ $t('com.title') }}</h1>
-        <p class="mt-2 lg:mt-4 text-sm lg:text-xl">{{ $t('com.content') }}</p>
-        <a href="mailto:contact@lumoz.org">
-          <HomeButton @click="to('https://docs.lumoz.org/')" class="mt-4 lg:mt-8 text-base w-40" :word="$t('com.building')" />
-        </a>
+  <div class="com-banner">
+    <div >
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="w-1/2 lg:w-1/2">
+          <h1 class="text-xl lg:text-5xl font-bold">{{ $t('com.title') }}</h1>
+          <p class="mt-2 lg:mt-4 text-sm lg:text-xl">{{ $t('com.content') }}</p>
+          <a href="mailto:contact@lumoz.org">
+            <HomeButton @click="to('https://docs.lumoz.org/')" class="mt-4 lg:mt-8 text-base w-40" :word="$t('com.building')" />
+          </a>
+        </div>
+        <img src="@/assets/img/com/banner.avif" class="cursor-pointer hvr-grow w-2/5 lg:w-1/2 p-2 lg:p-10">
       </div>
-      <img src="@/assets/img/com/banner.svg" class="cursor-pointer hvr-grow w-2/5 lg:w-1/2 2xl:w-2/5 p-2 lg:p-10">
     </div>
+    
     <ComArc class="mb-40" />
 
     <div class="relative for-box">
@@ -38,6 +41,12 @@ const to = (url: string) => {
 </script>
 
 <style lang="less" scoped>
+.com-banner {
+  background: url(@/assets/img/com/bg.avif) no-repeat;
+  background-size: 65% 25%;
+  background-position: right top;
+}
+
 .compute-box {
   background:url(@/assets/img/com/c1.avif) no-repeat;
   background-size: 100% 100%;

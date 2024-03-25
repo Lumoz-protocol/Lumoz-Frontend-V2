@@ -7,8 +7,11 @@ export default defineConfig({
         DEFAULT: '1rem',
         sm: '2rem',
         lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem'
+        xl: '8rem',
+        '2xl': '10rem'
+      },
+      width: {
+        '2xl': '2000px'
       }
     },
     extend: {
