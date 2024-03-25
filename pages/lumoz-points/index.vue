@@ -1,14 +1,14 @@
 <template>
   <div class="container mx-auto">
-    <a href="https://dragon-slayer.zkfair.io" target="_blank" class="w-full lg:w-2/3 lg:ml-1/6 cursor-pointer hvr-grow relative">
+    <a href="https://dragon-slayer.zkfair.io" target="_blank" class="w-full cursor-pointer hvr-grow relative">
       <img src="@/assets/img/points/dragon.avif" class="w-full" alt="">
-      <div class="absolute bottom-8 left-8 lg:(bottom-15 left-15)">
-        <div class="lg:text-2xl font-bold">{{ $t('points.dragon') }}</div>
-        <div>{{ $t('points.dragont') }}</div>
+      <div class="absolute bottom-8 left-2 lg:(bottom-22 left-4)">
+        <div class="lg:text-4xl font-bold">{{ $t('points.dragon') }}</div>
+        <div class="lg:text-xl lg:mt-2">{{ $t('points.dragont') }}</div>
       </div>
     </a>
     <div class="points-box mt-8">
-      <div class="text-cnter h-1/4 flex items-center justify-center text-xs md:text-2xl font-bold text-primary-900">{{ $t('points.points') }}</div>
+      <div class="text-center h-1/4 flex items-center justify-center text-xs md:text-2xl font-bold text-primary-900">{{ $t('points.points') }}</div>
       <div class="h-4/5 p-1 lg:p-4">
         <div class="h-full rounded-lg border-4 border-black shadow-inner-box flex items-center justify-center text-center text-sm lg:text-xl">
           {{ $t('points.pcontent') }}
