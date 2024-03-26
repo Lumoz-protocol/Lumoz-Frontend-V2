@@ -142,6 +142,11 @@ export default {
     miner: 'Miner Rewards',
     more: 'Get More'
   },
+  eco: {
+    title: 'Shaping the Future of Lumoz Ecosystem',
+    content: 'Explore the applications built on Lumoz, which provided application-specific chains based on ZK-Rollup.',
+    get: 'Get Listed'
+  },
   wallet: {
     connect: 'Connect Wallet'
   }

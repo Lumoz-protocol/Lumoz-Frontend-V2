@@ -1,23 +1,64 @@
 .b-animation {
-    background-image: url("./b/b_00000.avif");
-    background-size: 60%;
+    background-size: 65%;
+    background:
+        url("./b/b_00000.avif"),
+        url("./b/b_00001.avif"),
+        url("./b/b_00002.avif"),
+        url("./b/b_00003.avif"),
+        url("./b/b_00004.avif"),
+        url("./b/b_00005.avif"),
+        url("./b/b_00006.avif"),
+        url("./b/b_00007.avif"),
+        url("./b/b_00008.avif"),
+        url("./b/b_00009.avif"),
+        url("./b/b_000010.avif"),
+        url("./b/b_000011.avif"),
+        url("./b/b_000012.avif"),
+        url("./b/b_000013.avif"),
+        url("./b/b_000014.avif"),
+        url("./b/b_000015.avif"),
+        url("./b/b_000016.avif"),
+        url("./b/b_000017.avif"),
+        url("./b/b_000018.avif"),
+        url("./b/b_000019.avif"),
+        url("./b/b_000020.avif"),
+        url("./b/b_000021.avif"),
+        url("./b/b_000022.avif"),
+        url("./b/b_000023.avif"),
+        url("./b/b_000024.avif"),
+        url("./b/b_000025.avif"),
+        url("./b/b_000026.avif"),
+        url("./b/b_000027.avif"),
+        url("./b/b_000028.avif"),
+        url("./b/b_000029.avif"),
+        url("./b/b_000030.avif"),
+        url("./b/b_000031.avif"),
+        url("./b/b_000032.avif"),
+        url("./b/b_000033.avif"),
+        url("./b/b_000034.avif"),
+        url("./b/b_000035.avif"),
+        url("./b/b_000036.avif"),
+        url("./b/b_000037.avif"),
+        url("./b/b_000038.avif"),
+        url("./b/b_000039.avif"),
+    ;
     background-repeat: no-repeat;
-    background-position: left 30% top 20%;
+    background-position: left 50% top 50%;
     background-attachment: fixed;
     animation-name: keyframes-b;
     animation-duration: 2s;
     animation-delay: 0s;
-    animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: steps(1);
 }
 
+/* animation-iteration-count: infinite; */
 @media (max-width: 1024px) {
     .b-animation {
-        background-size: cover;
+        background-size: 100%;
         background-position: cemter;
     }
-  }
+}
 
 @keyframes keyframes-b {
     0% {

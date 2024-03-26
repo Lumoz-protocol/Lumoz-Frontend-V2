@@ -865,12 +865,20 @@ function toArray(value) {
 }
 const _routes = [
   {
+    name: "compute-layer",
+    path: "/compute-layer",
+    meta: {},
+    alias: [],
+    redirect: void 0 ,
+    component: () => import('./index-DiD3qYse.mjs').then((m) => m.default || m)
+  },
+  {
     name: "ecosystems",
     path: "/ecosystems",
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./index-DYUOPl-4.mjs').then((m) => m.default || m)
+    component: () => import('./index-CgZNkP8B.mjs').then((m) => m.default || m)
   },
   {
     name: "index",
@@ -878,7 +886,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./index-Dr0mSs1J.mjs').then((m) => m.default || m)
+    component: () => import('./index-DlGT6Ick.mjs').then((m) => m.default || m)
   },
   {
     name: "lumoz-points",
@@ -886,15 +894,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./index-Cm7M-qmV.mjs').then((m) => m.default || m)
-  },
-  {
-    name: "raas",
-    path: "/raas",
-    meta: {},
-    alias: [],
-    redirect: void 0 ,
-    component: () => import('./index-D5E67JK_.mjs').then((m) => m.default || m)
+    component: () => import('./index-dlbGULar.mjs').then((m) => m.default || m)
   },
   {
     name: "rollups",
@@ -902,7 +902,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./index-CzEDHJNl.mjs').then((m) => m.default || m)
+    component: () => import('./index-DFFWwFwY.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -5593,7 +5593,7 @@ const localeCodes = [];
 const localeLoaders = {};
 const vueI18nConfigs = [
   () => import(
-    './i18n.config-8sreRa_d.mjs'
+    './i18n.config-BSgINPtn.mjs'
     /* webpackChunkName: "__i18n_config_ts_bffaebcb" */
   )
 ];
@@ -7056,7 +7056,7 @@ const plugins = [
   lumoz_common_wdbZBAKBrT
 ];
 const layouts = {
-  default: () => import('./default-DjzPuLdZ.mjs').then((m) => m.default || m)
+  default: () => import('./default-CuoiWli1.mjs').then((m) => m.default || m)
 };
 const LayoutLoader = defineComponent({
   name: "LayoutLoader",
@@ -7435,5 +7435,5 @@ let entry;
 }
 const entry$1 = (ssrContext) => entry(ssrContext);
 
-export { _export_sfc as _, parseQuery as a, useRuntimeConfig as b, createError as c, navigateTo as d, entry$1 as default, withoutTrailingSlash as e, __nuxt_component_6 as f, defineStore as g, hasProtocol as h, injectHead as i, joinURL as j, useIdInjection as k, useRoute as l, __nuxt_component_1 as m, nuxtLinkDefaults as n, parseURL as p, resolveUnrefHeadInput as r, useRouter as u, withTrailingSlash as w };
+export { _export_sfc as _, parseQuery as a, useRuntimeConfig as b, createError as c, navigateTo as d, entry$1 as default, withoutTrailingSlash as e, defineStore as f, __nuxt_component_6 as g, hasProtocol as h, injectHead as i, joinURL as j, useIdInjection as k, useRoute as l, __nuxt_component_1 as m, nuxtLinkDefaults as n, parseURL as p, resolveUnrefHeadInput as r, useRouter as u, withTrailingSlash as w };
 //# sourceMappingURL=server.mjs.map
