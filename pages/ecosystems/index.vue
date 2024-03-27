@@ -12,7 +12,7 @@
     <div class="mt-12 lg:flex">
       <EcoMenu @change="menuChange" />
       <div class="flex-1 grid grid-cols-2 lg:grid-cols-3 gap-6 lg:pl-12 mt-12 lg:mt-0">
-        <div v-for="item, index in ecos" :key="index" class="h-60 border-8 border-[#333332] rounded-xl hvr-grow cursor-pointer eco-outer bg-[#1C1C1C] hover:(border-[#BEFE00aa] text-primary-900 bg-[#000])" @click="to(item)">
+        <div v-for="item, index in ecos" :key="index" class="h-60 border-4 border-[#333332] rounded-xl hvr-grow cursor-pointer eco-outer bg-[#1C1C1C] aaa hover:(border-[#BEFE0088] text-primary-900 bg-[#00000088])" @click="to(item)">
           <div class="h-full flex flex-col items-center justify-center eco-inner overflow-hidden">
             <img :src="item.img" class="w-1/4 rounded-full" alt="">
             <div class="mt-8 font-bold">{{ item.name }}</div>
@@ -49,5 +49,8 @@ const to = (item: any) => {
 }
 </script>
 <style scoped>
+.aaa:hover{
+  background: linear-gradient(269.99deg, #EDEDED22 -1.07%, #B9F80022 99.99%);
 
+}
 </style>

@@ -117,7 +117,7 @@ const hideItems = () => {
 }
 
 const toLaunch = () => {
-  window.open(IFRAME_PREFIX+'rollup/create')
+  router.push('/launchbase')
 }
 </script>
 <style class="ra-borders">

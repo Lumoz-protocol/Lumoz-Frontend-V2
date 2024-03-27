@@ -147,6 +147,27 @@ export default {
     content: 'Explore the applications built on Lumoz, which provided application-specific chains based on ZK-Rollup.',
     get: 'Get Listed'
   },
+  launch: {
+    create: 'Create a rollup in 10 minutes',
+    content: 'With the modular Rollup functionality provided by Lumoz RaaS, you can quickly assemble a complete ZK Rollup like building LEGO bricks in just 10 minutes.',
+    layer1: 'Layer1',
+    layer1c: 'Base layer is the base blockchain. Ethereum and Bitcoin are both base layer blockchains because they are the underlying foundation that various layer 2 networks build on top of. ',
+    type: 'zkEVM Type',
+    typec: 'Different types of zkevm have made different trade-offs between practicality and speed. There are four different zkEVM types available to choose from.',
+    da: 'Data Availability',
+    dac: 'ZK-rollups publish state data for every transaction processed off-chain to Base Layers. ',
+    seq: 'Sequencer',
+    seqc: 'Specify the sequencer to be incorporated into your Rollup Chain, as well as the network URL. You can also choose a permissionless sequencer configuration, by which any eligible address will have the ability to become a sequencer. ',
+    gas: 'Gas Token',
+    gasc: 'Lumoz allows users customize the gas token and the gas price of the rollup.',
+    cus: 'Customize',
+    next: 'Next',
+    info: 'Rollup information',
+    generate: 'Generating',
+    con: '🎉 Congratulations',
+    con1: 'your rollup has been living.',
+    apply: 'Apply My Rollup'
+  },
   wallet: {
     connect: 'Connect Wallet'
   }
