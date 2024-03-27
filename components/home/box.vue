@@ -14,24 +14,23 @@ const multiple = 30
 
 
 onMounted(() => {
-  try {
-    const mouseOverContainer = document.getElementById('outer'+id.value)
-    console.log(mouseOverContainer)
-    mouseOverContainer.addEventListener("mousemove", (e) => {
-        window.requestAnimationFrame(function () {
-            transformElement(e.offsetX, e.offsetY);
-        });
-    });
+  // try {
+  //   const mouseOverContainer = document.getElementById('outer'+id.value)
+  //   mouseOverContainer.addEventListener("mousemove", (e) => {
+  //       window.requestAnimationFrame(function () {
+  //           transformElement(e.offsetX, e.offsetY);
+  //       });
+  //   });
 
-    mouseOverContainer.addEventListener("mouseleave", (e) => {
-      const element = document.getElementById(id.value);
-      window.requestAnimationFrame(function () {
-          element.style.transform = "rotateX(0) rotateY(0)";
-      });
-    });
-  } catch {
+  //   mouseOverContainer.addEventListener("mouseleave", (e) => {
+  //     const element = document.getElementById(id.value);
+  //     window.requestAnimationFrame(function () {
+  //         element.style.transform = "rotateX(0) rotateY(0)";
+  //     });
+  //   });
+  // } catch {
 
-  }
+  // }
  
 })
 function transformElement(x, y) {

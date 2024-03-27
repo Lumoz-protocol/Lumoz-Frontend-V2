@@ -14,5 +14,3 @@ const getNetwork = () => {
 export const LUMOZ = getNetwork()
 
 export const DATA_API = 'https://lumoz.org/lumoz-rollup/api/'
-
-export const IFRAME_PREFIX = 'https://launch.lumoz.org/'

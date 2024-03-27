@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="hidden w-full flex-wrap w-54 lg:flex flex-col">
-      <div v-for="item, index in list" :key="index" @click="checkIt(item)" :class="check.includes(item) ? 'bg-primary-900 text-black opacity-90 hover:opacity-100' : 'hover:text-primary-900'" class="px-4 py-1 rounded-md mt-2 cursor-pointer hvr-grow">
+      <div v-for="item, index in list" :key="index" @click="checkIt(item)" :class="check === item ? 'bg-primary-900 text-black opacity-90 hover:opacity-100' : 'hover:text-primary-900'" class="px-4 py-1 rounded-md mt-2 cursor-pointer hvr-grow">
         <div>
           {{ item }} ({{ getCount(item) }})
         </div>

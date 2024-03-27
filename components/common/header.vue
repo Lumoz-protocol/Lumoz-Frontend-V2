@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed z-1 top-0 left-0 right-0 h-20 bg-filter flex items-center justify-between px-4">
+  <div class="fixed z-10 top-0 left-0 right-0 h-20 bg-filter flex items-center justify-between px-4">
     <CommonLogo />
     <div class="hidden xl:flex items-center h-full">
       <CommonSingleNavItem v-for="item in singleMenus" :key="item.name" :item="item" @click="hideMenu" />
@@ -63,7 +63,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import { IFRAME_PREFIX } from '@/constants/networks'
 const vm = getCurrentInstance()?.proxy
 const router = useRouter()
 const menuShow = ref(false)
