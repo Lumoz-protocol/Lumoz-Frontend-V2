@@ -8,7 +8,7 @@
       <div v-if="active" class="flex items-center justify-center flex-col">
         <div class="typed-out text-3xl md:text-4xl lg:text-6xl py-4 font-bold text-center">{{ $t('home.banner.title') }}</div>
         <div class="typed-out-1s text-2xl py-4 text-primary-900 text-center">{{ $t('home.banner.content') }}</div>
-        <HomeButton @click="to" :word="$t('home.banner.start')" class="mt-4 w-40 animate__animated animate__fadeIn animate__delay-1s" />
+        <HomeButton @click="to" :word="$t('home.banner.start')" class="mt-4 w-40 animate__animated animate__fadeIn animate__delay-2s" />
       </div>
     </div>
   </div>

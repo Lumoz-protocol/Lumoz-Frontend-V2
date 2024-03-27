@@ -3,7 +3,7 @@
     <CommonHeader />
     <div class="h-20" v-if="router.currentRoute.value.fullPath !== '/'"></div>
     <NuxtPage />
-    <CommonFooter />
+    <CommonFooter v-if="router.currentRoute.value.fullPath !== '/'" />
    
   </div>
 </template>
