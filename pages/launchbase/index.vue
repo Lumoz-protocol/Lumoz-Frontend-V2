@@ -14,7 +14,7 @@
     </div>
     <div v-if="part === 2">
       <div class="text-xl font-bold">{{ $t('launch.info') }}</div>
-      <div class="grid grid-cols-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <div class="mt-8 flex items-center">
           <div class="text-text-dark w-40">{{ $t('launch.layer1') }}:</div>
           <div>{{ launchStore.layer1 }}</div>
@@ -47,6 +47,7 @@
           striped-flow
           :duration="100"
         />
+        <div class="text-center mt-4 text-primary-900 font-bold" v-if="progress">{{ progress }} ...</div>
       </div>
       <div v-if="percentage === 100" class="flex flex-col items-center justify-center">
         <div class="mt-8 lg:mt-16 text-center text-3xl font-bold animate__animated animate__flipInX">
@@ -65,6 +66,7 @@
 <script setup lang="ts">
 import { useLaunchStore } from '@/stores'
 const launchStore = useLaunchStore()
+const vm = getCurrentInstance()?.proxy
 let timer = null
 const part = ref(1)
 const percentage = ref(0)
@@ -101,6 +103,19 @@ const startTimer = () => {
     percentage.value = percentage.value + 1
   }, 200)
 }
+
+const progress = computed(() => {
+  if (percentage.value <= 25) {
+    return vm?.$t('launch.d1')
+  } else if (percentage.value <= 50) {
+    return vm?.$t('launch.d2')
+  } else if (percentage.value <= 75) {
+    return vm?.$t('launch.d3')
+  } else if (percentage.value < 100) {
+    return vm?.$t('launch.d4')
+  }
+  return ''
+})
 </script>
 <style scoped>
 .launch-p-box {

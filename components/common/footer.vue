@@ -57,6 +57,10 @@ const footer = ref([
       {
         name: vm.$t('footer.s2'),
         url: '/rollups'
+      },
+      {
+        name: vm.$t('footer.s3'),
+        url: '/launchbase'
       }
     ]
   },

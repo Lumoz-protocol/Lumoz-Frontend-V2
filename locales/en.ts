@@ -16,6 +16,7 @@ export default {
     solutions: 'Solutions',
     s1: 'Modular Compute Layer',
     s2: 'Rollups',
+    s3: 'Launch a ZK-Rollup',
     community: 'Community',
     c1: 'Lumoz Points',
     c2: 'Ecosystems',
@@ -166,7 +167,11 @@ export default {
     generate: 'Generating',
     con: '🎉 Congratulations',
     con1: 'your rollup has been living.',
-    apply: 'Apply My Rollup'
+    apply: 'Apply My Rollup',
+    d1: 'Deploing ZK-Rollup Contract',
+    d2: 'Creating ZK-Rollup Node',
+    d3: 'Deploing Block Explorer',
+    d4: 'Deploing ZK Rollup Bridge'
   },
   wallet: {
     connect: 'Connect Wallet'
