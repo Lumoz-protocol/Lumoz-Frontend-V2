@@ -13,8 +13,8 @@
         @click="launchStore.setSequencer(item)"
       >
         <div class="h-full w-full flex justify-center items-center">
-          <img v-if="item === 'Lumoz PoS'" src="@/assets/img/launch/lumoz.svg" class="ml-4 h-16 mt-2" />
-          <img v-else-if="item === 'Espresso'" src="@/assets/img/launch/espressosys.svg" class="ml-4 h-16 mt-2" />
+          <img v-if="item === 'Single Node'" src="@/assets/img/launch/gas.svg" class="ml-4 h-13 mb-3 mt-2" />
+          <img v-if="item === 'Espresso'" src="@/assets/img/launch/espressosys.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'Astria'" src="@/assets/img/launch/astria.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'Radius'" src="@/assets/img/launch/radius.svg" class="ml-4 h-16 mt-2" />
           <span class="ml-4 font-bold flex-1">{{ item }}</span>
@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { useLaunchStore } from '@/stores'
 const launchStore = useLaunchStore()
-const SEQUENCERS = ['Lumoz PoS', 'Espresso', 'Astria', 'Radius']
+const SEQUENCERS = ['Single Node', 'Espresso', 'Astria', 'Radius']
 </script>
 <style lang="less">
 .launch-check-box {

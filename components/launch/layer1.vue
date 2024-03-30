@@ -13,11 +13,11 @@
         @click="launchStore.setLayer1(item)"
       >
         <div class="h-full w-full flex justify-center items-center">
-          <img v-if="item === 'BTC'" src="@/assets/img/launch/btc.svg" class="ml-4 h-16 mt-2" />
-          <img v-if="item === 'Lumoz'" src="@/assets/img/launch/lumoz.svg" class="ml-4 h-16 mt-2" />
+          <img v-if="item === 'Bitcoin'" src="@/assets/img/launch/btc.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'Ethereum'" src="@/assets/img/launch/ethereum.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'Polygon'" src="@/assets/img/launch/polygon.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'BNB Chain'" src="@/assets/img/launch/bsc.svg" class="ml-4 h-16 mt-2" />
+          <img v-else-if="item === 'Solana'" src="@/assets/img/launch/solana.svg" class="ml-4 h-13 mb-3 mt-2" />
           <span class="ml-4 font-bold flex-1">{{ item }}</span>
         </div>
       </div>
@@ -25,7 +25,7 @@
   </div>
 </template>
 <script setup lang="ts">
-const NETWORKS = ['BTC', 'Lumoz', 'Ethereum', 'Polygon', 'BNB Chain']
+const NETWORKS = ['Bitcoin', 'Ethereum', 'Polygon', 'BNB Chain', 'Solana']
 
 import { useLaunchStore } from '@/stores'
 const launchStore = useLaunchStore()

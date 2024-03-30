@@ -7,6 +7,7 @@
       <LaunchZkevm />
       <LaunchDa />
       <LaunchSequencer />
+      <LaunchProver />
       <LaunchGas v-if="launchStore.layer1" />
       <div class="flex items-center justify-center">
         <HomeButton :light="!canNext ? true : false" @click="next" class="w-40" :class="!canNext ? 'cursor-not-allowed' : ''" :word="$t('launch.next')" />
@@ -34,6 +35,10 @@
         <div class="mt-8 flex items-center">
           <div class="text-text-dark w-40">{{ $t('launch.gas') }}:</div>
           <div>{{ launchStore.gas }}</div>
+        </div>
+        <div class="mt-8 flex items-center">
+          <div class="text-text-dark w-40">{{ $t('launch.prov') }}:</div>
+          <div>{{ launchStore.prover }}</div>
         </div>
       </div>
       
@@ -71,7 +76,7 @@ let timer = null
 const part = ref(1)
 const percentage = ref(0)
 const canNext = computed(() => {
-  if (launchStore.layer1 && launchStore.zkevmType && launchStore.da && launchStore.sequencer && launchStore.gas) {
+  if (launchStore.layer1 && launchStore.zkevmType && launchStore.da && launchStore.sequencer && launchStore.gas && launchStore.prover) {
     return true
   }
   return false

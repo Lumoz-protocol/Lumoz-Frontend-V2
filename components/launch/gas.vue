@@ -11,7 +11,7 @@
         @click="chooseGas(true)"
       >
         <div class="h-full w-full flex justify-center items-center">
-          <img v-if="launchStore.layer1 === 'BTC'" src="@/assets/img/launch/btc.svg" class="ml-4 h-16 mt-2" />
+          <img v-if="launchStore.layer1 === 'Bitcoin'" src="@/assets/img/launch/btc.svg" class="ml-4 h-16 mt-2" />
           <img v-if="launchStore.layer1 === 'Lumoz'" src="@/assets/img/launch/lumoz.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="launchStore.layer1 === 'Ethereum'" src="@/assets/img/launch/ethereum.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="launchStore.layer1 === 'Polygon'" src="@/assets/img/launch/polygon.svg" class="ml-4 h-16 mt-2" />
@@ -25,7 +25,7 @@
         @click="chooseGas(false)"
       >
         <div class="h-full w-full flex justify-center items-center">
-          <img src="@/assets/img/launch/gas.svg" class="ml-4 h-16 mt-2" />
+          <img src="@/assets/img/launch/gas.svg" class="ml-4 h-13 mb-3  mt-2" />
           <span class="ml-4 font-bold flex-1">{{ $t('launch.cus') }}</span>
         </div>
       </div>
@@ -39,7 +39,7 @@ const vm = getCurrentInstance()?.proxy
 
 
 const token = computed(() => {
-  if (launchStore.layer1 === 'BTC') {
+  if (launchStore.layer1 === 'Bitcoin') {
     return 'BTC'
   }
   if (launchStore.layer1 === 'Lumoz') {

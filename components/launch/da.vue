@@ -9,18 +9,18 @@
         v-for="item, index in DAS"
         :key="index"
         class="rounded-xl border bg-[#181818] border-[#181818] text-white"
-        :class="launchStore.da === item ? 'launch-check-box-high cursor-pointer hover:(text-primary-900 border-primary-900) hvr-grow' : 'launch-check-box cursor-pointer hover:(text-primary-900 border-primary-900) hvr-grow'"
-        @click="launchStore.setDa(item)"
+        :class="getDis(item) ? 'opacity-50 cursor-not-allowed' : launchStore.da === item ? 'launch-check-box-high cursor-pointer hover:(text-primary-900 border-primary-900) hvr-grow' : 'launch-check-box cursor-pointer hover:(text-primary-900 border-primary-900) hvr-grow'"
+        @click="getDis(item) ? '' : launchStore.setDa(item)"
       >
+      
         <div class="h-full w-full flex justify-center items-center">
-          <img v-if="item === 'Lumoz DA'" src="@/assets/img/launch/lumoz.svg" class="ml-4 h-16 mt-2" />
-          <img v-if="item === 'Ethereum'" src="@/assets/img/launch/ethereum.svg" class="ml-4 h-16 mt-2" />
+          <img v-if="item === 'Layer 1'" src="@/assets/img/launch/gas.svg" class="ml-4 h-13 mb-3  mt-2" />
+
           <img v-else-if="item === 'Celestia'" src="@/assets/img/launch/celestia.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'Eigenlayer'" src="@/assets/img/launch/eigenlayer.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'Ethstorage'" src="@/assets/img/launch/ethstorage.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'Avail'" src="@/assets/img/launch/avail.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="item === 'Espresso'" src="@/assets/img/launch/espressosys.svg" class="ml-4 h-16 mt-2" />
-          <img v-else-if="item === 'BNB Chain'" src="@/assets/img/launch/bsc.svg" class="ml-4 h-16 mt-2" />
           <span class="ml-4 font-bold flex-1">{{ item }}</span>
         </div>
       </div>
@@ -30,8 +30,23 @@
 <script setup lang="ts">
 import { useLaunchStore } from '@/stores'
 const launchStore = useLaunchStore()
+const DAS = ['Layer 1', 'Celestia', 'Eigenlayer', 'Ethstorage', 'Avail', 'Espresso']
 
-const DAS = ['Lumoz DA', 'Ethereum', 'BNB Chain', 'Celestia', 'Eigenlayer', 'Ethstorage', 'Avail', 'Espresso']
+watch(() => launchStore.layer1, () => {
+  launchStore.setDa('')
+})
+
+const disabled = computed(() => {
+  if (launchStore.layer1 === 'Bitcoin') {
+    return ['Ethereum', 'BNB Chain']
+  }
+  return []
+})
+
+const getDis = (item: string) => {
+  return disabled.value.includes(item)
+}
+
 </script>
 <style lang="less">
 .launch-check-box {

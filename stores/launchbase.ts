@@ -6,7 +6,8 @@ export const useLaunchStore = defineStore('launch', {
     zkevmType: '',
     da: '',
     sequencer: '',
-    gas: ''
+    gas: '',
+    prover: 'Lumoz'
   }),
   actions: {
     setLayer1(layer1: string) {
@@ -24,5 +25,8 @@ export const useLaunchStore = defineStore('launch', {
     setGas(gas: string) {
       this.gas = gas
     },
+    setProver(prover: string) {
+      this.prover = prover
+    }
   }
 })
