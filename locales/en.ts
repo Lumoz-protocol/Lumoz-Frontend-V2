@@ -170,10 +170,10 @@ export default {
     con: '🎉 Congratulations',
     con1: 'your rollup has been living.',
     apply: 'Apply My Rollup',
-    d1: 'Deploing ZK-Rollup Contract',
+    d1: 'Deploying ZK-Rollup Contract',
     d2: 'Creating ZK-Rollup Node',
-    d3: 'Deploing Block Explorer',
-    d4: 'Deploing ZK Rollup Bridge'
+    d3: 'Deploying Block Explorer',
+    d4: 'Deploying ZK Rollup Bridge'
   },
   wallet: {
     connect: 'Connect Wallet'
