@@ -16,6 +16,7 @@
           <img v-else-if="launchStore.layer1 === 'Ethereum'" src="@/assets/img/launch/ethereum.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="launchStore.layer1 === 'Polygon'" src="@/assets/img/launch/polygon.svg" class="ml-4 h-16 mt-2" />
           <img v-else-if="launchStore.layer1 === 'BNB Chain'" src="@/assets/img/launch/bsc.svg" class="ml-4 h-16 mt-2" />
+          <img v-else-if="launchStore.layer1 === 'Solana'" src="@/assets/img/launch/solana.svg" class="ml-4 h-13 mb-3 mt-2" />
           <span class="ml-4 font-bold flex-1">{{ token }}</span>
         </div>
       </div>
@@ -53,6 +54,9 @@ const token = computed(() => {
   }
   if (launchStore.layer1 === 'BNB Chain') {
     return 'BNB'
+  }
+  if (launchStore.layer1 === 'Solana') {
+    return 'SOL'
   }
 })
 
