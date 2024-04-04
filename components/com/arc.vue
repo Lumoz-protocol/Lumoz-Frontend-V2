@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <div class="p-4 rounded-2xl flex items-center py-8 text-xl mt-4 bg-[#BEFE0033]">
+        <div class="p-4 rounded-2xl flex items-center py-10 text-xl mt-4 bg-[#BEFE0033]">
           <div class="text-xl slideShine font-bold">{{ $t('com.arc.t5') }}</div>
           <div class="slideShine font-bold flex-1 text-center pl-8 text-xl lg:text-3xl">{{ $t('com.arc.c5') }}</div>
         </div>
