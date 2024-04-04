@@ -6,49 +6,50 @@
         <div class="my-4 lg:(my-8 w-2/3) mx-auto">{{ $t('com.arc.des2') }}</div>
       </div>
       <div class="">
-        <div class="raas-arc-shadow p-4 rounded-2xl flex items-center justify-between">
-          <div class="text-xl slideShine font-bold h-16 flex items-center">{{ $t('com.arc.t1') }}</div>
-          <div class="flex items-center">
-            <ComNet type="btc" />
-            <ComNet type="eth" class="ml-2 lg:ml-4" />
-            <ComNet type="polygon" class="ml-2 lg:ml-4" />
-            <ComNet type="bnb" class="ml-2 lg:ml-4" />
-            <ComNet type="sol" class="ml-2 lg:ml-4" />
-            <ComNet type="more" class="ml-2 lg:ml-4" />
+        <div class="raas-arc-shadow p-4 rounded-2xl flex items-center">
+          <div class="text-xl slideShine font-bold h-16 flex items-center w-30 lg:w-60">{{ $t('com.arc.t1') }}</div>
+          <div class="grid grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-0 flex-1">
+            <ComNet name="Bitcoin" type="btc" />
+            <ComNet name="Ethereum" type="eth" class="ml-2 lg:ml-4" />
+            <ComNet name="Polygon" type="polygon" class="ml-2 lg:ml-4" />
+            <ComNet name="BSC" type="bnb" class="ml-2 lg:ml-4" />
+            <ComNet name="Solana" type="sol" class="ml-2 lg:ml-4" />
+            <ComNet :name="$t('com.arc.more')" type="more" class="ml-2 lg:ml-4" />
+          </div>
+        </div>
+
+        <div class="raas-arc-shadow p-4 rounded-2xl flex items-center text-xl mt-4">
+          <div class="text-xl slideShine font-bold h-16 flex items-center w-30 lg:w-60">{{ $t('com.arc.t2') }}</div>
+          <div class="grid grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-0 flex-1">
+            <ComNet name="Polygon CDK" type="polygon" />
+            <ComNet name="Scroll" type="scroll" class="ml-2 lg:ml-4" />
+            <ComNet name="zkSync" type="zksync" class="ml-2 lg:ml-4" />
+            <ComNet name="StarkNet" type="stark" class="ml-2 lg:ml-4" />
+            <ComNet name="Linea" type="linea" class="ml-2 lg:ml-4" />
+            <ComNet name="Taiko" type="taiko" class="ml-2 lg:ml-4" />
+            <ComNet :name="$t('com.arc.more')" type="more" class="ml-2 lg:ml-4" />
           </div>
         </div>
 
         <div class="raas-arc-shadow p-4 rounded-2xl flex items-center justify-between text-xl mt-4">
-          <div class="text-xl slideShine font-bold h-16 flex items-center">{{ $t('com.arc.t2') }}</div>
-          <div class="flex items-center">
-            <ComNet type="polygon" />
-            <ComNet type="scroll" class="ml-2 lg:ml-4" />
-            <ComNet type="zksync" class="ml-2 lg:ml-4" />
-            <ComNet type="stark" class="ml-2 lg:ml-4" />
-            <ComNet type="linea" class="ml-2 lg:ml-4" />
-            <ComNet type="more" class="ml-2 lg:ml-4" />
+          <div class="text-xl slideShine font-bold h-16 flex items-center w-30 lg:w-60">{{ $t('com.arc.t3') }}</div>
+          <div class="grid grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-0 flex-1">
+            <ComNet name="Ethereum" type="eth" />
+            <ComNet name="Eigenlayer" type="eigen" class="ml-2 lg:ml-4" />
+            <ComNet name="Celestia" type="celestia" class="ml-2 lg:ml-4" />
+            <ComNet name="ETHStorage" type="eths" class="ml-2 lg:ml-4" />
+            <ComNet name="Avail" type="avail" class="ml-2 lg:ml-4" />
+            <ComNet :name="$t('com.arc.more')" type="more" class="ml-2 lg:ml-4" />
           </div>
         </div>
 
-        <div class="raas-arc-shadow p-4 rounded-2xl flex items-center justify-between text-xl mt-4">
-          <div class="text-xl slideShine font-bold h-16 flex items-center">{{ $t('com.arc.t3') }}</div>
-          <div class="flex items-center">
-            <ComNet type="eth" />
-            <ComNet type="lumoz" class="ml-2 lg:ml-4" />
-            <ComNet type="eigen" class="ml-2 lg:ml-4" />
-            <ComNet type="celestia" class="ml-2 lg:ml-4" />
-            <ComNet type="eths" class="ml-2 lg:ml-4" />
-            <ComNet type="more" class="ml-2 lg:ml-4" />
-          </div>
-        </div>
-
-        <div class="raas-arc-shadow p-4 rounded-2xl flex items-center justify-between text-xl mt-4">
-          <div class="text-xl slideShine font-bold h-16 flex items-center">{{ $t('com.arc.t4') }}</div>
-          <div class="flex items-center">
-            <ComNet type="lumoz" />
-            <ComNet type="esp" class="ml-2 lg:ml-4" />
-            <ComNet type="radius" class="ml-2 lg:ml-4" />
-            <ComNet type="more" class="ml-2 lg:ml-4" />
+        <div class="raas-arc-shadow p-4 rounded-2xl flex items-center text-xl mt-4">
+          <div class="text-xl slideShine font-bold h-16 flex items-center w-30 lg:w-60">{{ $t('com.arc.t4') }}</div>
+          <div class="grid grid-cols-4 lg:grid-cols-7 gap-8 lg:gap-0 flex-1">
+            <ComNet name="EspressoSys" type="esp" class="ml-2 lg:ml-4" />
+            <ComNet name="Radius" type="radius" class="ml-2 lg:ml-4" />
+            <ComNet name="Metis" type="metis" class="ml-2 lg:ml-4" />
+            <ComNet :name="$t('com.arc.more')" type="more" class="ml-2 lg:ml-4" />
           </div>
         </div>
 

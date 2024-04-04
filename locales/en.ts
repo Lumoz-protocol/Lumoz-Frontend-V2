@@ -99,6 +99,7 @@ export default {
     },
     arc: {
       title: 'Architecture',
+      more: 'More',
       t1: 'Layer 1',
       t2: 'zkEVM Stack',
       t3: 'Data Availability',

@@ -1,12 +1,14 @@
 <template>
-  <div class="rounded-full raas-net-box h-8 xl:h-14 cursor-pointer hvr-float">
-    <div class="w-full h-full flex items-center justify-center ">
-      <img :src="img" class="h-4 xl:h-6" />
-    </div>
+<div class="hvr-float">
+  <div class="cursor-pointer com-net-box flex flex-col items-center justify-center hover:(text-primary-900) text-sm">
+    <img :src="img" class="h-10 xl:h-14 mb-2 rounded-full" />
+    {{ name }}
+  </div>
   </div>
 </template>
 <script setup lang="ts">
 import MORE from '@/assets/img/com/more.png'
+import AVAIL from '@/assets/img/com/avail.png'
 import BTC from '@/assets/img/com/btc.png'
 import ETH from '@/assets/img/com/eth.png'
 import POLYGON from '@/assets/img/com/polygon.png'
@@ -16,19 +18,23 @@ import SCROLL from '@/assets/img/com/scroll.png'
 import ZKSYNC from '@/assets/img/com/zksync.png'
 import STARK from '@/assets/img/com/stark.png'
 import LINEA from '@/assets/img/com/linea.png'
+import TAIKO from '@/assets/img/com/taiko.png'
 import LUMOZ from '@/assets/img/com/lumoz.png'
 import EIGEN from '@/assets/img/com/eigenlayer.png'
 import CELESTIA from '@/assets/img/com/celestia.png'
 import ETHS from '@/assets/img/com/ethstorage.png'
 import ESP from '@/assets/img/com/espresso.png'
 import RADIUS from '@/assets/img/com/radius.png'
+import METIS from '@/assets/img/com/metis.png'
 
 const props = withDefaults(
   defineProps<{
     type: string
+    name: string
   }>(),
   {
-    type: ''
+    type: '',
+    name: ''
   }
 )
 
@@ -59,10 +65,16 @@ const img = computed(() => {
     return EIGEN
   } else if (type === 'linea') {
     return LINEA
+  } else if (type === 'taiko') {
+    return TAIKO
   } else if (type === 'celestia') {
     return CELESTIA
+  } else if (type === 'avail') {
+    return AVAIL
   } else if (type === 'eths') {
     return ETHS
+  } else if (type === 'metis') {
+    return METIS
   } else if (type === 'esp') {
     return ESP
   } else if (type === 'radius') {
@@ -71,14 +83,8 @@ const img = computed(() => {
   
 })
 </script>
-
 <style scoped>
-.raas-net-box {
-  background: linear-gradient(157.35deg, #232323 0%, #232323 100%);
-  box-shadow: -5px -5px 10px 0px #464646 inset;
-  aspect-ratio: 1;
-}
-.raas-net-box:hover{
-  background: #8ebd00;
+.com-net-box:hover img {
+  box-shadow: 0 0 10px 0px #befe00;
 }
 </style>
