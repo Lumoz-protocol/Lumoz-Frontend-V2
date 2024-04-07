@@ -50,8 +50,8 @@ export default {
       title: 'Decentralized, efficient, and reliable.',
       nodes: 'Nodes',
       ser: 'Servicing Rollups',
-      trans: 'Process Transactions',
-      zkp: 'ZKP Submitted'
+      trans: 'Processed Transactions',
+      zkp: 'ZKPs Submitted'
     },
     ben: {
       title: 'Benifit',
