@@ -27,7 +27,7 @@
     "vue": "^3.4.19",
     "vue-countup-v3": "^1.4.1",
     "vue-router": "^4.3.0",
-    "vue3-seamless-scroll": "^2.0.1",
+    "vue3-marquee": "^4.2.0",
     "yarn": "^1.22.22"
   },
   "devDependencies": {
