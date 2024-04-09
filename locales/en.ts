@@ -27,6 +27,7 @@ export default {
   },
   home: {
     service: 'SERVICE FOR',
+    back: 'BACKER BY THE BEST',
     banner: {
       title: 'Modular Compute Layer For',
       content: 'RaaS, AI, And More...',
