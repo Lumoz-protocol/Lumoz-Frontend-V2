@@ -1,6 +1,6 @@
 <template>
   <client-only class="overflow-hidden">
-    <Vue3Marquee  pauseOnHover class="flex items-center">
+    <Vue3Marquee  pauseOnHover class="flex items-center" duration="30">
       <div v-for="(item, index) in list" :key="index">
         <img :src="item.img" alt="" class="opacity-80 hover:(opacity-100) hvr-float mt-2 cursor-pointer" :class="item.css">
       </div>
@@ -83,7 +83,3 @@ const list = ref([
   }
 ])
 </script>
- 
-<style>
-
-</style>

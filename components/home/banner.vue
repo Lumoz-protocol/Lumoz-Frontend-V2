@@ -11,7 +11,7 @@
         <HomeButton @click="to" :word="$t('home.banner.start')" class="mt-4 w-40 animate__animated animate__fadeIn animate__delay-2s" />
       </div>
     </div>
-    <div class=" overflow-hidden mb-10 h-20 fade-edges">
+    <div class="lg:(w-2/3) overflow-hidden mb-10 h-20 fade-edges">
       <CommonScroll></CommonScroll>
     </div>
   </div>
@@ -41,6 +41,8 @@ const to = () => {
 }
 
 .fade-edges {
- 
+  flex-shrink: 0;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%); 
 }
+
 </style>
