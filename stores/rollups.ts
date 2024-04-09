@@ -50,10 +50,12 @@ export const useRollupsStore = defineStore('rollups', {
   }),
   actions: {
     async getMainData() {
-      const merlin = await axios.get('https://scan.merlinchain.io/api/v2/stats')
+      const merlin1 = await axios.get('https://scan.merlinchain.io/api/trpc/transaction.getTransactions?input={"json":{"take":10,"showPublicTag":false}}')
+      const merlin2 = await axios.get('https://scan.merlinchain.io/api/trpc/address.getUniqueWalletCount?input={"json":null}')
       const zkfair = await axios.get('https://scan.zkfair.io/api/v2/stats')
-      this.mainnetRollups[0].addresses = merlin.data.total_addresses
-      this.mainnetRollups[0].transactions = merlin.data.total_transactions
+      console.log(zkfair)
+      this.mainnetRollups[0].transactions = merlin1.data.result.data.json.count
+      this.mainnetRollups[0].addresses = Number(merlin2.data.result.data.json)
       this.mainnetRollups[1].addresses = zkfair.data.total_addresses
       this.mainnetRollups[1].transactions = zkfair.data.total_transactions
     }
