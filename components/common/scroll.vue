@@ -67,19 +67,19 @@ const list = ref([
   },
     {
     img: M9,
-    css: 'w-20 mx-4 lg:(w-30 mx-10)'
+    css: 'w-20 mx-4 lg:(w-30 ml-10)'
+  },
+    {
+    img: M13,
+    css: 'w-20 mx-4 lg:(w-45)'
   },
   {
     img: M7,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    css: 'w-20 mx-4 lg:(w-40 mr-10)'
   },
   {
     img: M8,
-    css: 'w-20 mx-4 lg:(w-40 ml-10)'
-  },
-  {
-    img: M13,
-    css: 'w-20 mx-4 lg:(w-45)'
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
   },
   {
     img: M14,
