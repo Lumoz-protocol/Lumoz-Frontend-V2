@@ -1,10 +1,14 @@
 <template>
-  <client-only class="overflow-hidden">
-    <Vue3Marquee  pauseOnHover class="flex items-center" duration="30">
+ <!-- class="overflow-hidden" -->
+  <client-only class="flex">
+    <!-- <Vue3Marquee  pauseOnHover class="flex items-center" duration="30">
       <div v-for="(item, index) in list" :key="index">
         <img :src="item.img" alt="" class="hvr-float mt-2 cursor-pointer" :class="item.css">
       </div>
-    </Vue3Marquee>
+    </Vue3Marquee> -->
+    <div v-for="(item, index) in list" :key="index">
+      <img :src="item.img" alt="" class="hvr-float mt-2 cursor-pointer" :class="item.css">
+    </div>
   </client-only>
 </template>
  
@@ -27,59 +31,59 @@ import { Vue3Marquee } from 'vue3-marquee'
 const list = ref([
   {
     img: M1,
-    css: 'w-40 mx-10'
+    css: 'w-20 mx-4 lg:(w-35 mx-10)'
   },
   {
     img: M2,
-    css: 'w-30 mx-10'
-  },
-  {
-    img: M3,
-    css: 'w-45 mx-10'
-  },
-  {
-    img: M4,
-    css: 'w-45 mx-10'
-  },
-  {
-    img: M5,
-    css: 'w-45 mx-10'
-  },
-  {
-    img: M6,
-    css: 'w-45 mx-10'
-  },
-  {
-    img: M7,
-    css: 'w-40 mx-10'
-  },
-  {
-    img: M8,
-    css: 'w-40 mx-10'
-  },
-  {
-    img: M9,
-    css: 'w-35 mx-10'
+    css: 'w-20 mx-4 lg:(w-28 mx-10)'
   },
   {
     img: M10,
-    css: 'w-35 mx-10'
+    css: 'w-20 mx-4 lg:(w-35 mx-10)'
+  },
+    {
+    img: M6,
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
   },
   {
+    img: M3,
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+  },
+  {
+    img: M4,
+    css: 'w-20 mx-4 lg:(w-40 mx-10'
+  },
+    {
     img: M11,
-    css: 'w-45 mx-10'
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+  },
+  {
+    img: M5,
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
   },
   {
     img: M12,
-    css: 'w-35 mx-10'
+    css: 'w-20 mx-4 lg:(w-30 mx-10)'
+  },
+    {
+    img: M9,
+    css: 'w-20 mx-4 lg:(w-30 mx-10)'
+  },
+  {
+    img: M7,
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+  },
+  {
+    img: M8,
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
   },
   {
     img: M13,
-    css: 'w-50'
+    css: 'w-20 mx-4 lg:(w-40)'
   },
   {
     img: M14,
-    css: 'w-35 mx-10'
+    css: 'w-20 mx-4 lg:(w-30 mx-10)'
   }
 ])
 </script>
