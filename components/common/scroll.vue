@@ -40,8 +40,8 @@ const list = ref([
     css: 'w-20 mx-4 lg:(w-28 mx-10)'
   },
   {
-    img: M10,
-    css: 'w-20 mx-4 lg:(w-35 mx-10)'
+    img: M6,
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
   },
   {
     img: M15,
@@ -52,8 +52,8 @@ const list = ref([
     css: 'w-20 mx-4 lg:(w-35 mx-10)'
   },
   {
-    img: M6,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    img: M10,
+    css: 'w-20 mx-4 lg:(w-35 mx-10)'
   },
   {
     img: M3,
