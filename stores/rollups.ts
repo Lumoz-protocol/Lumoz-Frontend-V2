@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import TestnetRollups from './testnet.json'
+import { TESTLIST } from './testnet'
 import ZKF from '@/assets/img/networks/zkf.png'
 import MEL from '@/assets/img/networks/merlin.jpg'
 import axios from 'axios'
@@ -45,7 +45,7 @@ const MainnetRollups = [
 
 export const useRollupsStore = defineStore('rollups', {
   state: () => ({
-    testnetRollups: TestnetRollups,
+    testnetRollups: TESTLIST,
     mainnetRollups: MainnetRollups
   }),
   actions: {
@@ -53,7 +53,6 @@ export const useRollupsStore = defineStore('rollups', {
       const merlin1 = await axios.get('https://scan.merlinchain.io/api/trpc/transaction.getTransactions?input={"json":{"take":10,"showPublicTag":false}}')
       const merlin2 = await axios.get('https://scan.merlinchain.io/api/trpc/address.getUniqueWalletCount?input={"json":null}')
       const zkfair = await axios.get('https://scan.zkfair.io/api/v2/stats')
-      console.log(zkfair)
       this.mainnetRollups[0].transactions = merlin1.data.result.data.json.count
       this.mainnetRollups[0].addresses = Number(merlin2.data.result.data.json)
       this.mainnetRollups[1].addresses = zkfair.data.total_addresses

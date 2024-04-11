@@ -1,7 +1,25 @@
-[
+import M1 from '@/assets/img/rollups/1.avif'
+import M2 from '@/assets/img/rollups/2.avif'
+import M3 from '@/assets/img/rollups/3.avif'
+import M4 from '@/assets/img/rollups/4.avif'
+import M5 from '@/assets/img/rollups/5.avif'
+import M6 from '@/assets/img/rollups/6.avif'
+import M7 from '@/assets/img/rollups/7.avif'
+import M8 from '@/assets/img/rollups/8.avif'
+import M9 from '@/assets/img/rollups/9.avif'
+import M10 from '@/assets/img/rollups/10.avif'
+import M11 from '@/assets/img/rollups/11.avif'
+import M12 from '@/assets/img/rollups/12.avif'
+import M13 from '@/assets/img/rollups/13.avif'
+import M14 from '@/assets/img/rollups/14.avif'
+import M15 from '@/assets/img/rollups/15.avif'
+import M16 from '@/assets/img/rollups/16.avif'
+
+
+export const TESTLIST = [
   {
       "name": "Lumoz Public zkEVM V2",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927783550.png",
+      "img": M1,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -9,7 +27,7 @@
   },
   {
       "name": "CB zkEVM",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927791950.png",
+      "img": M2,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -17,7 +35,7 @@
   },
   {
       "name": "LAW Chain",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927803717.png",
+      "img": M3,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -25,7 +43,7 @@
   },
   {
       "name": "XThrill",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927811298.png",
+      "img": M4,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -33,7 +51,7 @@
   },
   {
       "name": "SoQuest zkEVM",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927818345.jpeg",
+      "img": M5,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -41,7 +59,7 @@
   },
   {
       "name": "ReadON Content Test Chain",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927826865.png",
+      "img": M6,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -49,7 +67,7 @@
   },
   {
       "name": "Relation",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927834174.png",
+      "img": M7,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -57,7 +75,7 @@
   },
   {
       "name": "VIP3",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927840742.png",
+      "img": M8,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -65,7 +83,7 @@
   },
   {
       "name": "DeBox",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927852291.png",
+      "img": M9,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -73,7 +91,7 @@
   },
   {
       "name": "ODX zkEVM Testnet",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927860275.png",
+      "img": M10,
       "layer1": "Goerli",
       "zkevmType": "Polygon zkEVM",
       "da": "Goerli",
@@ -81,7 +99,7 @@
   },
   {
       "name": "aaww",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927870426.png",
+      "img": M11,
       "layer1": "Goerli",
       "zkevmType": "Polygon zkEVM",
       "da": "Goerli",
@@ -89,7 +107,7 @@
   },
   {
       "name": "Public zkSync V2",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927946984.png",
+      "img": M12,
       "layer1": "Goerli",
       "zkevmType": "zkSync",
       "da": "Goerli",
@@ -97,7 +115,7 @@
   },
   {
       "name": "Decibling",
-      "img": "https://lumoz.org/admin/file/2023-10-10-1696927940562.jpeg",
+      "img": M13,
       "layer1": "Goerli",
       "zkevmType": "zkSync",
       "da": "Goerli",
@@ -105,7 +123,7 @@
   },
   {
       "name": "Polygon CDK DEMO",
-      "img": "https://lumoz.org/admin/file/2023-10-18-1697596346142.png",
+      "img": M14,
       "layer1": "Goerli",
       "zkevmType": "Polygon zkEVM",
       "da": "Goerli",
@@ -113,7 +131,7 @@
   },
   {
       "name": "StarkSport Rollup",
-      "img": "https://lumoz.org/admin/file/2023-10-12-1697106379207.png",
+      "img": M15,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -121,7 +139,7 @@
   },
   {
       "name": "Public Scroll",
-      "img": "https://lumoz.org/admin/file/2023-10-26-1698289010503.png",
+      "img": M16,
       "layer1": "Goerli",
       "zkevmType": "Scroll",
       "da": "Goerli",
