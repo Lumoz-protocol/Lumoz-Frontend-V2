@@ -12,19 +12,19 @@
           <div v-if="!main" class="h-16 font-bold text-sm flex items-center text-center">{{ rollup.name }}</div>
         </div>
         <div v-if="!main" class="flex-1 grid grid-cols-2 lg:grid-cols-4">
-          <div class="flex flex-col items-start justify-center">
+          <div class="flex flex-col items-center justify-center">
             <div class="lg:text-2xl font-bold">{{ rollup.layer1 || '-' }}</div>
             <div class="text-text-500 mt-2">{{ $t('rollups.base') }}</div>
           </div>
-          <div class="flex flex-col items-start justify-center">
+          <div class="flex flex-col items-center justify-center">
             <div class="lg:text-2xl font-bold">{{ rollup.zkevmType || '-' }}</div>
             <div class="text-text-500 mt-2">{{ $t('rollups.zkType') }}</div>
           </div>
-          <div class="flex flex-col items-start justify-center mt-4 lg:mt-0">
+          <div class="flex flex-col items-center justify-center mt-4 lg:mt-0">
             <div class="lg:text-2xl font-bold">{{ rollup.da || '-' }}</div>
             <div class="text-text-500 mt-2">{{ $t('rollups.da') }}</div>
           </div>
-          <div class="flex flex-col items-start justify-center mt-4 lg:mt-0">
+          <div class="flex flex-col items-center justify-center mt-4 lg:mt-0">
             <div class="lg:text-2xl font-bold">{{ rollup.gasToken || '-' }}</div>
             <div class="text-text-500 mt-2">{{ $t('rollups.token') }}</div>
           </div>
@@ -63,15 +63,15 @@
             </a>
           </div>
           <div class="mt-4 grid grid-cols-2 lg:grid-cols-4">
-            <div class="flex flex-col items-start justify-center">
+            <div class="flex flex-col items-center justify-center">
               <div class="lg:text-2xl font-bold">{{ rollup.layer1 || '-' }}</div>
               <div class="text-text-500 mt-2">{{ $t('rollups.base') }}</div>
             </div>
-            <div class="flex flex-col items-start justify-center">
+            <div class="flex flex-col items-center justify-center">
               <div class="lg:text-2xl font-bold">{{ rollup.tvl || '-' }}</div>
               <div class="text-text-500 mt-2">{{ $t('rollups.tvl') }}</div>
             </div>
-            <div class="flex flex-col items-start justify-center mt-4 lg:mt-0">
+            <div class="flex flex-col items-center justify-center mt-4 lg:mt-0">
               <CountUp
                 :end-val="Number(rollup.transactions || 0)"
                 :duration="2"
@@ -81,7 +81,7 @@
               ></CountUp>
               <div class="text-text-500 mt-2">{{ $t('rollups.transactions') }}</div>
             </div>
-            <div class="flex flex-col items-start justify-center mt-4 lg:mt-0">
+            <div class="flex flex-col items-center justify-center mt-4 lg:mt-0">
               <CountUp
                 :end-val="Number(rollup.addresses || 0)"
                 :duration="2"
