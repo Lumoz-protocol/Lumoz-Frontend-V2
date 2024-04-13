@@ -114,6 +114,11 @@ export default {
       des1: 'The First and Only Prover Network',
       des2: 'In addition to common modules like Settlement, Data Availability, and Sequencer, a modular ZK-Rollup consists of a crucial component: the prover responsible for generating ZKPs (Zero Knowledge Proofs). Currently, Lumoz is the only provider in the modular rollup space offering a modular prover network.'
     },
+    news: {
+      title: 'IN THE NEWS',
+      title1: 'NEWS',
+      t1: 'Blockchain scaling infra provider Lumoz raises token round at $120 million valuation'
+    },
     why: {
       title: 'Why Choose Lumoz?',
       t1: 'Easily own a Rollup',

@@ -1,7 +1,7 @@
 <template>
 <div :id="'outer'+id" class="home-box-outer">
   <div class="home-box flex flex-col p-2 cursor-pointer" :id="id">
-    <img src="@/assets/img/home/arrow.png" class="h-3 mb-4 w-20">
+    <img v-if="!hide" src="@/assets/img/home/arrow.png" class="h-3 mb-4 w-20">
     <div class="flex-1">
       <slot></slot>
     </div>
@@ -12,6 +12,14 @@
 const id = ref('home-box'+Number(new Date())+Math.floor(Math.random() * 1000))
 const multiple = 30
 
+const props = withDefaults(
+  defineProps<{
+    hide: boolean
+  }>(),
+  {
+    hide: false
+  }
+)
 
 onMounted(() => {
   // try {
