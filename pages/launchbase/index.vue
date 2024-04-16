@@ -62,7 +62,7 @@
           {{ $t('launch.con1') }}
         </div>
         <a href="mailto:contact@lumoz.org" class="mt-8 animate__animated animate__fadeIn animate__delay-2s">
-          <HomeButton class="w-40" :word="$t('launch.apply')" />
+          <HomeButton class="w-60" :word="$t('launch.apply')" />
         </a>
       </div>
     </div>
