@@ -12,7 +12,7 @@ import M11 from '@/assets/img/eco/11.avif'
 import M12 from '@/assets/img/eco/12.avif'
 import M13 from '@/assets/img/eco/13.avif'
 import M14 from '@/assets/img/eco/14.avif'
-import M15 from '@/assets/img/eco/15.avif'
+import M15 from '@/assets/img/eco/15.svg'
 import M16 from '@/assets/img/eco/16.avif'
 import M17 from '@/assets/img/eco/17.avif'
 import M18 from '@/assets/img/eco/18.avif'
@@ -123,8 +123,8 @@ const getEcosystems = () => {
         category: 'Bridge'
       },
       {
-        name: 'Meson Network',
-        url: 'https://www.meson.network/',
+        name: 'Meson',
+        url: 'https://meson.fi/',
         img: M15,
         category: 'Bridge'
       },
