@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   i18n: {
     vueI18n: './i18n.config.ts'
   },
+  build: {
+    transpile: ['echarts']
+  },
   elementPlus: { themes: ['dark'] },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },

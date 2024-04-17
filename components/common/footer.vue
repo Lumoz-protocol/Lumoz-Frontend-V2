@@ -69,22 +69,26 @@ const footer = ref([
     list: [
       {
         name: vm.$t('footer.c1'),
-        url: '/lumoz-points'
+        url: '/miners'
       },
       {
         name: vm.$t('footer.c2'),
-        url: '/ecosystems'
+        url: '/lumoz-points'
       },
       {
         name: vm.$t('footer.c3'),
-        url: 'https://mirror.xyz/lumozorg.eth'
+        url: '/ecosystems'
       },
       {
         name: vm.$t('footer.c4'),
-        url: 'https://docs.lumoz.org/'
+        url: 'https://mirror.xyz/lumozorg.eth'
       },
       {
         name: vm.$t('footer.c5'),
+        url: 'https://docs.lumoz.org/'
+      },
+      {
+        name: vm.$t('footer.c6'),
         url: 'https://lumoz.org/admin/file/files/LUMOZ_MEDIA_KIT_2.zip'
       },
     ]

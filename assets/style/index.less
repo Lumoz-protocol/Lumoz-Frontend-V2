@@ -2,6 +2,9 @@
 
 :root {
   --animate-delay: 0.5s;
+  --el-color-primary: #BEFE00 !important;
+  --el-color-error:#F5222D;
+  --el-color-danger: #F5222D;
 }
 
 .fp-watermark {
@@ -165,15 +168,109 @@ html, body {
   color: #BEFE00;
 }
 
+.lumoz-rollup-tabs .el-tabs__nav-wrap::after {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.el-tabs__active-bar {
+  display: none;
+}
+.el-tabs__item:hover {
+  
+}
+.lumoz-rollup-tabs .el-tabs__item {
+  padding: 0 20px !important;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 10px;
+  border:1px solid #F4FFA3;
+  color: #F4FFA3;
+  border-radius: 10px 10px 0 0;
+}
+.lumoz-rollup-tabs:hover {
+  color:red;
+}
+.lumoz-rollup-tabs .is-active {
+  background: #BEFE00;
+  border:1px solid #BEFE00;
+  color:black !important;
+}
 
+.simple_tabstabs .el-tabs__item {
+  color: #FFFFFF;
+}
+.simple_tabstabs .is-active {
+  color: #BEFE00;
+}
+.simple_tabstabs .el-tabs__nav-wrap::after{
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.simple_tabstabs .el-tabs__active-bar {
+  height: 1px;
+}
+.simple_tabstabs .el-tabs__header {
+  margin: 0 0 5px;
+}
 
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+  background: #BEFE0020;
+}
+.el-select-dropdown__item {
+  color: white;
+}
+.el-select-dropdown__item.selected {
+  font-weight: 400;
+}
+.el-select-group__title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.el-popper__arrow::before {
+  background: #333333 !important;
+}
+.is-dark {
+  background:#333333 !important;
+  border: #333333 !important;
+}
+.el-select__popper.el-popper {
+  margin-top: 5px !important;
+  border-radius: 20px;
+}
+.el-select-dropdown__list {
+  margin: 0 !important;
+}
+.el-select-dropdown__item {
+  border-radius: 40px;
+}
 
+.el-select__wrapper {
+  background: #252525 !important;
+  color: #BEFE00 !important;
+  border: 1px solit #252525 !important;
+  border-radius: 1000px !important;
+  box-shadow: 0 0 0 1px #BEFE00cc !important;
+}
+.el-select__input {
+  color: #BEFE00 !important;
+}
+.el-select-dropdown__item.is-hovering {
+  background: #BEFE0022 !important;
+  color: #BEFE00 !important;
+}
+.el-select-dropdown__item {
+  color: white !important
+}
 
-
-
-
-
-
+.el-select__popper.el-popper .el-popper__arrow::before {
+  border: 0 !important
+}
+.el-select__placeholder {
+  color: #BEFE00 !important;
+}
+.el-select__caret {
+  color: white !important
+}
 
 
 //others 

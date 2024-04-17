@@ -79,6 +79,11 @@ const menus = ref([
     name: vm.$t('header.community.title'),
     list: [
       {
+        name: vm.$t('header.community.miners'),
+        local: true,
+        url: '/miners'
+      },
+      {
         name: vm.$t('header.community.ecosystems'),
         local: true,
         url: '/ecosystems'

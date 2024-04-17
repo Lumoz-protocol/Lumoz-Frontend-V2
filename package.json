@@ -19,6 +19,7 @@
     "animate.css": "^4.1.1",
     "axios": "^1.6.7",
     "copy-to-clipboard": "^3.3.3",
+    "echarts": "^5.5.0",
     "element-plus": "^2.6.0",
     "ethers": "5.7.2",
     "hover.css": "^2.3.2",
