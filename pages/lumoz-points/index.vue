@@ -148,7 +148,7 @@ const data = {
   alpha_extra_validator_rank_10: 0,
   alpha_extra_validator_rank_11: 0,
   alpha_extra_validator_rank_12: 0,
-  alpha_extra_validator_rank_9: 70,
+  alpha_extra_validator_rank_9: 0,
   dragon_slayer_phase_1: 0,
   dragon_slayer_phase_2: 0,
   dragon_slayer_phase_3: 0,
