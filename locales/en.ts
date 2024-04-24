@@ -119,7 +119,8 @@ export default {
     news: {
       title: 'IN THE NEWS',
       title1: 'NEWS',
-      t1: 'Blockchain scaling infra provider Lumoz raises token round at $120 million valuation'
+      t1: 'Blockchain scaling infra provider Lumoz raises token round at $120 million valuation',
+      t2: 'Lumoz Supports Op Stack + ZK Fraud Proof.Initiating a New Paradigm in L2 Architecture'
     },
     why: {
       title: 'Why Choose Lumoz?',
