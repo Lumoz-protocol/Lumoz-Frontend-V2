@@ -17,7 +17,7 @@
                 <div class="text-xl px-4 mb-4 xl:text-xl mt-4 xl:mt-12">
                   <img src="@/assets/img/com/n2.avif" alt="">
                 </div>
-                <div class="px-4 font-bold">2024-04-24</div>
+                <div class="px-4 font-bold">2024-04-18</div>
               </a>
             </HomeBox>
           </div>
