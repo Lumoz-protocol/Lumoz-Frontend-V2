@@ -12,7 +12,7 @@
           
           <div class="flex items-center justify-center">
             <HomeBox hide class="px-20 lg:px-0 xl:(w-96 px-0)">
-              <a class="flex flex-col justif text-black h-full" target="_blank" href="https://www.theblock.co/post/286969/lumoz-crypto-funding-token-round-valuation?utm_source=twitter&utm_medium=social">
+              <a class="flex flex-col justif text-black h-full" target="_blank" href="https://coinmarketcap.com/community/articles/6620cd0b5cbc554af5aa0dc7/">
                 <div class="text-xl mt-8 pl-4 font-bold">{{ $t('com.news.t2') }}</div>
                 <div class="text-xl px-4 mb-4 xl:text-xl mt-4 xl:mt-12">
                   <img src="@/assets/img/com/n2.avif" alt="">
