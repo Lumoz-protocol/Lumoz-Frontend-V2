@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto">
-    <HomeBanner />
-    <HomeWhite />
+    <!-- <HomeBanner />
+    <HomeWhite /> -->
   </div>
 </template>
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   css: ['@/assets/style/index.less', 'animate.css/animate.css','hover.css/less/hover.less'],
   typescript: {
     shim: false
