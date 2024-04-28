@@ -2,10 +2,19 @@
 <script lang="ts" setup>
 import { createWeb3Modal, defaultConfig, useWeb3Modal, useWeb3ModalProvider, useWeb3ModalAccount, useDisconnect } from '@web3modal/ethers5/vue'
 import { useWalletStore } from '@/stores'
+import { NODE_NETWORKS } from '@/constants/networks'
 const projectId = 'f84f8b1354cd3805ef4253caaadbe45f'
 
 const { disconnect } = useDisconnect()
-
+const otherNetwork = JSON.parse(JSON.stringify(NODE_NETWORKS)).map(item => {
+  return {
+    chainId: item.chainId,
+    name: item.name,
+    currency: item.symbol,
+    explorerUrl: item.explorer,
+    rpcUrl: item.rpcUrl
+  }
+})
 const networks = [
   {
     chainId: 51178,
@@ -14,20 +23,7 @@ const networks = [
     explorerUrl: 'https://lumoz.info',
     rpcUrl: 'https://alpha-us-http-geth.lumoz.org'
   },
-  {
-    chainId: 42766,
-    name: 'ZKFair',
-    currency: 'USDT',
-    explorerUrl: 'https://scan.zkfair.io',
-    rpcUrl: 'https://rpc.zkfair.io'
-  },
-  {
-    chainId: 4200,
-    name: 'Merlin',
-    currency: 'BTC',
-    explorerUrl: 'https://scan.merlinchain.io',
-    rpcUrl: 'https://rpc.merlinchain.io'
-  },
+  ...otherNetwork
 ]
 
 const metadata = {

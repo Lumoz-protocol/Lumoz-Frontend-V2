@@ -1,11 +1,8 @@
 <template>
   <div>
     <CommonHeader />
-    <div class="h-20" v-if="router.currentRoute.value.fullPath !== '/'"></div>
+    <div class="h-20"></div>
     <NuxtPage />
-    <CommonFooter v-if="router.currentRoute.value.fullPath !== '/'" />
+    <CommonFooter />
   </div>
 </template>
-<script setup lang="ts">
-const router = useRouter()
-</script> 

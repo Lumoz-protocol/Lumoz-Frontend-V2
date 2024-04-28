@@ -7,6 +7,7 @@ import POLYGONLIGHT from '@/assets/img/networks/polygon-light.svg'
 import ZKSYNC from '@/assets/img/networks/zksync.svg'
 import ZKSYNCLIGHT from '@/assets/img/networks/zksync-light.svg'
 import Scroll from '@/assets/img/networks/scroll.svg'
+import { ElNotification } from 'element-plus/dist/index.full.js'
 
 export function formatUnit(num: number) {
   const _num = Math.abs(num)
@@ -82,4 +83,33 @@ const includes = (name: string, area: string[]) => {
     }
   }
   return false
+}
+
+
+export const notifyInfo = (title = '', text = '') => {
+  ElNotification({
+    title,
+    message: text,
+    showClose: false
+  })
+}
+
+export const notifySuccess = (title = '', text = '') => {
+  ElNotification({
+    title,
+    type: 'success',
+    message: text,
+    showClose: false,
+    customClass: 'el-notification-success'
+  })
+}
+
+export const notifyError = (title = '', text = '') => {
+  ElNotification({
+    title,
+    type: 'error',
+    message: text,
+    showClose: false,
+    customClass: 'el-notification-error'
+  })
 }

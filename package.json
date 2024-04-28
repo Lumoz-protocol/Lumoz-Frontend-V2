@@ -1,5 +1,5 @@
 {
-  "name": "lumoz-frontend",
+  "name": "lumoz-node-frontend",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,7 +15,6 @@
     "@fullpage/nuxt-fullpage": "^0.2.5",
     "@pinia/nuxt": "^0.5.1",
     "@web3modal/ethers5": "^4.0.10",
-    "add": "^2.0.6",
     "animate.css": "^4.1.1",
     "axios": "^1.6.7",
     "copy-to-clipboard": "^3.3.3",
@@ -27,9 +26,7 @@
     "nuxt": "^3.10.3",
     "vue": "^3.4.19",
     "vue-countup-v3": "^1.4.1",
-    "vue-router": "^4.3.0",
-    "vue3-marquee": "^4.2.0",
-    "yarn": "^1.22.22"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@nuxtjs/i18n": "^8.1.1",

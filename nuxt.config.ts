@@ -21,19 +21,19 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'Lumoz | ZK-RaaS Network Featuring ZKP Mining',
+      title: 'Lumoz | zkVerifier Node',
       meta: [
         { charset: 'utf-8' },
         {
           hid: 'keywords',
           name: 'keywords',
           content:
-            'zk, RaaS, zkRaaS, ZK-Rollups, PoW PoS, high throughtput, zkEVM, layer2, rollup, 0 gas'
+            'zk, RaaS, zkRaaS, ZK-Rollups, PoW PoS, high throughtput, zkEVM, layer2, rollup, 0 gas, zkVerifier'
         },
         {
           hid: 'description',
           name: 'description',
-          content: 'zk, RaaS, zkRaaS, ZK-Rollups, PoW PoS, high throughtput, zkEVM, layer2, rollup, 0 gas'
+          content: 'zk, RaaS, zkRaaS, ZK-Rollups, PoW PoS, high throughtput, zkEVM, layer2, rollup, 0 gas, zkVerifier'
         }
       ]
     }

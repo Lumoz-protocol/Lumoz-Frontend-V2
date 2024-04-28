@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ethers } from 'ethers'
 import { LUMOZ } from '~~/constants/networks'
+import { notifyError } from '@/libs/utils'
 
 export type Bridge = {
   provider: any
@@ -87,6 +88,54 @@ export const useWalletStore = defineStore('wallet', {
         })
       } catch (e) {
         return false
+      }
+    },
+    setNetwork(name:string, chainId: number) {
+      bridge.web3Provider = new ethers.providers.Web3Provider(bridge.provider, { name, chainId })
+    },
+    async checkAndSwitchNetwork(network: any) {
+      const chainIdHex = `0x${network.chainId.toString(16)}`
+      try {
+        const chainId = await bridge.provider.request({ method: 'eth_chainId' })
+        if (chainId === chainIdHex) {
+          return true
+        }
+        await bridge.provider.request({
+          method: 'wallet_switchEthereumChain',
+          params: [
+            {
+              chainId: chainIdHex
+            }
+          ]
+        })
+        return true
+      } catch (e) {
+        if (e.code === 4902) {
+          try {
+            await bridge.provider.request({
+              method: 'wallet_addEthereumChain',
+              params: [
+                {
+                  chainId: chainIdHex,
+                  chainName: network.name,
+                  nativeCurrency: {
+                    name: network.symbol,
+                    symbol: network.symbol,
+                    decimals: network.decimals || 18
+                  },
+                  rpcUrls: [network.rpcUrl],
+                  blockExplorerUrls: [network.explorerUrl || network.explorer]
+                }
+              ]
+            })
+            return true
+          } catch (e) {
+            if (e && e.code === 4001) {
+              notifyError(e)
+              return false
+            }
+          }
+        }
       }
     }
   }

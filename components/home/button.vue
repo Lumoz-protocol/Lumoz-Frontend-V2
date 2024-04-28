@@ -1,5 +1,5 @@
 <template>
-  <button class="home-button-corner px-4 py-1.5 hvr-bounce-in" :class="light ? 'home-button-corner-light text-white' : 'home-button-corner text-black'">{{ word }}</button>
+  <button class="home-button-corner px-4 py-1.5 hvr-bounce-in" :class="light ? 'home-button-corner-light text-white' : 'home-button-corner text-black'">{{ word }}<slot></slot></button>
 </template>
 <script setup lang="ts">
 withDefaults(

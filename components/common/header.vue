@@ -15,10 +15,10 @@
         >
         </CommonNavItem>
       </CommonNavItems>
-      <div class="px-2 2xl:px-5 border-l border-r border-border-300">
+      <div class="px-2 2xl:px-5 border-l border-r border-border-300 mr-8">
         <CommonMedia />
       </div>
-      <HomeButton @click="toLaunch" class="ml-8" :word="$t('header.launch')" />
+      <Wallet />
     </div>
     <div class="xl:hidden relative">
       <img
@@ -31,7 +31,7 @@
         <el-drawer v-model="menuShow" :with-header="false" :append-to-body="true" :size="400">
           <div class="flex items-center justify-between mb-4">
             <CommonLogo />
-            <HomeButton @click="toLaunch" :word="$t('header.launch')" />
+            <Wallet class="ml-8" />
           </div>
 
           <CommonSingleNavItem
