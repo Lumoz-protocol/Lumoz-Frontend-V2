@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --port 10044",
     "generate": "nuxt generate",
     "start": "node .output/server/index.mjs",
     "preview": "nuxt preview",
@@ -23,7 +23,7 @@
     "ethers": "5.7.2",
     "hover.css": "^2.3.2",
     "moment": "^2.30.1",
-    "nuxt": "^3.10.3",
+    "nuxt": "3.10.2",
     "vue": "^3.4.19",
     "vue-countup-v3": "^1.4.1",
     "vue-router": "^4.3.0"

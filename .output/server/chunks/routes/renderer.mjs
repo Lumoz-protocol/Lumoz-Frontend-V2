@@ -93,7 +93,7 @@ function createServerHead(options = {}) {
 
 const unheadPlugins = [];
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"hid":"keywords","name":"keywords","content":"zk, RaaS, zkRaaS, ZK-Rollups, PoW PoS, high throughtput, zkEVM, layer2, rollup, 0 gas"},{"hid":"description","name":"description","content":"zk, RaaS, zkRaaS, ZK-Rollups, PoW PoS, high throughtput, zkEVM, layer2, rollup, 0 gas"}],"link":[],"style":[],"script":[],"noscript":[],"title":"Lumoz | ZK-RaaS Network Featuring ZKP Mining"};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"hid":"keywords","name":"keywords","content":"zk, RaaS, zkRaaS, ZK-Rollups, PoW PoS, high throughtput, zkEVM, layer2, rollup, 0 gas, zkVerifier"},{"hid":"description","name":"description","content":"zk, RaaS, zkRaaS, ZK-Rollups, PoW PoS, high throughtput, zkEVM, layer2, rollup, 0 gas, zkVerifier"}],"link":[],"style":[],"script":[],"noscript":[],"title":"Lumoz | zkVerifier Node"};
 
 const appRootId = "__nuxt";
 
