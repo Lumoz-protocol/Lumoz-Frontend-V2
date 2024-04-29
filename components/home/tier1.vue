@@ -12,7 +12,7 @@
       <div v-if="!dark" class="mt-4 flex items-center">
         <div>{{ $t('home.white.pro') }}</div>
         <div class="flex-1 tier-pro-bg h-2.5 mx-4 rounded-full">
-          <div class="rounded-full tier-pro-con h-full" :class="progress"></div>
+          <div class="rounded-full tier-pro-con h-full" :style="progress"></div>
         </div>
         <div class="flex text-sm">
           <div class="text-primary-900">{{ tierStore.pre.sell_count }}</div>
@@ -50,13 +50,13 @@ const price = computed(() => {
 
 const progress = computed(() => {
   if (props.dark || !tierStore.pre.volume) {
-    return 'w-0'
+    return 'width: 0px'
   }
   const index = Math.floor(Number(tierStore.pre.sell_count) / Number(tierStore.pre.volume) * 100)
   if (index === 0) {
-    return 'w-0'
+    return 'width:0px'
   }
-  return `w-${index}\/100`
+  return `width:${index}%`
 })
 
 </script>
