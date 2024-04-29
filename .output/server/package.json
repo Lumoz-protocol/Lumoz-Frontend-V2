@@ -47,6 +47,8 @@
     "@vue/runtime-dom": "3.4.21",
     "@vue/server-renderer": "3.4.21",
     "@vue/shared": "3.4.21",
+    "@vueuse/core": "9.13.0",
+    "@vueuse/shared": "9.13.0",
     "aes-js": "3.0.0",
     "asynckit": "0.4.0",
     "axios": "1.6.7",
@@ -81,13 +83,16 @@
     "scrypt-js": "3.0.1",
     "source-map-js": "1.0.2",
     "supports-color": "5.5.0",
+    "tslib": "2.3.0",
     "ufo": "1.4.0",
     "unhead": "1.8.18",
     "vue": "3.4.21",
     "vue-bundle-renderer": "2.0.0",
     "vue-countup-v3": "1.4.1",
+    "vue-demi": "0.14.7",
     "vue-devtools-stub": "0.1.0",
     "vue-router": "4.3.0",
-    "ws": "7.4.6"
+    "ws": "7.4.6",
+    "zrender": "5.5.0"
   }
 }

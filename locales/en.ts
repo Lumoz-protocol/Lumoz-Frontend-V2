@@ -68,7 +68,7 @@ export default {
   },
 
   rollups: {
-    title1: 'The world‘s frist RaaS with operation',
+    title1: 'The world‘s first RaaS with operation',
     title2: 'ZK-Rollups on the mainnet',
     main: 'Mainnet',
     test: 'Testnet',

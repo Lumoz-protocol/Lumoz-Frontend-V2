@@ -1,0 +1,6 @@
+const info_vue_vue_type_style_index_0_scoped_2531b1aa_lang = '.sp[data-v-2531b1aa]{clear:both;height:14px}.sp-bars[data-v-2531b1aa]{animation:spBars-2531b1aa 1s linear infinite;background-color:#befe00dd;border-radius:100px;position:relative;width:2px}.sp-bars[data-v-2531b1aa]:after,.sp-bars[data-v-2531b1aa]:before{background-color:inherit;border-radius:100px;content:"";height:inherit;position:absolute;width:inherit}.sp-bars[data-v-2531b1aa]:before{animation:spBarsBefore-2531b1aa 1s linear infinite;left:-8px}.sp-bars[data-v-2531b1aa]:after{animation:spBarsAfter-2531b1aa 1s linear infinite;right:-8px}@keyframes spBarsBefore-2531b1aa{0%{transform:scale(1)}25%{transform:scaleY(1.25)}50%{transform:scaleY(.75)}75%{transform:scale(1)}to{transform:scale(1)}}@keyframes spBars-2531b1aa{0%{transform:scale(1)}25%{transform:scale(1)}50%{transform:scaleY(1.25)}75%{transform:scale(1)}to{transform:scale(1)}}@keyframes spBarsAfter-2531b1aa{0%{transform:scale(1)}25%{transform:scale(1)}50%{transform:scaleY(.75)}75%{transform:scaleY(1.25)}to{transform:scale(1)}}';
+
+const infoStyles_CyO9d3d1 = [info_vue_vue_type_style_index_0_scoped_2531b1aa_lang];
+
+export { infoStyles_CyO9d3d1 as default };
+//# sourceMappingURL=info-styles.CyO9d3d1.mjs.map
