@@ -11,9 +11,6 @@ export default defineNuxtConfig({
     '@fullpage/nuxt-fullpage',
     '@nuxtjs/i18n'
   ],
-  vite: {
-    ssr: false
-  },
   i18n: {
     vueI18n: './i18n.config.ts'
   },
