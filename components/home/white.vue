@@ -9,7 +9,7 @@
       <HomeWhiteGetTier />
       <HomeWhiteDeposit />
     </div>
-    <!-- <HomeWhiteFaq /> -->
+    <HomeWhiteFaq />
   </div>
 </template>
 <script setup lang="ts">
