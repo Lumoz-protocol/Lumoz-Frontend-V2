@@ -32,7 +32,7 @@ export default {
     back: 'BACKERS',
     banner: {
       title: 'Modular Compute Layer For',
-      content: 'RaaS, AI, And More...',
+      content: 'ZK & AI',
       start: 'Start Building'
     },
     arc: {
@@ -84,9 +84,9 @@ export default {
     add: "Add Network"
   },
   com: {
-    title: 'The First Modular Prover Network',
+    title: 'The Leading Modular Compute Layer',
     building: 'Get In Touch',
-    content: 'Lumoz is a modular compute network that allows anyone to easily and quickly launch their own zk-rollup.',
+    content: 'Lumoz is the leading Modular Compute Layer for ZK&AI. Lumoz uses PoW mining mechanism to provide computing power for Rollup, ZK-ML and ZKP verification.',
     t1: 'Compute for ZK-Rollup',
     c1: 'Lumoz provides cloud infrastructure for ZKP computation that is compatible with most types of ZK-Rollups (such as Polygon CDK, zkSync, StarkNet, Scroll, etc.). The ZK-PoW algorithm combines miners\' computational resources with cloud infrastructure to provide ZKP computation capabilities for various ZK-Rollups.',
     t2: 'Optimized ZKP Network',
