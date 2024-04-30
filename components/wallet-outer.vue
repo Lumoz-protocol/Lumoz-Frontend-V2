@@ -7,13 +7,13 @@ const projectId = 'f84f8b1354cd3805ef4253caaadbe45f'
 const { disconnect } = useDisconnect()
 
 const networks = [
-  {
-    chainId: 51178,
-    name: 'Lumoz',
-    currency: 'MOZ',
-    explorerUrl: 'https://lumoz.info',
-    rpcUrl: 'https://alpha-us-http-geth.lumoz.org'
-  },
+  // {
+  //   chainId: 51178,
+  //   name: 'Lumoz',
+  //   currency: 'MOZ',
+  //   explorerUrl: 'https://lumoz.info',
+  //   rpcUrl: 'https://alpha-us-http-geth.lumoz.org'
+  // },
   {
     chainId: 42766,
     name: 'ZKFair',
