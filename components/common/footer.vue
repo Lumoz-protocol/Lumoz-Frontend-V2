@@ -89,7 +89,7 @@ const footer = ref([
       },
       {
         name: vm.$t('footer.c6'),
-        url: 'https://lumoz.org/admin/file/files/LUMOZ_MEDIA_KIT_2.zip'
+        url: 'https://github.com/opside-protocol/Media-Kits'
       },
     ]
   }
