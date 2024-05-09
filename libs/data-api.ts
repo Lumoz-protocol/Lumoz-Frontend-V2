@@ -3,7 +3,7 @@ import ETH from '@/assets/img/networks/eth.png'
 import LUMOZ from '@/assets/img/networks/lumoz.svg'
 import POLYGON from '@/assets/img/networks/polygon.svg'
 import BNB from '@/assets/img/networks/bsc.svg'
-const DATA_API = 'https://lumoz.org/data/api/'
+const DATA_API = 'https://api.lumoz.org/data/api/'
 const lumozTestnetNetworkId = 51178
 const goerliNetworkId = 5
 const mumbaiNetworkId = 80001
