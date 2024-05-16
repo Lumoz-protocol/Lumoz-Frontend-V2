@@ -29,6 +29,14 @@ import M13 from '@/assets/img/backer/13.avif'
 import M14 from '@/assets/img/backer/14.avif'
 import M15 from '@/assets/img/backer/15.avif'
 import M16 from '@/assets/img/backer/16.avif'
+import M17 from '@/assets/img/backer/17.avif'
+import M18 from '@/assets/img/backer/18.avif'
+import M19 from '@/assets/img/backer/19.avif'
+import M20 from '@/assets/img/backer/20.avif'
+import M21 from '@/assets/img/backer/21.avif'
+import M22 from '@/assets/img/backer/22.avif'
+import M23 from '@/assets/img/backer/23.avif'
+import M24 from '@/assets/img/backer/24.avif'
 import { Vue3Marquee } from 'vue3-marquee'
 const list = ref([
   {
@@ -93,6 +101,38 @@ const list = ref([
   },
   {
     img: M14,
+    css: 'w-20 mx-4 lg:(w-35 mr-10)'
+  },
+  {
+    img: M17,
+    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+  },
+  {
+    img: M18,
+    css: 'w-20 mx-4 lg:(w-35 mr-10)'
+  },
+  {
+    img: M19,
+    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+  },
+  {
+    img: M20,
+    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+  },
+  {
+    img: M21,
+    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+  },
+  {
+    img: M22,
+    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+  },
+  {
+    img: M23,
+    css: 'w-20 mx-4 lg:(w-35 mr-10)'
+  },
+  {
+    img: M24,
     css: 'w-20 mx-4 lg:(w-35 mr-10)'
   }
 ])
