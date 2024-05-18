@@ -40,12 +40,20 @@ import M24 from '@/assets/img/backer/24.avif'
 import { Vue3Marquee } from 'vue3-marquee'
 const list = ref([
   {
+    img: M21,
+    css: 'w-20 mx-4 lg:(w-32 mr-10)'
+  },
+  {
     img: M1,
-    css: 'w-20 mx-4 lg:(w-35 mx-10)'
+    css: 'w-20 mx-4 lg:(w-30 mx-10)'
   },
   {
     img: M2,
-    css: 'w-20 mx-4 lg:(w-28 mx-10)'
+    css: 'w-20 mx-4 lg:(w-24 mx-10)'
+  },
+  {
+    img: M22,
+    css: 'w-20 mx-4 lg:(w-30 mr-10)'
   },
   {
     img: M6,
@@ -56,13 +64,22 @@ const list = ref([
     css: 'w-20 mx-4 lg:(w-35 mx-10)'
   },
   {
-    img: M16,
-    css: 'w-20 mx-4 lg:(w-35 mx-10)'
-  },
-  {
     img: M10,
     css: 'w-20 mx-4 lg:(w-35 mx-10)'
   },
+  {
+    img: M20,
+    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+  },
+  {
+    img: M23,
+    css: 'w-20 mx-4 lg:(w-35 mr-10) mt-4'
+  },
+  {
+    img: M16,
+    css: 'w-20 mx-4 lg:(w-35 mx-10)'
+  },
+
   {
     img: M3,
     css: 'w-20 mx-4 lg:(w-40 mx-10)'
@@ -114,22 +131,6 @@ const list = ref([
   {
     img: M19,
     css: 'w-20 mx-4 lg:(w-30 mr-10)'
-  },
-  {
-    img: M20,
-    css: 'w-20 mx-4 lg:(w-30 mr-10)'
-  },
-  {
-    img: M21,
-    css: 'w-20 mx-4 lg:(w-30 mr-10)'
-  },
-  {
-    img: M22,
-    css: 'w-20 mx-4 lg:(w-30 mr-10)'
-  },
-  {
-    img: M23,
-    css: 'w-20 mx-4 lg:(w-35 mr-10)'
   },
   {
     img: M24,
