@@ -53,11 +53,11 @@ const list = ref([
   },
   {
     img: M22,
-    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+    css: 'w-20 mx-4 lg:(w-40 mx-10)'
   },
   {
     img: M6,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    css: 'w-20 mx-4 lg:(w-40 mr-10)'
   },
   {
     img: M15,
