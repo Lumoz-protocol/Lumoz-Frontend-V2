@@ -43,11 +43,11 @@ export default {
     },
     raas: {
       title: 'RaaS & Rollups',
-      content: 'Lumoz decentralized computing layer removescomputational barriers for ZK-Rollups, ensuring stableand effective provision ofZK-Proof computation across allpublic chains.Additionally, it serves as a modularized blockchaincompute module for RaaS, offering computational powerto all ZK-Rollups developed on RaaS, thereby completingthe RaaS ecosystem.'
+      content: 'Lumoz decentralized computing layer removes computational barriers for ZK-Rollups, ensuring stableand effective provision ofZK-Proof computation across allpublic chains.Additionally, it serves as a modularized blockchain compute module for RaaS, offering computational powerto all ZK-Rollups developed on RaaS, thereby completing the RaaS ecosystem.'
     },
     ai: {
       title: 'AI & More',
-      content: 'The decentralized computing layer of Lumoz can providestable and affordable computational power for the Web3AI platform, enabling AI projects to focus on businessdevelopment. Meanwhile, Lumoz, as a public chain, canseamlessly integrate with Web3 AI, facilitating the sharingand exchange of data and resources. This integrationoffers AI projects a broader space for development.'
+      content: 'The decentralized computing layer of Lumoz can provide stable and affordable computational power for the Web3AI platform, enabling AI projects to focus on business development. Meanwhile, Lumoz, as a public chain, canseamlessly integrate with Web3 AI, facilitating the sharing and exchange of data and resources. This integration offers AI projects a broader space for development.'
     },
     data: {
       title: 'Decentralized, efficient, and reliable.',
@@ -59,11 +59,11 @@ export default {
     ben: {
       title: 'Benifit',
       t1: 'Compute to Earn',
-      c1: 'DePiN nodes have anopportunity to earn MOZ tokenas a rewards for computing ZKProof for rollups networks andcomputing for AI networks.',
+      c1: 'DePiN nodes have anopportunity to earn MOZ token as a rewards for computing ZKProof for rollups networks and computing for AI networks.',
       t2: 'Affordable Computility',
       c2: 'Produce ZKP for your rollup and compute for your AI with Lumoz\'s Depin network. eliminating the need for expensive computing costs.',
       t3: 'Robustize Your Work',
-      c3: 'Through the decentralizedLumoz Depin network,enhancing the robustness andstability of the rollup and AI.'
+      c3: 'Through the decentralized Lumoz Depin network,enhancing the robustness andstability of the rollup and AI.'
     }
   },
 
@@ -133,9 +133,9 @@ export default {
       c1: 'Create a ZK-Rollup in few steps, No tech expertise needed.',
       c2: 'Customize the gas tokens brings excellent scalability to youreconomic model.',
       c3: 'DePlN with ZK-PoW incentivizes Miners to generate ZK Proofs to reduce costs.',
-      c4: 'ZK-Rollups have trustless security, safe bridges and fastewithdrawals.',
-      c5: 'More interoperability and composability writh shared liguidityfor all rollups.',
-      c6: 'Upon successful launch of your rollup, all infrastructureincluding bridges and browsers will be automaticallydeployed.',
+      c4: 'ZK-Rollups have trustless security, safe bridges and faste withdrawals.',
+      c5: 'More interoperability and composability writh shared liguidity for all rollups.',
+      c6: 'Upon successful launch of your rollup, all infrastructure including bridges and browsers will be automatically deployed.',
     }
   },
   points: {
