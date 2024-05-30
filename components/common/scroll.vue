@@ -7,7 +7,7 @@
       </div>
     </Vue3Marquee> -->
     <div v-for="(item, index) in list" :key="index">
-      <img :src="item.img" alt="" class="hvr-float mt-2 cursor-pointer" :class="item.css">
+      <img :src="item.img" alt="" class="hvr-float mt-1 cursor-pointer" :class="item.css">
     </div>
   </client-only>
 </template>
@@ -41,100 +41,100 @@ import { Vue3Marquee } from 'vue3-marquee'
 const list = ref([
   {
     img: M21,
-    css: 'w-20 mx-4 lg:(w-32 mr-10)'
+    css: 'w-20 mx-4 lg:(w-30 -mt-1)'
   },
   {
     img: M1,
-    css: 'w-20 mx-4 lg:(w-30 mx-10)'
+    css: 'w-20 mx-4 lg:(w-30)'
   },
   {
     img: M2,
-    css: 'w-20 mx-4 lg:(w-24 mx-10)'
+    css: 'w-16 mx-4 lg:(w-24)'
   },
   {
     img: M22,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    css: 'w-20 mx-4 lg:(w-40)'
   },
   {
     img: M6,
-    css: 'w-20 mx-4 lg:(w-40 mr-10)'
+    css: 'w-20 mx-4 lg:(w-34)'
   },
   {
     img: M15,
-    css: 'w-20 mx-4 lg:(w-35 mx-10)'
+    css: 'w-20 mx-4 lg:(w-32)'
   },
   {
     img: M10,
-    css: 'w-20 mx-4 lg:(w-35 mx-10)'
+    css: 'w-20 mx-4 lg:(w-32)'
   },
   {
     img: M20,
-    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+    css: 'w-20 mx-4 lg:(w-30)'
   },
   {
     img: M23,
-    css: 'w-20 mx-4 lg:(w-35 mr-10) mt-4'
+    css: 'w-20 mx-4 lg:(w-35)'
   },
   {
     img: M16,
-    css: 'w-20 mx-4 lg:(w-35 mx-10)'
+    css: 'w-20 mx-4 lg:(w-30)'
   },
 
   {
     img: M3,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    css: 'w-20 mx-4 lg:(w-34)'
   },
   {
     img: M4,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    css: 'w-20 mx-4 lg:(w-32)'
   },
   {
     img: M11,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    css: 'w-20 mx-4 lg:(w-36)'
   },
   {
     img: M5,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    css: 'w-20 mx-4 lg:(w-36 -mt-1)'
   },
   {
     img: M12,
-    css: 'w-20 mx-4 lg:(w-30 mx-10)'
+    css: 'w-20 mx-4 lg:(w-26)'
   },
     {
     img: M9,
-    css: 'w-20 mx-4 lg:(w-30 ml-10)'
+    css: 'w-20 mx-4 lg:(w-24 -mt-0.5)'
   },
     {
     img: M13,
-    css: 'w-20 mx-4 lg:(w-45)'
+    css: 'w-20 mx-4 lg:(w-16)'
   },
   {
     img: M7,
-    css: 'w-20 mx-4 lg:(w-40 mr-10)'
+    css: 'w-20 mx-4 lg:(w-32)'
   },
   {
     img: M8,
-    css: 'w-20 mx-4 lg:(w-40 mx-10)'
+    css: 'w-20 mx-4 lg:(w-30)'
   },
   {
     img: M14,
-    css: 'w-20 mx-4 lg:(w-35 mr-10)'
+    css: 'w-20 mx-4 lg:(w-30)'
   },
   {
     img: M17,
-    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+    css: 'w-20 mx-4 lg:(w-26)'
   },
   {
     img: M18,
-    css: 'w-20 mx-4 lg:(w-35 mr-10)'
+    css: 'w-20 mx-4 lg:(w-30)'
   },
   {
     img: M19,
-    css: 'w-20 mx-4 lg:(w-30 mr-10)'
+    css: 'w-20 mx-4 lg:(w-28)'
   },
   {
     img: M24,
-    css: 'w-20 mx-4 lg:(w-35 mr-10)'
+    css: 'w-20 mx-4 lg:(w-34 mt-4)'
   }
 ])
 </script>

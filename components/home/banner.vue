@@ -11,10 +11,10 @@
         <HomeButton @click="to" :word="$t('home.banner.start')" class="mt-4 w-40 animate__animated animate__fadeIn animate__delay-2s" />
       </div>
     </div>
-    <div class="fade-edges-s py-4 lg:pb-8 w-full">
+    <div class="fade-edges-s w-full">
       <!-- lg:(w-2/3 ml-1/6) -->
       <div class=" overflow-hidden">
-        <div class="text-center font-bold lg:text-2xl">{{ $t('home.back') }}</div>
+        <div class="text-center font-bold lg:text-xl mb-2">{{ $t('home.back') }}</div>
         <div class="fade-edges">
           <div class="fade-edges-t flex flex-wrap items-center justify-center">
             <CommonScroll></CommonScroll>
