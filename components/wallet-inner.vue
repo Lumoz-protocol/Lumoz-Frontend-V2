@@ -4,7 +4,7 @@
     <div v-if="slotDefault && !walletStore.account" @click="modal.open()">
       <slot></slot>
     </div>
-    <button v-if="walletStore.account" @click="modal.open()" class="home-button-corner px-4 py-1.5 flex items-center justify-center" :class="light ? 'home-button-corner-light text-white' : 'home-button-corner text-black'">
+    <button v-if="walletStore.account" class="home-button-corner px-4 py-1.5 flex items-center justify-center" :class="light ? 'home-button-corner-light text-white' : 'home-button-corner text-black'">
         {{ formatAddress(walletStore.account, 6) }}
         <img src="@/assets/img/share/exit.svg" @click="dis" class="opacity-80 hover:opacity-100 w-6 ml-2 hvr-grow">
       </button>

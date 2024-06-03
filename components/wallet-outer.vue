@@ -45,6 +45,7 @@ const modal = createWeb3Modal({
     enableCoinbase: false,
     rpcUrl: 'https://alpha-us-http-geth.lumoz.org'
   }),
+  allowUnsupportedChain: true,
   chains: networks,
   projectId,
   enableAnalytics: false
