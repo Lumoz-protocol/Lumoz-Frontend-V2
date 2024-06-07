@@ -37,6 +37,7 @@ import M21 from '@/assets/img/backer/21.avif'
 import M22 from '@/assets/img/backer/22.avif'
 import M23 from '@/assets/img/backer/23.avif'
 import M24 from '@/assets/img/backer/24.avif'
+import M25 from '@/assets/img/backer/25.svg'
 import { Vue3Marquee } from 'vue3-marquee'
 const list = ref([
   {
@@ -135,6 +136,10 @@ const list = ref([
   {
     img: M24,
     css: 'w-20 mx-4 lg:(w-34 mt-4)'
+  },
+  {
+    img: M25,
+    css: 'w-20 mx-4 lg:(w-34)'
   }
 ])
 </script>
