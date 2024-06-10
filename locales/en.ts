@@ -3,6 +3,7 @@ export default {
     raas: 'Modular Compute Layer',
     rollups: 'Rollups',
     points: 'Lumoz Points',
+    node: 'Node Sale🔥',
     community: {
       title: 'Community',
       miners: 'Miners Overview',
@@ -18,6 +19,7 @@ export default {
     s1: 'Modular Compute Layer',
     s2: 'Rollups',
     s3: 'Launch a ZK-Rollup',
+    s4: 'Node Sale',
     community: 'Community',
     c1: 'Miners Overview',
     c2: 'Lumoz Points',

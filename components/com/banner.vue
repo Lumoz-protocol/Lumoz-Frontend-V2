@@ -1,7 +1,7 @@
 <template>
   <div class="com-banner">
     <div >
-      <div class="container mx-auto flex items-center justify-between">
+      <div class="container mx-auto flex items-center justify-between py-20 lg:py-0">
         <div class="w-1/2 lg:w-1/2">
           <h1 class="text-xl lg:text-5xl font-bold">{{ $t('com.title') }}</h1>
           <p class="mt-2 lg:mt-4 text-sm lg:text-xl">{{ $t('com.content') }}</p>

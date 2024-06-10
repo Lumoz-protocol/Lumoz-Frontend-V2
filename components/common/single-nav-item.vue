@@ -2,7 +2,7 @@
   <div>
     <div class="hidden lg:block">
       <div
-        class="mr-10 items-center hover:text-primary-900 cursor-pointer hvr-bounce-in hvr-underline-from-center py-4"
+        class="mr-10 items-center hover:text-primary-900 cursor-pointer hvr-bounce-in hvr-underline-from-center py-4 text-sm"
         @click="goToLink"
       >
         {{ item.name }}

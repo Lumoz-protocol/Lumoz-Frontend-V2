@@ -51,6 +51,10 @@ const footer = ref([
     name: vm.$t('footer.solutions'),
     list: [
       {
+        name: vm.$t('footer.s4'),
+        url: 'https://node.lumoz.org'
+      },
+      {
         name: vm.$t('footer.s1'),
         url: '/compute-layer'
       },

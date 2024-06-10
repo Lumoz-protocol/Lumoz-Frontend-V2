@@ -2,7 +2,7 @@
   <div class="mr-10">
     <div class="relative hidden lg:block" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
       <div
-        class="py-4 cursor-pointer flex items-center transition hvr-bounce-in hvr-underline-from-center"
+        class="py-4 cursor-pointer flex items-center transition hvr-bounce-in hvr-underline-from-center text-sm"
         :class="show ? 'text-primary-900' : 'text-white'"
       >
         {{ name }}

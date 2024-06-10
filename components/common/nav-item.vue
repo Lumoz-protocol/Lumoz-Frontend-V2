@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex items-center rounded-md cursor-pointer mr-3 hover:(text-primary-900 lg:text-lg)"
+    class="flex items-center rounded-md cursor-pointer mr-3 text-sm hover:(text-primary-900 text-base)"
     @click="navigate"
   >
     <span class="ml-2 mt-4 flex h-8 items-center">

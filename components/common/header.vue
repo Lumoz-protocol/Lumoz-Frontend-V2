@@ -2,6 +2,7 @@
   <div class="fixed z-10 top-0 left-0 right-0 h-20 bg-filter flex items-center justify-between px-4">
     <CommonLogo />
     <div class="hidden xl:flex items-center h-full">
+      <a class="header-node px-3 py-1.5 mr-8 text-black font-bold cursor-pointer hvr-grow opacity-90 hover:opacity-100 text-sm" target="_blank" href="https://node.lumoz.org">{{ $t('header.node') }}</a>
       <CommonSingleNavItem v-for="item in singleMenus" :key="item.name" :item="item" @click="hideMenu" />
       <CommonNavItems v-for="item in menus" :key="item.name" :name="item.name" :hide-status="navHide">
         <CommonNavItem
@@ -21,6 +22,7 @@
       <HomeButton @click="toLaunch" class="ml-8" :word="$t('header.launch')" />
     </div>
     <div class="xl:hidden relative">
+      <a class="header-node px-3 py-1.5 mr-8 text-black font-bold cursor-pointer hvr-grow opacity-90 hover:opacity-100 text-sm" target="_blank" href="https://node.lumoz.org">{{ $t('header.node') }}</a>
       <img
         src="@/assets/img/icon/menu.svg"
         class="w-6 mr-2 cursor-pointer hvr-bounce-in"
@@ -127,5 +129,8 @@ const toLaunch = () => {
 <style class="ra-borders">
 .ra-borders {
   border: 2px solid var(--1, #44EF49);
+}
+.header-node {
+  background: linear-gradient(90deg, #5CD3BC 0%, #52EFBE 23%, #FFA5A9 60%, #EEC02D 100%);
 }
 </style>
