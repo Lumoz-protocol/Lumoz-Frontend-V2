@@ -14,6 +14,7 @@
           :url="_item.url"
           @click.native="hideItems"
         >
+        
         </CommonNavItem>
       </CommonNavItems>
       <div class="px-2 2xl:px-5 border-l border-r border-border-300">
@@ -22,7 +23,7 @@
       <HomeButton @click="toLaunch" class="ml-8" :word="$t('header.launch')" />
     </div>
     <div class="xl:hidden relative">
-      <a class="header-node px-3 py-1.5 mr-8 text-black font-bold cursor-pointer hvr-grow opacity-90 hover:opacity-100 text-sm" target="_blank" href="https://node.lumoz.org">{{ $t('header.node') }}</a>
+      <a class="header-node px-3 py-1.5 mr-8 text-black font-bold cursor-pointer hvr-grow opacity-90 hover:opacity-100 text-sm mt-2" target="_blank" href="https://node.lumoz.org">{{ $t('header.node') }}</a>
       <img
         src="@/assets/img/icon/menu.svg"
         class="w-6 mr-2 cursor-pointer hvr-bounce-in"
