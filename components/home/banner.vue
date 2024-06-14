@@ -40,8 +40,8 @@ const props = withDefaults(
 )
 
 const to = () => {
-  // window.open('https://docs.lumoz.org')
-  router.push('/compute-layer')
+  window.open('https://node.lumoz.org')
+  // router.push('/compute-layer')
 }
 </script>
 
