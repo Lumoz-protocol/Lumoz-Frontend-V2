@@ -3,7 +3,7 @@ export default {
     raas: 'Modular Compute Layer',
     rollups: 'Rollups',
     points: 'Lumoz Points',
-    node: 'Node Sale🔥',
+    node: 'Node Sale 🔥',
     community: {
       title: 'Community',
       miners: 'Miners Overview',
