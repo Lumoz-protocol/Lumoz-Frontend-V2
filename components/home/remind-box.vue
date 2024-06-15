@@ -1,5 +1,5 @@
 <template>
-<div class="home-remind-box bg-filter-1 py-4 px-20 mx-2">
+<div class="home-remind-box bg-filter py-4 px-20 mx-2">
     <div class="text-center text-[#FF6B00] text-xl font-bold">Nodes Buyback Guarantee: </div>
     <div class="text-center mt-2">Lumoz offers a unique 80% Buyback Guarantee mechanism. </div>
     <div class="flex items-center justify-center mt-2">
