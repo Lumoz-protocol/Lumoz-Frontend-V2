@@ -35,6 +35,7 @@ import M34 from '@/assets/img/eco/34.avif'
 import M35 from '@/assets/img/eco/35.avif'
 import M36 from '@/assets/img/eco/36.avif'
 import M37 from '@/assets/img/eco/37.avif'
+import M38 from '@/assets/img/eco/38.avif'
 
 const getEcosystems = () => {
     return [
@@ -126,6 +127,12 @@ const getEcosystems = () => {
         name: 'Meson',
         url: 'https://meson.fi/',
         img: M15,
+        category: 'Bridge'
+      },
+      {
+        name: 'oooo',
+        url: 'https://oooo.money',
+        img: M38,
         category: 'Bridge'
       },
       {
