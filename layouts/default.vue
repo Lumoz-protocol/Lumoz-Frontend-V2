@@ -5,6 +5,7 @@
     <NuxtPage />
     <CommonFooter v-if="router.currentRoute.value.fullPath !== '/'" />
     <!-- <Warning /> -->
+    <Ip />
   </div>
 </template>
 <script setup lang="ts">
