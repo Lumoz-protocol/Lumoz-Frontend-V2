@@ -3,8 +3,6 @@ import { defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin(nuxtApp => {
   nuxtApp.vueApp.use(VueGtag, {
-    property: { id: 'G-W0ZSYW5BF0' },
-    isEnabled: true,
-    debug: true,
+    property: { id: 'G-W0ZSYW5BF0' }
   })
 })
