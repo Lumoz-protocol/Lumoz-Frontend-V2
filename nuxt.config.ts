@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
   plugins: [
-    { src: '~/plugins/vue-gtag.client.ts', mode: 'client' }
+    { src: '~/plugins/gtag.client.ts', mode: 'client' }
   ],
   i18n: {
     vueI18n: './i18n.config.ts'
