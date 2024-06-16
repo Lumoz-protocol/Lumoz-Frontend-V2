@@ -87,21 +87,42 @@ const permit = [
 
 onMounted(async() => {
     try {
+        const time = Number(localStorage.getItem('lumoz-ip'))
+        if (time && Number(new Date()) - time < 604800000) {
+            return
+        }
+    } catch {}
+        
+    try {
         const { data } = await axios.get('https://ipapi.co/json')
         const _item = permit.find(item => item.key === data.country_code || item.key === data.languages)
-
         if (_item) {
-            try {
-                const time = Number(localStorage.getItem('lumoz-ip'))
-                if (time && Number(new Date()) - time < 604800000) {
-                    return
-                }
-            } catch {}
             country.value = _item.name
             dialog.value = true
+            return
         }
-    } catch(e) {
-        // console.log(e)
+    } catch {
+        const { data } = await axios.get('https://api.ipify.org')
+        try {
+            const info = await axios.get(`http://ip-api.com/json/${data}`)
+            if (info.data.country === 'United States' || info.data.country === 'China') {
+                country.value = info.data.country
+                dialog.value = true
+                return
+            }
+        } catch {
+            try {
+                const info = await axios.get(`https://api.iplocation.net/?ip=${data}`)
+                if (info.data.country_code2 === 'US' || info.data.country === 'CN') {
+                    country.value = info.data.country_name
+                    dialog.value = true
+                    return
+                }
+            } catch {
+
+            }
+        }
+       
         // dialog.value = true
     }
 })
