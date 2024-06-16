@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://discord.gg/lumoz"
+    href="https://discord.com/invite/lumozorg"
     target="_blank"
     class="h-7 inline-block text-[#292929] transition flex items-center hvr-bounce-in"
   >

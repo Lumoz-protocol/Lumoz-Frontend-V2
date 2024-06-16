@@ -101,8 +101,8 @@ onMounted(async() => {
             dialog.value = true
         }
     } catch(e) {
-        console.log(e)
-        dialog.value = true
+        // console.log(e)
+        // dialog.value = true
     }
 })
 

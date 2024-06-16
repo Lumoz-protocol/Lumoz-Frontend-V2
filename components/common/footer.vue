@@ -22,7 +22,7 @@
               <a href="https://twitter.com/LumozOrg" target="_blank" class="rounded-full hvr-float">
                 <img src="@/assets/img/share/twitter.svg" class="w-10">
               </a>
-              <a href="https://discord.gg/lumoz" target="_blank" class="ml-4 rounded-full hvr-float">
+              <a href="https://discord.com/invite/lumozorg" target="_blank" class="ml-4 rounded-full hvr-float">
                 <img src="@/assets/img/share/dc.svg" class="w-10">
               </a>
               <a href="mailto:contact@lumoz.org" class="ml-4 rounded-full hvr-float">
