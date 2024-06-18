@@ -3,8 +3,17 @@
 import { createWeb3Modal, defaultConfig, useWeb3Modal, useWeb3ModalProvider, useWeb3ModalAccount, useDisconnect } from '@web3modal/ethers5/vue'
 import { useWalletStore } from '@/stores'
 const projectId = 'f84f8b1354cd3805ef4253caaadbe45f'
+import OXKIMG from '@/assets/img/networks/okx.png'
 
 const { disconnect } = useDisconnect()
+
+const customWallets = window.okxwallet ? [] : [{
+    id: "OKX Wallet",
+    name: "OKX Wallet",
+    image_url: OXKIMG,
+    desktop_link: 'https://chromewebstore.google.com/detail/%E6%AC%A7%E6%98%93-web3-%E9%92%B1%E5%8C%85/mcohilncbfahbmgdjkbpemcciiolgcge?hl=zh-CN&utm_source=ext_sidebar'
+  }]
+
 
 const networks = [
   // {
@@ -45,6 +54,7 @@ const modal = createWeb3Modal({
     enableCoinbase: false,
     rpcUrl: 'https://alpha-us-http-geth.lumoz.org'
   }),
+  customWallets,
   allowUnsupportedChain: true,
   chains: networks,
   projectId,
