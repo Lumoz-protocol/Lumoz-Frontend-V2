@@ -276,15 +276,15 @@ const getEcosystems = () => {
         category: 'Miners&Hardware'
       },
       {
-        name: 'Nodeops',
-        url: 'https://nodeops.xyz',
-        img: M39,
-        category: 'Node-as-a-Service'
-      },
-      {
         name: 'Infstones',
         url: 'https://infstones.com',
         img: M40,
+        category: 'Node-as-a-Service'
+      },
+      {
+        name: 'Nodeops',
+        url: 'https://nodeops.xyz',
+        img: M39,
         category: 'Node-as-a-Service'
       },
       {
