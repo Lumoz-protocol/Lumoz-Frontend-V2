@@ -288,7 +288,7 @@ const getEcosystems = () => {
         category: 'Node-as-a-Service'
       },
       {
-        name: 'Infstones',
+        name: 'Bware Labs',
         url: 'https://bwarelabs.com',
         img: M41,
         category: 'Node-as-a-Service'
