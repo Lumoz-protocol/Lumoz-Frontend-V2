@@ -38,6 +38,7 @@ import M37 from '@/assets/img/eco/37.avif'
 import M38 from '@/assets/img/eco/38.avif'
 import M39 from '@/assets/img/eco/39.avif'
 import M40 from '@/assets/img/eco/40.avif'
+import M41 from '@/assets/img/eco/41.avif'
 
 const getEcosystems = () => {
     return [
@@ -284,6 +285,12 @@ const getEcosystems = () => {
         name: 'Infstones',
         url: 'https://infstones.com',
         img: M40,
+        category: 'Node-as-a-Service'
+      },
+      {
+        name: 'Infstones',
+        url: 'https://bwarelabs.com',
+        img: M41,
         category: 'Node-as-a-Service'
       },
     ]
