@@ -55,6 +55,12 @@ const getEcosystems = () => {
         category: 'Settlement'
       },
       {
+        name: 'OKX EaaS',
+        url: 'https://www.okx.com/zh-hans/web3/explorer/eaas',
+        img: M28,
+        category: 'Explorer'
+      },
+      {
         name: 'BNB Chain',
         url: 'https://t.co/eALxNqLXwS',
         img: M3,
