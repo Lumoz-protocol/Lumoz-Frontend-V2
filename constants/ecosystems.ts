@@ -56,7 +56,7 @@ const getEcosystems = () => {
       },
       {
         name: 'OKX Explorer',
-        url: 'https://www.okx.com/zh-hans/web3/explorer/eaas',
+        url: 'https://www.okx.com/web3/explorer/eaas',
         img: M28,
         category: 'Explorer'
       },
