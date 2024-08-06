@@ -39,6 +39,9 @@ import M38 from '@/assets/img/eco/38.avif'
 import M39 from '@/assets/img/eco/39.avif'
 import M40 from '@/assets/img/eco/40.avif'
 import M41 from '@/assets/img/eco/41.avif'
+import M42 from '@/assets/img/eco/42.avif'
+import M43 from '@/assets/img/eco/43.avif'
+import M44 from '@/assets/img/eco/44.avif'
 
 const getEcosystems = () => {
     return [
@@ -297,6 +300,24 @@ const getEcosystems = () => {
         name: 'Bware Labs',
         url: 'https://bwarelabs.com',
         img: M41,
+        category: 'Node-as-a-Service'
+      },
+      {
+        name: 'EaseFlow',
+        url: 'https://easeflow.io',
+        img: M43,
+        category: 'Node-as-a-Service'
+      },
+      {
+        name: 'RapidNode',
+        url: 'https://www.rapidnode.xyz',
+        img: M42,
+        category: 'Node-as-a-Service'
+      },
+      {
+        name: 'DepinX',
+        url: 'https://depinx.com',
+        img: M44,
         category: 'Node-as-a-Service'
       },
     ]
