@@ -3,8 +3,8 @@
     <a href="https://dragon-slayer.zkfair.io" target="_blank" class="w-full cursor-pointer hvr-grow relative">
       <img src="@/assets/img/points/dragon.avif" class="w-full" alt="">
       <div class="absolute bottom-8 left-2 lg:(bottom-22 left-4)">
-        <div class="lg:text-4xl font-bold">{{ $t('points.dragon') }}</div>
-        <div class="lg:text-xl lg:mt-2">{{ $t('points.dragont') }}</div>
+        <!-- <div class="lg:text-4xl font-bold">{{ $t('points.dragon') }}</div>
+        <div class="lg:text-xl lg:mt-2">{{ $t('points.dragont') }}</div> -->
       </div>
     </a>
     <div class="points-box mt-8">
@@ -22,7 +22,7 @@
     <div>
       <div class="shadow-inner-box p-8 rounded-2xl flex items-center justify-center">
         <CountUp
-          :end-val="Number(info.total_points || 0)"
+          :end-val="Number(info.nodes_campaign || 0)"
           :duration="2"
           :decimal-places="0"
           :delay="2"
@@ -38,10 +38,35 @@
           <div class="phase-box-right absolute right-0 top-0 bottom-0 h-full w-12"></div>
           <div class="flex flex-col items-center justify-center">
             <div class="text-xl lg:text-2xl">
+              {{ $t('points.zkv') }}
+            </div>
+            <div class="h-16 flex items-center justify-center">
+              <!-- <HomeButton @click="to('https://dragon-slayer.zkfair.io')" light class="w-32" :word="$t('points.more')" /> -->
+            </div>
+            <div class="flex items-center">
+              <CountUp
+                :end-val="Number(dragon || 0)"
+                :duration="2"
+                :decimal-places="0"
+                :delay="2"
+                class="text-xl lg:text-3xl font-bold mr-4"
+              ></CountUp>
+              <div class="text-text-dark">{{ $t('points.p') }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-box points-outer">
+        <div class="py-4 px-8 phase-inner1 relative">
+          <div class="phase-box-left absolute left-0 top-0 bottom-0 h-full w-12"></div>
+          <div class="phase-box-right absolute right-0 top-0 bottom-0 h-full w-12"></div>
+          <div class="flex flex-col items-center justify-center">
+            <div class="text-xl lg:text-2xl">
               {{ $t('points.dragon') }}
             </div>
             <div class="h-16 flex items-center justify-center">
-              <HomeButton @click="to('https://dragon-slayer.zkfair.io')" light class="w-32" :word="$t('points.more')" />
+              <!-- <HomeButton @click="to('https://dragon-slayer.zkfair.io')" light class="w-32" :word="$t('points.more')" /> -->
             </div>
             <div class="flex items-center">
               <CountUp
@@ -135,6 +160,7 @@ import { getAchieveInfo } from '@/api/api'
 const walletStore = useWalletStore()
 const data = {
   total_points: 0,
+  nodes_campaign: 0,
   alpha_extra_cpu_miner_rank_10: 0,
   alpha_extra_cpu_miner_rank_11: 0,
   alpha_extra_cpu_miner_rank_12: 0,
@@ -154,6 +180,7 @@ const data = {
   dragon_slayer_phase_3: 0,
   galxe_alpha: 0,
   galxe_pre_alpha: 0,
+  galxe_final_wave: 0,
   miner_alpha_cpu: 0,
   miner_alpha_gpu: 0,
   miner_pre_alpha: 0,
@@ -194,7 +221,8 @@ const user = computed(() => {
   const _info = info.value
   return  _info.galxe_pre_alpha +
           _info.galxe_alpha +
-          _info.alpha_extra_pk_team
+          _info.alpha_extra_pk_team +
+          _info.galxe_final_wave
 })
 
 const validator = computed(() => {

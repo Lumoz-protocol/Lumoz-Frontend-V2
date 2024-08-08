@@ -324,4 +324,3 @@ const getEcosystems = () => {
 }
 
 export const ECOSYSTEMS = getEcosystems()
-
