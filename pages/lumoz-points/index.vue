@@ -22,7 +22,7 @@
     <div>
       <div class="shadow-inner-box p-8 rounded-2xl flex items-center justify-center">
         <CountUp
-          :end-val="Number(info.nodes_campaign || 0)"
+          :end-val="Number(info.total_points || 0)"
           :duration="2"
           :decimal-places="0"
           :delay="2"
@@ -45,7 +45,7 @@
             </div>
             <div class="flex items-center">
               <CountUp
-                :end-val="Number(dragon || 0)"
+                :end-val="Number(info.nodes_campaign || 0)"
                 :duration="2"
                 :decimal-places="0"
                 :delay="2"
@@ -267,3 +267,4 @@ const miner = computed(() => {
   color: #BEFE00
 }
 </style>
+
