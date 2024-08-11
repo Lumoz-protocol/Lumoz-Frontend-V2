@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="@/assets/img/share/footer.avif" class="h-80 w-full">
+    <img v-if="!router.currentRoute.value.path.toLowerCase().startsWith('/quidditch')" src="@/assets/img/share/footer.avif" class="h-80 w-full">
     <div class="-mt-40">
       <div class="w-full flex items-center justify-center">
         <div class="footer-linear-1 h-0.5 w-1/2"></div>
