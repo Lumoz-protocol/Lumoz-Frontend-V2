@@ -83,34 +83,5 @@ onMounted(() => {
 
 </script>
 <style>
- .qui-wallet-box {
-    aspect-ratio: 1.5;
-    background: url(@/assets/img/quidditch/pocket-inner.avif) no-repeat, url(@/assets/img/quidditch/pocket-outer.avif) no-repeat;
-    background-size:100% 100% ,100% 100%;
-}
-.qui-wallet-box-tag {
-    aspect-ratio: 3;
-    background: url(@/assets/img/quidditch/tag.avif) no-repeat;
-    background-size: 100% 100%;
-}
-@media (min-width: 1024px) {
-    .qui-wallet-box {
-        aspect-ratio: 2;
-        background: url(@/assets/img/quidditch/pocket-inner.avif) no-repeat, url(@/assets/img/quidditch/pocket-outer.avif) no-repeat;
-        background-size:auto 80% ,auto 100%;
-        background-position: 10% 50%, 0% 0%;
-    }
-    .qui-wallet-box-tag {
-        aspect-ratio: 4;
-        background: url(@/assets/img/quidditch/tag.avif) no-repeat;
-        background-size: 100% 100%;
-    }
-}
-.qui-start-button-bg {
-    background: url(@/assets/img/quidditch/start-button.avif) no-repeat;
-    background-size: 100% 100%;
-}
-.tgme_widget_login, .tgme_widget_login_user_photo{
-    visibility: hidden;
-}
+
 </style>

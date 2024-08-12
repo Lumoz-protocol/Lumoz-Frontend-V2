@@ -359,3 +359,65 @@ html, body {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(4px);
 }
+
+
+.quidditch-bg {
+    font-family: "IrishGrover-Regular-Bold", sans-serif;
+    background: url(@/assets/img/quidditch/bg.avif) no-repeat;
+    background-size: cover; 
+}
+.quidditch-bg-inner {
+    background: #ac4e1799;
+}
+.quidditch-bg-inner-2 {
+    background: #ac4e1766;
+}
+.qui-card {
+    background:url(@/assets/img/quidditch/card-bg.avif) no-repeat;
+    background-size: 100% 100%;
+}
+.qui-card-inner {
+    background:url(@/assets/img/quidditch/box-line.png) no-repeat;
+    background-size: 100% 100%;
+}
+.qui-card-round-box {
+    aspect-ratio: 0.9;
+    background:url(@/assets/img/quidditch/polygon.png) no-repeat;
+    background-size: 100% 100%;
+}
+.quiSlideShine{
+  background: linear-gradient(90deg, #F0AF60 0%, #FAE79B 43.5%, #EAA352 100%);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.qui-wallet-box {
+  aspect-ratio: 1.5;
+  background: url(@/assets/img/quidditch/pocket-inner.avif) no-repeat, url(@/assets/img/quidditch/pocket-outer.avif) no-repeat;
+  background-size:100% 100% ,100% 100%;
+}
+.qui-wallet-box-tag {
+  aspect-ratio: 3;
+  background: url(@/assets/img/quidditch/tag.avif) no-repeat;
+  background-size: 100% 100%;
+}
+@media (min-width: 1024px) {
+  .qui-wallet-box {
+      aspect-ratio: 2;
+      background: url(@/assets/img/quidditch/pocket-inner.avif) no-repeat, url(@/assets/img/quidditch/pocket-outer.avif) no-repeat;
+      background-size:auto 80% ,auto 100%;
+      background-position: 10% 50%, 0% 0%;
+  }
+  .qui-wallet-box-tag {
+      aspect-ratio: 4;
+      background: url(@/assets/img/quidditch/tag.avif) no-repeat;
+      background-size: 100% 100%;
+  }
+}
+.qui-start-button-bg {
+  background: url(@/assets/img/quidditch/start-button.avif) no-repeat;
+  background-size: 100% 100%;
+}
+.tgme_widget_login, .tgme_widget_login_user_photo{
+  visibility: hidden;
+}

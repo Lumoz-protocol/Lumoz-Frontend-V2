@@ -36,35 +36,3 @@
 <script setup lang="ts">
 
 </script>
-<style>
-.quidditch-bg {
-    font-family: "IrishGrover-Regular-Bold", sans-serif;
-    background: url(@/assets/img/quidditch/bg.avif) no-repeat;
-    background-size: cover; 
-}
-.quidditch-bg-inner {
-    background: #ac4e1799;
-}
-.quidditch-bg-inner-2 {
-    background: #ac4e1766;
-}
-.qui-card {
-    background:url(@/assets/img/quidditch/card-bg.avif) no-repeat;
-    background-size: 100% 100%;
-}
-.qui-card-inner {
-    background:url(@/assets/img/quidditch/box-line.png) no-repeat;
-    background-size: 100% 100%;
-}
-.qui-card-round-box {
-    aspect-ratio: 0.9;
-    background:url(@/assets/img/quidditch/polygon.png) no-repeat;
-    background-size: 100% 100%;
-}
-.quiSlideShine{
-  background: linear-gradient(90deg, #F0AF60 0%, #FAE79B 43.5%, #EAA352 100%);
-  background-size: 100% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
