@@ -115,6 +115,7 @@ const getIfBind = async() => {
     const signature = await walletStore.simpleSign([timestamp, 'GET', `/api/lumoz_quidditch?address=${walletStore.account}`])
     const data = await getQuidditchTgBindStatus(walletStore.account, timestamp, signature)
     if (data.address) {
+        data.id = data.tg_id
         binded.value = true
         user.value = data
     }
