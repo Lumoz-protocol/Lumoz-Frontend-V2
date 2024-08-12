@@ -30,8 +30,8 @@
                     <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
                         <div class="pt-2">{{ $t('qui.connect2') }}</div>
                         <!-- <QuiButton v-if="!user.id" class="w-50 text-base mt-2 lg:mt-0" >Connect Telegram</QuiButton> -->
-                        <div v-if="!user.id" id="telegram-login-widget w-50 text-base mt-2 lg:mt-0"></div>
-                        <div class="flex items-center">
+                        <div v-show="!user.id" id="telegram-login-widget" class="w-50 text-base mt-2 lg:mt-0"></div>
+                        <div v-show="user.id" class="flex items-center">
                             {{ user.username }}
                             <img v-if="user.photo_url" :src="user.photo_url" class="w-10 h-10 rounded-full" alt="">
                         </div>
@@ -79,11 +79,7 @@ onMounted(() => {
     script.setAttribute('data-size', 'large')
     script.setAttribute('data-onauth', 'onTelegramAuth(user)')
     script.setAttribute('data-request-access', 'write')
-    console.log(document.getElementById('telegram-login-widget'))
     id.appendChild(script)
 })
 
 </script>
-<style>
-
-</style>
