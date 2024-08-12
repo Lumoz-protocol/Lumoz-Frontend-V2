@@ -32,13 +32,14 @@
                         <!-- <QuiButton v-if="!user.id" class="w-50 text-base mt-2 lg:mt-0" >Connect Telegram</QuiButton> -->
                         <div v-show="!user.id" id="telegram-login-widget" class="hvr-grow qui-tg-login-button w-50 text-base mt-2 lg:mt-0"></div>
                         <div v-show="user.id" class="flex items-center">
-                            {{ user.username || user.first_name }}
+                            {{ user.username || user.first_name || '' }}
                             <img v-if="user.photo_url" :src="user.photo_url" class="w-10 h-10 ml-2 rounded-full" alt="">
                         </div>
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
                         <div class="pt-2">3、 Bind</div>
-                        <QuiButton v-if="walletStore.account && user.id" class="w-50 mt-2 lg:(ml-24 mt-0) text-base">Bind</QuiButton>
+                        <QuiButton v-if="walletStore.account && user.id && !binded" @click="bind" class="w-50 mt-2 lg:(ml-24 mt-0) text-base">Bind</QuiButton>
+                        <div v-if="walletStore.account && user.id && binded" class="w-50 mt-2 lg:(ml-24 mt-0) text-base">Already Bind!</div>
                     </div>
                 </div>
                 <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute right-0 top-0 bottom-0 left-1/2 h-full" alt="">
@@ -46,8 +47,8 @@
             </div>
             <div class="h-120">
                 <!-- {{ user }} -->
-                <div class="text-center quiSlideShine mt-8">Congratulations! Now enter the game to collect more rewards.</div>
-                <div class="flex justify-center">
+                <div v-if="binded" class="text-center quiSlideShine mt-8">Congratulations! Now enter the game to collect more rewards.</div>
+                <div v-if="binded" class="flex justify-center">
                     <div class="hvr-grow w-60 mx-auto">
                         <div class="w-60 flex items-center justify-center mt-8 qui-start-button-bg py-1 cursor-pointer">
                             <img src="@/assets/img/quidditch/start-button-arrow.png" class="w-8" alt="">
@@ -63,17 +64,24 @@
 <script setup lang="ts">
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
+import { getAdjustedIsoString } from '@/libs/utils'
+import { getQuidditchTgBindStatus, quidditchTgBind } from '~/api/api'
 
+const binded = ref(false)
 const walletStore = useWalletStore()
-const user = ref({
-    id: 0,
-    hash: '',
-    first_name: '',
-    username: '',
-    auth_date: '',
-    last_name: '',
-    photo_url: ''
-})
+const loading = ref(false)
+
+// const user = ref({
+//     id: 0,
+//     hash: '',
+//     first_name: '',
+//     username: '',
+//     auth_date: '',
+//     last_name: '',
+//     photo_url: ''
+// })
+
+const user = ref({ "id": 7237622293, "first_name": "A", "last_name": "Xing", "username": "AxingNXR", "photo_url": "https://t.me/i/userpic/320/bxsfW5GZcw2ZZvgPcdAW2K3OiyR6_gRVYJTpn9wH-a2rkBxyZ4Mcv7w2a7p2abd7.jpg", "auth_date": 1723433680, "hash": "6e1cba4c6af02ff110290498e900ab46cef32af89b8f48a7dd365d90c177daf0" })
 
 onMounted(() => {
     const id = document.getElementById('telegram-login-widget')
@@ -88,17 +96,45 @@ onMounted(() => {
     script.setAttribute('data-onauth', 'onTelegramAuth(user)')
     script.setAttribute('data-request-access', 'write')
     id.appendChild(script)
-    setUpTimer()
+    if (walletStore.account) {
+        getIfBind()
+    }
 })
 
-function setUpTimer() {
-    let timer = null
-    timer = setInterval(() => {
-        try {
-            document.getElementsByClassName('tgme_widget_login_button')[0].innerHTML = '<i class="tgme_widget_login_button_icon"></i>Log In Telegram'
-            clearInterval(timer)
-        } catch {}
-    }, 500)
+watch(() => walletStore.account, () => {
+    if (walletStore.account) {
+        getIfBind()
+    } else {
+        binded.value = false
+    }
+})
+
+const getIfBind = async() => {
+    const timestamp = getAdjustedIsoString()
+    const signature = await walletStore.simpleSign([timestamp, 'GET', `/api/lumoz_quidditch?address=${walletStore.account}`])
+    const data = await getQuidditchTgBindStatus(walletStore.account, timestamp, signature)
+    if (data.address) {
+        binded.value = true
+        user.value = data
+    }
+}
+
+const bind = async() => {
+    if (loading.value) {
+        return
+    }
+    loading.value = true
+    try {
+        const timestamp = getAdjustedIsoString()
+        const signature = await walletStore.simpleSign([timestamp, 'GET', `/api/lumoz_quidditch?address=${walletStore.account}`])
+        const data = await quidditchTgBind(walletStore.account, timestamp, signature, user.value)
+        binded.value = true
+        user.value = data
+        loading.value = false
+    } catch(e) {
+        loading.value = false
+        notifyError(e?.toString())
+    }
 }
 
 </script>
