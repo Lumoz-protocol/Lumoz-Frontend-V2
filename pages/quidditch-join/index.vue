@@ -72,17 +72,17 @@ const binded = ref(false)
 const walletStore = useWalletStore()
 const loading = ref(false)
 
-// const user = ref({
-//     id: 0,
-//     hash: '',
-//     first_name: '',
-//     username: '',
-//     auth_date: '',
-//     last_name: '',
-//     photo_url: ''
-// })
+const user = ref({
+    id: 0,
+    hash: '',
+    first_name: '',
+    username: '',
+    auth_date: '',
+    last_name: '',
+    photo_url: ''
+})
 
-const user = ref({ "id": 7237622293, "first_name": "A", "last_name": "Xing", "username": "AxingNXR", "photo_url": "https://t.me/i/userpic/320/bxsfW5GZcw2ZZvgPcdAW2K3OiyR6_gRVYJTpn9wH-a2rkBxyZ4Mcv7w2a7p2abd7.jpg", "auth_date": 1723433680, "hash": "6e1cba4c6af02ff110290498e900ab46cef32af89b8f48a7dd365d90c177daf0" })
+// const user = ref({ "id": 7237622293, "first_name": "A", "last_name": "Xing", "username": "AxingNXR", "photo_url": "https://t.me/i/userpic/320/bxsfW5GZcw2ZZvgPcdAW2K3OiyR6_gRVYJTpn9wH-a2rkBxyZ4Mcv7w2a7p2abd7.jpg", "auth_date": 1723433680, "hash": "6e1cba4c6af02ff110290498e900ab46cef32af89b8f48a7dd365d90c177daf0" })
 
 onMounted(() => {
     const id = document.getElementById('telegram-login-widget')
