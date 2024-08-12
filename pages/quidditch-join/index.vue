@@ -14,7 +14,7 @@
             </div>
             <div class="container mx-auto mt-8 relative">
                 <div class="qui-wallet-box flex items-start flex-col justify-center">
-                    <div class="lg:ml-1/20 qui-wallet-box-tag h-16 lg:h-20 text-[#4C2F1E] text-base lg:text-2xl flex items-center justify-start pl-4 pb-4">
+                    <div class="lg:ml-1/20 qui-wallet-box-tag font-bold h-16 lg:h-20 text-[#4C2F1E] text-base lg:text-2xl flex items-center justify-start pl-4 pb-4">
                         Rewards: +10Points <img src="@/assets/img/quidditch/flash.svg" class="ml-2 w-6 lg:w-8" alt="">
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] mt-0 lg:mt-8">
@@ -29,13 +29,14 @@
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
                         <div>{{ $t('qui.connect2') }}</div>
-                        <QuiButton class="w-50 text-base mt-2 lg:mt-0">Connect Telegram</QuiButton>
+                        <QuiButton class="w-50 text-base mt-2 lg:mt-0" id="telegram-login-widget">Connect Telegram</QuiButton>
                     </div>
                 </div>
                 <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute right-0 top-0 bottom-0 left-1/2 h-full" alt="">
                 <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-24 absolute right-1/6 top-1/10 bottom-0" alt="">
             </div>
             <div class="h-120">
+                {{ user }}
                 <div class="text-center quiSlideShine mt-8">Congratulations! Now enter the game to collect more rewards.</div>
                 <div class="flex justify-center">
                     <div class="hvr-grow w-60 mx-auto">
@@ -55,6 +56,25 @@ import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
 
 const walletStore = useWalletStore()
+const user = ref({
+    id: 0,
+    hash: ''
+})
+
+onMounted(() => {
+    const script = document.createElement('script')
+  script.src = "https://telegram.org/js/telegram-widget.js?22"
+  script.async = true
+  script.setAttribute('data-telegram-login', 'qianyikexin_bot')
+  script.setAttribute('data-size', 'large')
+  script.setAttribute('data-onauth', 'onTelegramAuth(user)')
+  script.setAttribute('data-request-access', 'write')
+  document.getElementById('telegram-login-widget').appendChild(script)
+})
+
+function onTelegramAuth(_user:any) {
+    user.value = _user
+}
 </script>
 <style scoped>
  .qui-wallet-box {
