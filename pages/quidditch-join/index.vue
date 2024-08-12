@@ -30,7 +30,7 @@
                     <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
                         <div class="pt-2">{{ $t('qui.connect2') }}</div>
                         <!-- <QuiButton v-if="!user.id" class="w-50 text-base mt-2 lg:mt-0" >Connect Telegram</QuiButton> -->
-                        <div v-show="!user.id" id="telegram-login-widget hvr-grow" class="qui-tg-login-button w-50 text-base mt-2 lg:mt-0"></div>
+                        <div v-show="!user.id" id="telegram-login-widget" class="hvr-grow qui-tg-login-button w-50 text-base mt-2 lg:mt-0"></div>
                         <div v-show="user.id" class="flex items-center">
                             {{ user.username || user.first_name }}
                             <img v-if="user.photo_url" :src="user.photo_url" class="w-10 h-10 ml-2 rounded-full" alt="">
