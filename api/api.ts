@@ -36,6 +36,8 @@ export const quidditchTgBind = async (address: string, timestamp: string, signat
   const { data } = await axios.post(getQuiUrl(`api/quidditch/bind_telegram`), {
     address,
     auth_data: _data 
-  }, {headers})
+  }, {
+    headers
+  })
   return data.lumoz_points
 }

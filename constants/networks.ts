@@ -10,8 +10,7 @@ const getNetwork = () => {
         symbol: 'MOZ',
         decimals: 18,
         rpcUrl: 'https://alpha-us-http-geth.lumoz.org',
-        explorerUrl: 'https://lumoz.info',
-        quidditchUrl: ''
+        explorerUrl: 'https://lumoz.info'
       }
     case 'mainnet':
       return {
@@ -21,8 +20,7 @@ const getNetwork = () => {
         symbol: 'MOZ',
         decimals: 18,
         rpcUrl: 'https://alpha-us-http-geth.lumoz.org',
-        explorerUrl: 'https://lumoz.info',
-        quidditchUrl: ''
+        explorerUrl: 'https://lumoz.info'
       }
   }
 }
@@ -40,9 +38,6 @@ const getConfig = () => {
   }
 }
 
-
-
 export const LUMOZ = getNetwork()
 export const CONFIG = getConfig()
-
 export const DATA_API = 'https://api.lumoz.org/lumoz-rollup/api/'

@@ -39,8 +39,8 @@
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
                         <div class="pt-2">3、 Bind</div>
-                        <QuiButton v-if="walletStore.account && user.id && !binded" @click="bind" class="w-50 mt-2 lg:(ml-24 mt-0) text-base">Bind</QuiButton>
-                        <div v-if="walletStore.account && user.id && binded" class="w-50 mt-2 lg:(ml-24 mt-0) text-base">Already Bind!</div>
+                        <QuiButton v-show="walletStore.account && user.id && !binded" @click="bind" class="w-50 mt-2 lg:(ml-24 mt-0) text-base">Bind</QuiButton>
+                        <div v-if="walletStore.account && user.id && binded" class="lg:w-60 mt-2 lg:(ml-24 mt-2) lg:text-right text-xl">You have already bind!</div>
                     </div>
                 </div>
                 <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute right-0 top-0 bottom-0 left-1/2 h-full" alt="">
@@ -128,9 +128,8 @@ const bind = async() => {
     try {
         const timestamp = getAdjustedIsoString()
         const signature = await walletStore.simpleSign([timestamp, 'GET', `/api/lumoz_quidditch?address=${walletStore.account}`])
-        const data = await quidditchTgBind(walletStore.account, timestamp, signature, user.value)
+        await quidditchTgBind(walletStore.account, timestamp, signature, user.value)
         binded.value = true
-        user.value = data
         loading.value = false
     } catch(e) {
         loading.value = false
