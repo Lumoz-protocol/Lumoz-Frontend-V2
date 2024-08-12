@@ -10,7 +10,7 @@
                 {{ $t('qui.content') }}
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 container mx-auto gap-4 xl:gap-8 mt-16">
-                <div class="qui-card hvr-grow p-1" v-for="item in 4" :key="item">
+                <div class="qui-card hvr-grow p-1" v-for="item in 4" :key="item" @click="router.push('/quidditch-join')">
                     <div class="qui-card-inner h-full px-4">
                         <div class="pt-4 text-lg text-center quiSlideShine">Quidditch</div>
                         <div class="flex items-center justify-center relative qui-card-round-box w-2/3 ml-1/6">

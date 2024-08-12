@@ -3,7 +3,7 @@
         <div class="quidditch-bg-inner-2 h-full min-h-screen">
             <div class="flex items-center justify-center text-lg lg:text-5xl quiSlideShine pt-8 lg:pt-12">
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" style="transform: rotate(180deg);" alt="">
-                <div class="mx-4">
+                <div class="mx-4 text-center">
                     <div>{{ $t('qui.joint1') }}</div>
                     <div>{{ $t('qui.joint2') }}</div>
                 </div>
@@ -32,16 +32,20 @@
                         <!-- <QuiButton v-if="!user.id" class="w-50 text-base mt-2 lg:mt-0" >Connect Telegram</QuiButton> -->
                         <div v-show="!user.id" id="telegram-login-widget" class="w-50 text-base mt-2 lg:mt-0"></div>
                         <div v-show="user.id" class="flex items-center">
-                            {{ user.username }}
-                            <img v-if="user.photo_url" :src="user.photo_url" class="w-10 h-10 rounded-full" alt="">
+                            {{ user.username || user.first_name }}
+                            <img v-if="user.photo_url" :src="user.photo_url" class="w-10 h-10 ml-2 rounded-full" alt="">
                         </div>
+                    </div>
+                    <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
+                        <div class="pt-2">3、 Bind</div>
+                        <QuiButton v-if="walletStore.account && user.id" class="w-50 mt-2 lg:(ml-24 mt-0) text-base">Bind</QuiButton>
                     </div>
                 </div>
                 <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute right-0 top-0 bottom-0 left-1/2 h-full" alt="">
-                <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-24 absolute right-1/6 top-1/10 bottom-0" alt="">
+                <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-32 absolute right-1/8 top-1/15 bottom-0" alt="">
             </div>
             <div class="h-120">
-                {{ user }}
+                <!-- {{ user }} -->
                 <div class="text-center quiSlideShine mt-8">Congratulations! Now enter the game to collect more rewards.</div>
                 <div class="flex justify-center">
                     <div class="hvr-grow w-60 mx-auto">
@@ -64,6 +68,10 @@ const walletStore = useWalletStore()
 const user = ref({
     id: 0,
     hash: '',
+    first_name: '',
+    username: '',
+    auth_date: '',
+    last_name: '',
     photo_url: ''
 })
 

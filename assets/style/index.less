@@ -367,10 +367,10 @@ html, body {
     background-size: cover; 
 }
 .quidditch-bg-inner {
-    background: #ac4e1799;
+    background: #00000099;
 }
 .quidditch-bg-inner-2 {
-    background: #ac4e1766;
+    background: #00000099;
 }
 .qui-card {
     background:url(@/assets/img/quidditch/card-bg.avif) no-repeat;
@@ -392,21 +392,21 @@ html, body {
   -webkit-text-fill-color: transparent;
 }
 .qui-wallet-box {
-  aspect-ratio: 1.5;
+  padding-bottom: 3rem;
   background: url(@/assets/img/quidditch/pocket-inner.avif) no-repeat, url(@/assets/img/quidditch/pocket-outer.avif) no-repeat;
   background-size:100% 100% ,100% 100%;
 }
 .qui-wallet-box-tag {
-  aspect-ratio: 3;
+  aspect-ratio: 4;
   background: url(@/assets/img/quidditch/tag.avif) no-repeat;
   background-size: 100% 100%;
 }
 @media (min-width: 1024px) {
   .qui-wallet-box {
       aspect-ratio: 2;
-      background: url(@/assets/img/quidditch/pocket-inner.avif) no-repeat, url(@/assets/img/quidditch/pocket-outer.avif) no-repeat;
-      background-size:auto 80% ,auto 100%;
-      background-position: 10% 50%, 0% 0%;
+      background:url(@/assets/img/quidditch/pocket-inner.avif) no-repeat, url(@/assets/img/quidditch/pocket-outer.avif) no-repeat, url(@/assets/img/quidditch/paper-dark.avif) no-repeat;
+      background-size:auto 80% ,auto 100%, auto 100%;
+      background-position: 10% 50%, 0% 0%, 110%;
   }
   .qui-wallet-box-tag {
       aspect-ratio: 4;
@@ -417,4 +417,7 @@ html, body {
 .qui-start-button-bg {
   background: url(@/assets/img/quidditch/start-button.avif) no-repeat;
   background-size: 100% 100%;
+}
+.tgme_widget_login_user_photo {
+  display: none !important;
 }
