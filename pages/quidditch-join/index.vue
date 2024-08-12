@@ -82,7 +82,7 @@ onMounted(() => {
 })
 
 </script>
-<style scoped>
+<style>
  .qui-wallet-box {
     aspect-ratio: 1.5;
     background: url(@/assets/img/quidditch/pocket-inner.avif) no-repeat, url(@/assets/img/quidditch/pocket-outer.avif) no-repeat;
