@@ -1,6 +1,7 @@
 <template>
-    <div class="quidditch-bg">
+    <div class="quidditch-bg -mt-18">
         <div class="quidditch-bg-inner h-full min-h-screen">
+            <div class="h-18"></div>
             <div class="flex items-center justify-center text-lg lg:text-5xl quiSlideShine pt-8 lg:pt-12">
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" style="transform: rotate(180deg);" alt="">
                 <div class="mx-4">{{ $t('qui.title') }}</div>
