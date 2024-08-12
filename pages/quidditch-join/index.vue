@@ -27,16 +27,19 @@
                             <img src="@/assets/img/quidditch/exit.svg" class="w-6 ml-2 hvr-grow cursor-pointer" @click="walletStore.disconnectWallet" alt="">
                         </div>
                     </div>
-                    <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
-                        <div>{{ $t('qui.connect2') }}</div>
-                        <QuiButton class="w-50 text-base mt-2 lg:mt-0" id="telegram-login-widget">Connect Telegram</QuiButton>
+                    <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
+                        <div class="pt-2">{{ $t('qui.connect2') }}</div>
+                        <QuiButton v-if="!user.id" class="w-50 text-base mt-2 lg:mt-0" id="telegram-login-widget">Connect Telegram</QuiButton>
+                        <div>
+                            {{ user.username }}
+                            <img v-if="user.photo_url" :src="user.photo_url" alt="">
+                        </div>
                     </div>
                 </div>
                 <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute right-0 top-0 bottom-0 left-1/2 h-full" alt="">
                 <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-24 absolute right-1/6 top-1/10 bottom-0" alt="">
             </div>
             <div class="h-120">
-                {{ user }}
                 <div class="text-center quiSlideShine mt-8">Congratulations! Now enter the game to collect more rewards.</div>
                 <div class="flex justify-center">
                     <div class="hvr-grow w-60 mx-auto">
@@ -58,7 +61,8 @@ import { useWalletStore } from '@/stores'
 const walletStore = useWalletStore()
 const user = ref({
     id: 0,
-    hash: ''
+    hash: '',
+    photo_url: ''
 })
 
 onMounted(() => {
@@ -105,5 +109,8 @@ onMounted(() => {
 .qui-start-button-bg {
     background: url(@/assets/img/quidditch/start-button.avif) no-repeat;
     background-size: 100% 100%;
+}
+.tgme_widget_login, .tgme_widget_login_user_photo{
+    visibility: hidden;
 }
 </style>
