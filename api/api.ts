@@ -1,8 +1,8 @@
-import { DATA_API, CONFIG } from '@/constants/networks'
+import { CONFIG } from '@/constants/networks'
 import axios from 'axios'
 
 const getDataUrl = (url: string) => {
-  return `${DATA_API}${url}`
+  return `${CONFIG.DATA_API}${url}`
 }
 
 const getQuiUrl = (url: string) => {
