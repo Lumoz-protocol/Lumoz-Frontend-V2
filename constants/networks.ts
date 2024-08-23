@@ -29,7 +29,8 @@ const getConfig = () => {
   switch(NETWORK) {
     case 'testnet':
       return {
-        quidditchApi: 'https://alpha-zkrollup-service.lumoz.org/quidditch-testnet-api/'
+        // quidditchApi: 'https://alpha-zkrollup-service.lumoz.org/quidditch-testnet-api/'
+        quidditchApi: 'https://quidditch-api.lumoz.org/'
       }
     case 'mainnet':
       return {
