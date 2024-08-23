@@ -64,6 +64,7 @@
 <script setup lang="ts">
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
+import { CONFIG } from '~/constants/networks'
 import { getAdjustedIsoString } from '@/libs/utils'
 import { getQuidditchTgBindStatus, quidditchTgBind } from '~/api/api'
 
@@ -90,7 +91,7 @@ onMounted(() => {
     const script = document.createElement('script')
     script.src = "https://telegram.org/js/telegram-widget.js?22"
     script.async = true
-    script.setAttribute('data-telegram-login', 'qianyikexin_bot')
+    script.setAttribute('data-telegram-login', CONFIG.bot_name)
     script.setAttribute('data-size', 'large')
     script.setAttribute('data-onauth', 'onTelegramAuth(user)')
     script.setAttribute('data-request-access', 'write')
