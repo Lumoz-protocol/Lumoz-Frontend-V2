@@ -34,7 +34,6 @@
                         <div v-show="!user.id" id="telegram-login-widget" class="hvr-grow qui-tg-login-button w-50 text-base mt-2 lg:mt-0"></div>
                         <div v-show="user.id" class="flex items-center">
                             {{ user.username || user.first_name || '' }}
-                            <img v-if="user.photo_url" :src="user.photo_url" class="w-10 h-10 ml-2 rounded-full" alt="">
                         </div>
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-xl lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] mt-4">
@@ -82,7 +81,6 @@ const user = ref({
     photo_url: ''
 })
 
-// const user = ref({ "id": 7237622293, "first_name": "A", "last_name": "Xing", "username": "AxingNXR", "photo_url": "https://t.me/i/userpic/320/bxsfW5GZcw2ZZvgPcdAW2K3OiyR6_gRVYJTpn9wH-a2rkBxyZ4Mcv7w2a7p2abd7.jpg", "auth_date": 1723433680, "hash": "6e1cba4c6af02ff110290498e900ab46cef32af89b8f48a7dd365d90c177daf0" })
 
 onMounted(() => {
     const id = document.getElementById('telegram-login-widget')
