@@ -3,6 +3,7 @@ export default {
     raas: 'Modular Compute Layer',
     rollups: 'Rollups',
     points: 'Lumoz Points',
+    zkv: 'zkVerifier Node',
     node: 'Node Sale 🔥',
     community: {
       title: 'Community',
@@ -229,11 +230,12 @@ export default {
     content: 'Lumoz originates from the “Lumos” spell in Harry Potter, combined with the evolution of zk, symbolizing the idea of lighting up the world with zk. Quidditch, meanwhile, is the beloved magical sport from the Harry Potter series. Therefore, in the final and most significant incentive testnet event of Lumoz, we have named it Lumoz Quidditch. We hope this event will ignite your passion and courage, and together, we will create the miracles that Lumoz is about to unveil. And most importantly, catch your own golden snitch.',
     rewards: 'Rewards',
     points: 'Points',
-    joint1: 'Join in the Quidditch match',
-    joint2: 'to get points rewards.',
-    joinc: 'The Quidditch match is a Telegram game meticulously crafted by Lumoz for this Quidditch event. Amidst the thrilling Quidditch journey, it offers community members an excellent opportunity to relax and unwind. Let\'s start the Quidditch match together!',
-    connect1: '1、Connect your wallet',
-    connect2: '2、Connect your Telegram'
+    joint: 'Lumoz Quidditch',
+    join2: 'Quidditch Match',
+    joinc: 'Lumoz originates from the “Lumos” spell in Harry Potter, combined with the evolution of zk, symbolizing the idea of lighting up the world with zk. Quidditch, meanwhile, is the beloved magical sport from the Harry Potter series. Therefore, in the final and most significant incentive testnet event of Lumoz, we have named it Lumoz Quidditch. We hope this event will ignite your passion and courage, and together, we will create the miracles that Lumoz is about to unveil. And most importantly, catch your own golden snitch.',
+    connect1: 'Step1: Connect your wallet',
+    connect2: 'Step2: Connect your Telegram',
+    events: 'Events'
   },
   wallet: {
     connect: 'Connect Wallet'
