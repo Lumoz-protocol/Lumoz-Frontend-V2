@@ -51,10 +51,6 @@ const footer = ref([
     name: vm.$t('footer.solutions'),
     list: [
       {
-        name: vm.$t('footer.s4'),
-        url: 'https://node.lumoz.org'
-      },
-      {
         name: vm.$t('footer.s1'),
         url: '/compute-layer'
       },
@@ -95,6 +91,27 @@ const footer = ref([
         name: vm.$t('footer.c6'),
         url: 'https://github.com/lumoz-protocol/Media-Kits'
       },
+    ]
+  },
+  {
+    name: vm.$t('footer.zkv'),
+    list: [
+      {
+        name: 'Run A Node',
+        url: 'https://quidditch-zkverifiers.lumoz.org/my-node'
+      },
+      {
+        name: 'Staking',
+        url: 'https://quidditch-zkverifiers.lumoz.org/staking'
+      },
+      {
+        name: 'Delegate',
+        url: 'https://quidditch-zkverifiers.lumoz.org/staking?tab=delegate'
+      },
+      {
+        name: 'Public Sale',
+        url: 'https://node.lumoz.org/public-sale'
+      }
     ]
   }
 ])

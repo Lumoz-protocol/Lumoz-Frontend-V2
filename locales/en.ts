@@ -19,6 +19,7 @@ export default {
     solutions: 'Solutions',
     s1: 'Modular Compute Layer',
     s2: 'Rollups',
+    zkv: 'zkVerifier Node',
     s3: 'Launch a ZK-Rollup',
     s4: 'Node Sale',
     community: 'Community',
