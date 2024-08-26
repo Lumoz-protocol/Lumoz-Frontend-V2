@@ -59,8 +59,8 @@ const activeName = ref(1)
 .qui-faq {
   border-radius: 10px;
   overflow: hidden;
-  border-top: 1px solid #ffffff55;
-  border-bottom: 1px solid #ffffff55;
+  border-top: 1px solid #ffffff33;
+  border-bottom: 1px solid #ffffff33;
 }
 .qui-faq .el-collapse-item__wrap {
   background: transparent;
@@ -78,7 +78,7 @@ const activeName = ref(1)
   -webkit-text-fill-color: transparent;
 }
 .qui-faq .el-collapse-item__content {
-  background: #23232244;
+  background: #23232266;
   padding: 0px;
   color: #cccccc !important;
   font-size: 16px;
