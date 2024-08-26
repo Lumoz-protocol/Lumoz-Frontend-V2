@@ -52,7 +52,7 @@
                         <QuiButton @click="goToGame" class="w-50 text-xl">Enter Game</QuiButton>
                     </div>
                 </div>
-                <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute top-1/12 left-11/20 bottom-0 h-4/5" alt="">
+                <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute top-1/6 left-11/20 ml-4 bottom-0 h-7/10 rounded-lg"  style="transform: rotate(10deg);" alt="">
                 <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-36 absolute right-1/8 top-1/15 bottom-0 cursor-pointer hvr-grow" @click="toTutorial" alt="">
                 <img src="@/assets/img/quidditch/rol.avif" class="hidden lg:block w-1/5 absolute right-1/8 left-2/5 ml-8 bottom-0" alt="">
             </div>
