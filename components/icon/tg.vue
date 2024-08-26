@@ -1,6 +1,7 @@
 <template>
   <a
     href="https://t.me/LumozOfficial/2"
+    target="_blank"
     class="h-7 inline-block text-[#292929] transition flex items-center justify-center hvr-bounce-in"
   >
     <div class="w-7 h-7 rounded bg-[#292929] hover:bg-[#34d399] flex items-center justify-center">
