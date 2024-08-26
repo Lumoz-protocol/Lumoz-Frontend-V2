@@ -35,7 +35,7 @@
                             <img src="@/assets/img/quidditch/exit.svg" class="w-6 ml-2 hvr-grow cursor-pointer" @click="walletStore.disconnectWallet" alt="">
                         </div>
                     </div>
-                    <div class="pl-8 lg:pl-1/15 text-lg lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
+                    <div class="pl-8 lg:pl-1/15 text-lg lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
                         <div class="pt-2">{{ $t('qui.connect2') }}</div>
                         <!-- <QuiButton v-if="!user.id" class="w-50 text-base mt-2 lg:mt-0" >Connect Telegram</QuiButton> -->
                         <div v-show="!user.id" id="telegram-login-widget" class="hvr-grow qui-tg-login-button w-50 text-base mt-2 lg:mt-0"></div>
@@ -43,17 +43,18 @@
                             {{ user.username || user.first_name || '' }}
                         </div>
                     </div>
-                    <div class="pl-8 lg:pl-1/15 text-lg lg:flex items-start lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
+                    <div class="pl-8 lg:pl-1/15 text-lg flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
                         <div class="pt-2">Step3: Bind</div>
                         <QuiButton v-show="walletStore.account && user.id && !binded" @click="bind" class="w-35 mt-2 lg:(ml-24 mt-0) text-sm">Bind</QuiButton>
-                        <img v-if="binded" src="@/assets/img/quidditch/check.svg" class="mr-10 w-8" alt="">
+                        <img v-if="binded" src="@/assets/img/quidditch/check.svg" class="mr-10 w-8 ml-4" alt="">
                     </div>
-                    <div class="pl-8 lg:pl-1/13 text-lg lg:flex items-start lg:w-1/2 justify-center text-[#4C2F1E] lg:h-12">
+                    <div class="pl-8 lg:pl-1/13 text-lg lg:flex items-start lg:w-1/2 justify-center text-[#4C2F1E] lg:h-12 py-8 lg:my-0">
                         <QuiButton @click="goToGame" class="w-50 text-xl">Enter Game</QuiButton>
                     </div>
                 </div>
-                <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute right-0 top-0 bottom-0 left-1/2 h-full" alt="">
+                <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute top-1/10 left-11/20 bottom-0 h-4/5" alt="">
                 <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-32 absolute right-1/8 top-1/15 bottom-0" alt="">
+                <img src="@/assets/img/quidditch/rol.avif" class="hidden lg:block w-1/5 absolute right-1/8 left-2/5 ml-8 bottom-0" alt="">
             </div>
             <div class="mt-16 mb-8 flex items-center justify-center text-2xl lg:text-5xl quiSlideShine">
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" style="transform: rotate(180deg);" alt="">
