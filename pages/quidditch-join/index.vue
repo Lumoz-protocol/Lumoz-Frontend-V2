@@ -60,7 +60,7 @@
                 <div class="mx-4">{{ $t('qui.events') }}</div>
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" alt="">
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 container mx-auto gap-4 xl:gap-8 pb-80">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 container mx-auto gap-4 xl:gap-8">
                 <div class="qui-card hvr-grow p-1 cursor-pointer w-2/3 md:w-full mx-auto lg:w-full" v-for="item in showList" :key="item.name" @click="router.push('/quidditch-join')">
                     <div class="qui-card-inner h-full px-4">
                         <div class="pt-4 text-lg text-center quiSlideShine mb-4">{{ item.name }} X Lumoz</div>
@@ -79,6 +79,14 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="mt-16 mb-8 flex items-center justify-center text-2xl lg:text-5xl quiSlideShine">
+                <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" style="transform: rotate(180deg);" alt="">
+                <div class="mx-4">{{ $t('qui.faq.title') }}</div>
+                <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" alt="">
+            </div>
+            <div class="h-200 container mx-auto">
+                <QuiFaq />
             </div>
         </div>
     </div>
