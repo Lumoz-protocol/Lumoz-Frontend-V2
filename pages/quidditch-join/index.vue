@@ -62,21 +62,21 @@
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" alt="">
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 container mx-auto gap-4 xl:gap-8 pb-80">
-                <div class="qui-card hvr-grow p-1 cursor-pointer w-2/3 mx-auto lg:w-full" v-for="item in 4" :key="item" @click="router.push('/quidditch-join')">
+                <div class="qui-card hvr-grow p-1 cursor-pointer w-2/3 md:w-full mx-auto lg:w-full" v-for="item in showList" :key="item.name" @click="router.push('/quidditch-join')">
                     <div class="qui-card-inner h-full px-4">
-                        <div class="pt-4 text-lg text-center quiSlideShine">Quidditch</div>
-                        <div class="flex items-center justify-center relative qui-card-round-box w-2/3 ml-1/6">
-                            <img src="@/assets/img/quidditch/round.avif" class="w-5/6" alt="">
+                        <div class="pt-4 text-lg text-center quiSlideShine mb-4">{{ item.name }} X Lumoz</div>
+                        <div class="flex items-center justify-center relative qui-card-round-box w-1/2 ml-1/4">
+                            <img :src="item.img" class="w-1/2 rounded-full" alt="">
                         </div>
+                        <div class="quiSlideShine text-center mt-2">Coming Soon</div>
                         <div class="text-center quiSlideShine mt-4">
                             <img src="@/assets/img/quidditch/devide.png" alt="">
-                            <div>Join in the Quidditch match to get points rewards.</div>
+                            <div>{{ item.des }}</div>
                             <img src="@/assets/img/quidditch/devide.png" alt="">
                         </div>
-                        <div class="quiSlideShine flex items-center justify-center my-4">
-                            {{ $t('qui.rewards') }}
-                            <img src="@/assets/img/quidditch/coin.svg" class="h-4 w-4 mx-2" alt="">
-                            {{ $t('qui.points') }}
+                        <div class="quiSlideShine flex items-center justify-center my-4 text-lg">
+                            <img src="@/assets/img/quidditch/coin.svg" class="h-4 w-4 mr-2" alt="">
+                            {{ item.points }}
                         </div>
                     </div>
                 </div>
@@ -85,12 +85,44 @@
     </div>
 </template>
 <script setup lang="ts">
+import OKX from '@/assets/img/quidditch/okx.webp'
+import GATE from '@/assets/img/quidditch/gate.webp'
+import C98 from '@/assets/img/quidditch/c98.webp'
+import BIT from '@/assets/img/quidditch/bit.webp'
+
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
 import { CONFIG } from '~/constants/networks'
 import { getAdjustedIsoString } from '@/libs/utils'
 import { getQuidditchTgBindStatus, quidditchTgBind } from '~/api/api'
 const router = useRouter()
+
+const showList = ref([
+    {
+        name: 'OKX Wallet',
+        img: OKX,
+        des: 'Participate in the joint event of Lumoz and OKX Wallet to earn rewards.',
+        points: '4M Lumoz Points'
+    },
+    {
+        name: 'Bitget Wallet',
+        img: BIT,
+        des: 'Participate in the joint event of Lumoz and Bitget Wallet to earn rewards.',
+        points: '4M Lumoz Points'
+    },
+    {
+        name: 'Gate Wallet',
+        img: GATE,
+        des: 'Participate in the joint event of Lumoz and Gate Wallet to earn rewards.',
+        points: '2M Lumoz Points'
+    },
+    {
+        name: 'Coin98 Wallet',
+        img: C98,
+        des: 'Participate in the joint event of Lumoz and Coin98 Wallet to earn rewards.',
+        points: '500K Lumoz Points'
+    }
+])
 
 const binded = ref(true)
 const walletStore = useWalletStore()
