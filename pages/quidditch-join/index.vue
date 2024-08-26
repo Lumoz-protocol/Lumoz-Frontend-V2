@@ -22,7 +22,7 @@
             <div class="container mx-auto mt-4 lg:mt-8 relative">
                 <div class="qui-wallet-box flex items-start flex-col justify-center">
                     <div class="lg:ml-1/20 qui-wallet-box-tag font-bold h-16 lg:h-20 text-[#4C2F1E] text-base lg:text-2xl flex items-center justify-start pl-4 pb-4 mt-15">
-                        Rewards: +10 Points <img src="@/assets/img/quidditch/flash.svg" class="ml-2 w-6 lg:w-8" alt="">
+                        Link Rewards: +10 Points <img src="@/assets/img/quidditch/flash.svg" class="ml-2 w-6 lg:w-8" alt="">
                     </div>
                     <div class="pl-8 lg:pl-1/15 lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] text-xl lg:text-2xl mt-2 mb-4 lg:mb-0">Link Telegram with your EVM wallet!</div>
                     <div class="pl-8 lg:pl-1/15 text-lg lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
@@ -44,16 +44,16 @@
                         </div>
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-lg flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
-                        <div class="pt-2">Step3: Bind</div>
-                        <QuiButton v-show="walletStore.account && user.id && !binded" @click="bind" class="w-35 mt-2 lg:(ml-24 mt-0) text-sm">Bind</QuiButton>
+                        <div class="pt-2">Step3: Link</div>
+                        <QuiButton v-show="walletStore.account && user.id && !binded" @click="bind" class="w-35 mt-2 lg:(ml-24 mt-0) text-sm">Link</QuiButton>
                         <img v-if="binded" src="@/assets/img/quidditch/check.svg" class="mr-10 w-8 ml-4" alt="">
                     </div>
                     <div class="pl-8 lg:pl-1/13 text-lg lg:flex items-start lg:w-1/2 justify-center text-[#4C2F1E] lg:h-12 py-8 lg:my-0">
                         <QuiButton @click="goToGame" class="w-50 text-xl">Enter Game</QuiButton>
                     </div>
                 </div>
-                <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute top-1/10 left-11/20 bottom-0 h-4/5" alt="">
-                <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-32 absolute right-1/8 top-1/15 bottom-0" alt="">
+                <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute top-1/12 left-11/20 bottom-0 h-4/5" alt="">
+                <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-36 absolute right-1/8 top-1/15 bottom-0 cursor-pointer hvr-grow" @click="toTutorial" alt="">
                 <img src="@/assets/img/quidditch/rol.avif" class="hidden lg:block w-1/5 absolute right-1/8 left-2/5 ml-8 bottom-0" alt="">
             </div>
             <div class="mt-16 mb-8 flex items-center justify-center text-2xl lg:text-5xl quiSlideShine">
@@ -197,4 +197,7 @@ const goToGame = () => {
     window.open('https://t.me/Lumoz_Quidditch_Bot/Match')
 }
 
+const toTutorial = () => {
+    window.open('https://docs.google.com/document/d/1BuLFr7pS9u04FLI6NMh3Q69J0e4c5_Z6Jkr89ZCApTE/edit?usp=sharing')
+}
 </script>
