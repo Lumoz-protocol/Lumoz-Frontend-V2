@@ -37,7 +37,6 @@
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-lg lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
                         <div class="pt-2">{{ $t('qui.connect2') }}</div>
-                        <!-- <QuiButton v-if="!user.id" class="w-50 text-base mt-2 lg:mt-0" >Connect Telegram</QuiButton> -->
                         <div v-show="!user.id" id="telegram-login-widget" class="hvr-grow qui-tg-login-button w-50 text-base mt-2 lg:mt-0"></div>
                         <div v-show="user.id" class="flex items-center ml-8 lg:mr-8 pt-2">
                             {{ user.username || user.first_name || '' }}
@@ -45,7 +44,7 @@
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-lg flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
                         <div class="pt-2">Step3: Link</div>
-                        <QuiButton v-show="walletStore.account && user.id && !binded" @click="bind" class="w-35 mt-2 lg:(ml-24 mt-0) text-sm">Link</QuiButton>
+                        <QuiButton @click="bind" v-show="walletStore.account && user.id && !binded" class="w-35 mt-2 lg:(ml-24 mt-0) text-sm">Link</QuiButton>
                         <img v-if="binded" src="@/assets/img/quidditch/check.svg" class="mr-10 w-8 ml-4" alt="">
                     </div>
                     <div class="pl-8 lg:pl-1/13 text-lg lg:flex items-start lg:w-1/2 justify-center text-[#4C2F1E] lg:h-12 py-8 lg:my-0">
@@ -124,7 +123,7 @@ const showList = ref([
     }
 ])
 
-const binded = ref(true)
+const binded = ref(false)
 const walletStore = useWalletStore()
 const loading = ref(false)
 
