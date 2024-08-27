@@ -37,7 +37,7 @@
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-lg lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
                         <div class="pt-2">{{ $t('qui.connect2') }}</div>
-                        <div v-show="!user.id" id="telegram-login-widget" class="hvr-grow qui-tg-login-button w-50 text-base mt-2 lg:mt-0"></div>
+                        <div v-show="!user.id" id="telegram-login-widget" class="hvr-grow qui-tg-login-button w-50 text-base mt-2 lg:pt-4"></div>
                         <div v-show="user.id" class="flex items-center ml-8 lg:mr-8 pt-2">
                             {{ user.username || user.first_name || '' }}
                         </div>
