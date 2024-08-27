@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://t.me/LumozOfficial/2"
+    href="https://t.me/Lumozannouncement"
     target="_blank"
     class="h-7 inline-block text-[#292929] transition flex items-center justify-center hvr-bounce-in"
   >

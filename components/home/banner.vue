@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="fade-edges-s w-full">
+    <div class="fade-edges-s w-full mt-4">
       <div class=" overflow-hidden">
         <div class="text-center font-bold lg:text-xl mb-2">{{ $t('home.back') }}</div>
         <div class="fade-edges">
