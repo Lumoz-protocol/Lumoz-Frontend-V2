@@ -2,7 +2,9 @@
   <div class="fixed z-10 top-0 left-0 right-0 h-20 bg-filter flex items-center justify-between px-4">
     <CommonLogo />
     <div class="hidden xl:flex items-center h-full">
-      <a class="header-node px-3 py-1.5 mr-8 text-black font-bold cursor-pointer hvr-grow opacity-90 hover:opacity-100 text-sm" target="_blank" href="https://node.lumoz.org">{{ $t('header.node') }}</a>
+      <div class="qui-button py-2 px-8 font-bai text-sm mr-8 cursor-pointer opacity-85 hover:opacity-100 hvr-grow" @click="router.push('/quidditch-join')">
+        Quidditch
+      </div>
       <CommonSingleNavItem v-for="item in singleMenus" :key="item.name" :item="item" @click="hideMenu" />
       <CommonNavItems v-for="item in menus" :key="item.name" :name="item.name" :hide-status="navHide">
         <CommonNavItem
@@ -23,7 +25,9 @@
       <HomeButton @click="toLaunch" class="ml-8" :word="$t('header.launch')" />
     </div>
     <div class="xl:hidden relative">
-      <a class="header-node px-3 py-1.5 mr-8 text-black font-bold cursor-pointer hvr-grow opacity-90 hover:opacity-100 text-sm mt-2" target="_blank" href="https://node.lumoz.org">{{ $t('header.node') }}</a>
+      <div class="qui-button py-2 px-8 font-bai text-sm mr-8 cursor-pointer opacity-85 hover:opacity-100 hvr-grow" @click="router.push('/quidditch-join')">
+        Quidditch
+      </div>
       <img
         src="@/assets/img/icon/menu.svg"
         class="w-6 mr-2 cursor-pointer hvr-bounce-in"
@@ -72,6 +76,7 @@ const menuShow = ref(false)
 const navHide = ref(false)
 
 const singleMenus = ref([
+  { name: vm.$t('header.zkv'), link: 'https://node.lumoz.org' },
   { name: vm.$t('header.raas'), link: '/compute-layer' },
   { name: vm.$t('header.rollups'), link: '/rollups' },
   { name: vm.$t('header.points'), link: '/lumoz-points' },
