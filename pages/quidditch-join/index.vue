@@ -196,7 +196,7 @@ const bind = async() => {
         loading.value = false
     } catch(e) {
         loading.value = false
-        notifyError(e?.toString())
+        notifyError(e?.response?.data?.describe || 'Link failed!')
     }
 }
 
