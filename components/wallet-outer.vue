@@ -6,6 +6,7 @@ const projectId = 'f84f8b1354cd3805ef4253caaadbe45f'
 import OXKIMG from '@/assets/img/networks/okx.png'
 import C98 from '@/assets/img/networks/c98.png'
 import GATE from '@/assets/img/networks/gate.webp'
+import BITGET from '@/assets/img/networks/bitget.webp'
 
 const { disconnect } = useDisconnect()
 
@@ -26,6 +27,15 @@ if (!window.gatewallet) {
     desktop_link: 'https://chromewebstore.google.com/detail/gate-wallet/cpmkedoipcpimgecpmgpldfpohjplkpp?hl=zh-CN&utm_source=ext_sidebar'
   })
 }
+if (!window.bitgetWallet) {
+  customWallets.push({
+    id: "Bitget Wallet",
+    name: "Bitget Wallet",
+    image_url: BITGET,
+    desktop_link: 'https://chromewebstore.google.com/detail/bitget-wallet-formerly-bi/jiidiaalihmmhddjgbnbgdfflelocpak'
+  })
+}
+
 if (!window.coin98) {
   customWallets.push({
     id: "Coin98 Wallet",
