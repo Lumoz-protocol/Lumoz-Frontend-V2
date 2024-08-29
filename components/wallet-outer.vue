@@ -5,6 +5,7 @@ import { useWalletStore } from '@/stores'
 const projectId = 'f84f8b1354cd3805ef4253caaadbe45f'
 import OXKIMG from '@/assets/img/networks/okx.png'
 import C98 from '@/assets/img/networks/c98.png'
+import GATE from '@/assets/img/networks/gate.webp'
 
 const { disconnect } = useDisconnect()
 
@@ -17,7 +18,14 @@ if (!window.okxwallet) {
     desktop_link: 'https://chromewebstore.google.com/detail/%E6%AC%A7%E6%98%93-web3-%E9%92%B1%E5%8C%85/mcohilncbfahbmgdjkbpemcciiolgcge?hl=zh-CN&utm_source=ext_sidebar'
   })
 }
-
+if (!window.gatewallet) {
+  customWallets.push({
+    id: "Gate Wallet",
+    name: "Gate Wallet",
+    image_url: GATE,
+    desktop_link: 'https://chromewebstore.google.com/detail/gate-wallet/cpmkedoipcpimgecpmgpldfpohjplkpp?hl=zh-CN&utm_source=ext_sidebar'
+  })
+}
 if (!window.coin98) {
   customWallets.push({
     id: "Coin98 Wallet",
@@ -26,6 +34,9 @@ if (!window.coin98) {
     desktop_link: 'https://chromewebstore.google.com/detail/coin98-wallet/aeachknmefphepccionboohckonoeemg'
   })
 }
+
+
+
 
 
 
