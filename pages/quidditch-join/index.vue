@@ -217,6 +217,8 @@ const toTutorial = () => {
 }
 
 const goTo = (url: string) => {
-    window.open(url)
+    if (url) {
+        window.open(url)
+    }
 }
 </script>
