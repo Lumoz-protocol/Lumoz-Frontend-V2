@@ -42,6 +42,11 @@ import M41 from '@/assets/img/eco/41.avif'
 import M42 from '@/assets/img/eco/42.avif'
 import M43 from '@/assets/img/eco/43.avif'
 import M44 from '@/assets/img/eco/44.avif'
+import M45 from '@/assets/img/eco/45.svg'
+import M46 from '@/assets/img/eco/46.avif'
+import M47 from '@/assets/img/eco/47.avif'
+import M48 from '@/assets/img/eco/48.avif'
+import M49 from '@/assets/img/eco/49.avif'
 
 const getEcosystems = () => {
     return [
@@ -148,6 +153,12 @@ const getEcosystems = () => {
         category: 'Bridge'
       },
       {
+        name: 'Kima',
+        url: 'https://kima.finance/',
+        img: M46,
+        category: 'Bridge'
+      },
+      {
         name: 'Polygon zkEVM',
         url: 'https://polygon.technology/polygon-zkevm',
         img: M16,
@@ -190,7 +201,24 @@ const getEcosystems = () => {
         img: M22,
         category: 'ZK Rollups'
       },
-
+      {
+        name: 'DuckChain',
+        url: 'https://duckchain.io/',
+        img: M47,
+        category: 'ZK Rollups'
+      },
+      {
+        name: 'OrangeChain',
+        url: 'https://orangechain.xyz/',
+        img: M45,
+        category: 'ZK Rollups'
+      },
+      {
+        name: 'DeAgentAI',
+        url: 'https://deagent.ai/',
+        img: M48,
+        category: 'AI'
+      },
       {
         name: 'Espresso Systems',
         url: 'https://www.espressosys.com/',
@@ -222,7 +250,12 @@ const getEcosystems = () => {
         img: M27,
         category: 'Data Availabilty'
       },
-
+      {
+        name: 'Nubit',
+        url: 'https://www.nubit.org/',
+        img: M49,
+        category: 'Data Availabilty'
+      },
       {
         name: 'OKX Wallet',
         url: 'https://t.co/CgWe19Alot',
