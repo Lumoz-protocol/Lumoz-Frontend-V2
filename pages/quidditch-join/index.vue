@@ -61,13 +61,13 @@
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" alt="">
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 container mx-auto gap-4 xl:gap-8">
-                <div class="qui-card hvr-grow p-1 cursor-pointer w-2/3 md:w-full mx-auto lg:w-full" v-for="item in showList" :key="item.name" @click="router.push('/quidditch-join')">
+                <div class="qui-card hvr-grow p-1 cursor-pointer w-2/3 md:w-full mx-auto lg:w-full" v-for="item in showList" :key="item.name" @click="goTo(item.url)">
                     <div class="qui-card-inner h-full px-4">
                         <div class="pt-4 text-lg text-center quiSlideShine mb-4">{{ item.name }} X Lumoz</div>
                         <div class="flex items-center justify-center relative qui-card-round-box w-1/2 ml-1/4">
                             <img :src="item.img" class="w-1/2 rounded-full" alt="">
                         </div>
-                        <div class="quiSlideShine text-center mt-2">Coming Soon</div>
+                        <div class="quiSlideShine text-center mt-2 h-6">{{ item.coming ? 'Coming Soon' : 'Join Now!' }}</div>
                         <div class="text-center quiSlideShine mt-4">
                             <img src="@/assets/img/quidditch/devide.png" alt="">
                             <div>{{ item.des }}</div>
@@ -109,25 +109,33 @@ const showList = ref([
         name: 'OKX Wallet',
         img: OKX,
         des: 'Participate in the joint event of Lumoz and OKX Wallet to earn rewards.',
-        points: '4M Lumoz Points'
+        points: '4M Lumoz Points',
+        coming: true,
+        url: ''
     },
     {
         name: 'Bitget Wallet',
         img: BIT,
         des: 'Participate in the joint event of Lumoz and Bitget Wallet to earn rewards.',
-        points: '4M Lumoz Points'
+        points: '4M Lumoz Points',
+        coming: true,
+        url: ''
     },
     {
         name: 'Gate Wallet',
         img: GATE,
         des: 'Participate in the joint event of Lumoz and Gate Wallet to earn rewards.',
-        points: '1M Lumoz Points'
+        points: '1M Lumoz Points',
+        coming: false,
+        url: 'https://gate.io/web3/tasks/detail?id=75&network=EVM'
     },
     {
         name: 'Coin98 Wallet',
         img: C98,
         des: 'Participate in the joint event of Lumoz and Coin98 Wallet to earn rewards.',
-        points: '500K Lumoz Points'
+        points: '500K Lumoz Points',
+        coming: true,
+        url: ''
     }
 ])
 
@@ -206,5 +214,9 @@ const goToGame = () => {
 
 const toTutorial = () => {
     window.open('https://docs.google.com/document/d/1BuLFr7pS9u04FLI6NMh3Q69J0e4c5_Z6Jkr89ZCApTE/edit?usp=sharing')
+}
+
+const goTo = (url: string) => {
+    window.open(url)
 }
 </script>
