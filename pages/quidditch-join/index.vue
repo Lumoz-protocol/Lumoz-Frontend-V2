@@ -121,7 +121,7 @@ const showList = ref([
         name: 'Gate Wallet',
         img: GATE,
         des: 'Participate in the joint event of Lumoz and Gate Wallet to earn rewards.',
-        points: '2M Lumoz Points'
+        points: '1M Lumoz Points'
     },
     {
         name: 'Coin98 Wallet',
