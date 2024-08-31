@@ -9,6 +9,10 @@ const getQuiUrl = (url: string) => {
   return `${CONFIG.quidditchApi}${url}`
 }
 
+const getZkvUrl = (url: string) => {
+  return `${CONFIG.zkvApi}${url}`
+}
+
 export const getAchieveInfo = async (address: string, timestamp: string, signature: string) => {
   const headers = {
     'API-SIGNATURE': signature,
@@ -40,4 +44,13 @@ export const quidditchTgBind = async (address: string, timestamp: string, signat
     headers
   })
   return data.lumoz_points
+}
+
+export const getZkvTask = async (address: string, timestamp: string, signature: string) => {
+  const headers = {
+    'API-SIGNATURE': signature,
+    'TIMESTAMP': timestamp
+  };
+  const { data } = await axios.get(getZkvUrl(`api/zkverifiers/onchain_task_status?address=${address}`), { headers })
+  return data
 }

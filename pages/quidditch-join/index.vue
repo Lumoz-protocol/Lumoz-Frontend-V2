@@ -28,7 +28,7 @@
                     <div class="pl-8 lg:pl-1/15 text-lg lg:flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
                         {{ $t('qui.connect1') }}
                         <Wallet v-if="!walletStore.account">
-                            <QuiButton class="w-40 mt-2 lg:(ml-24 mt-0) text-sm">Connect Wallet</QuiButton>
+                            <QuiButton :type="1" class="w-40 mt-2 lg:(ml-24 mt-0) text-sm">Connect Wallet</QuiButton>
                         </Wallet>
                         <div v-else class="h-12 flex items-center w-50 justify-end pr-4">
                             {{ formatAddress(walletStore.account, 6) }} 
@@ -44,11 +44,11 @@
                     </div>
                     <div class="pl-8 lg:pl-1/15 text-lg flex items-center lg:w-1/2 justify-between text-[#4C2F1E] lg:h-16">
                         <div class="pt-2">Step3: Link</div>
-                        <QuiButton @click="bind" v-show="walletStore.account && user.id && !binded" class="w-35 mt-2 lg:(ml-24 mt-0) text-sm">Link</QuiButton>
+                        <QuiButton :type="1" @click="bind" v-show="walletStore.account && user.id && !binded" class="w-35 mt-2 lg:(ml-24 mt-0) text-sm">Link</QuiButton>
                         <img v-if="binded" src="@/assets/img/quidditch/check.svg" class="mr-10 w-8 ml-4" alt="">
                     </div>
                     <div class="pl-8 lg:pl-1/13 text-lg lg:flex items-start lg:w-1/2 justify-center text-[#4C2F1E] lg:h-12 py-8 lg:my-0">
-                        <QuiButton @click="goToGame" class="w-50 text-xl">Enter Game</QuiButton>
+                        <QuiButton :type="1" @click="goToGame" class="w-50 text-base">Enter Game</QuiButton>
                     </div>
                 </div>
                 <img src="@/assets/img/quidditch/paper-right-1.avif" class="hidden lg:block absolute top-1/6 left-11/20 ml-4 bottom-0 h-7/10 rounded-lg"  style="transform: rotate(10deg);" alt="">

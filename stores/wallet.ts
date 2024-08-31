@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ethers } from 'ethers'
 import { LUMOZ } from '~~/constants/networks'
+import { useDisconnect } from '@web3modal/ethers5/vue'
 
 export type Bridge = {
   provider: any
@@ -46,6 +47,8 @@ export const useWalletStore = defineStore('wallet', {
         web3Provider: null,
         signer: null
       }
+      const { disconnect } = useDisconnect()
+      disconnect()
     },
     async signature(message: any) {
       message.message.timestamp = Number(new Date())

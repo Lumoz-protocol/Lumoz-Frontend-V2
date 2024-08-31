@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img v-if="!router.currentRoute.value.path.toLowerCase().startsWith('/quidditch')" src="@/assets/img/share/footer.avif" class="h-80 w-full">
+    <img v-if="showImg" src="@/assets/img/share/footer.avif" class="h-80 w-full">
     <div class="-mt-40">
       <div class="w-full flex items-center justify-center">
         <div class="footer-linear-1 h-0.5 w-1/2"></div>
@@ -123,6 +123,14 @@ const to = (url:string) => {
     window.open(url)
   }
 }
+
+const showImg = computed(() => {
+  const rou = router.currentRoute.value.path.toLowerCase()
+  if (rou == '/quidditch-join' || rou == '/zkverifier-events') {
+    return false
+  }
+  return true
+})
 </script>
 <style scoped>
 .footer-linear-1 {

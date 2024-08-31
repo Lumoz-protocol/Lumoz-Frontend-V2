@@ -255,6 +255,16 @@ export default {
       c4: 'Invite friends to join the Quidditch game. You’ll earn 1 Philosopher’s Stone when a friend completes the tasks of following Lumoz on Twitter and joining the Lumoz Telegram group. Invite more friends to unlock additional Philosopher’s Stone rewards.'
     }
   },
+  zkv: {
+    title: 'zkVerifier Events',
+    content: 'Join the zkVerifier event to experience running a node, staking, and delegating for a chance to win big rewards.',
+    d1: 'Run a node ',
+    d2: 'Delegate your testnet license',
+    d3: 'Stake your MOZ',
+    rewards: 'Rewards',
+    points: 'Points',
+    go: 'Go'
+  },
   wallet: {
     connect: 'Connect Wallet'
   }
