@@ -152,7 +152,7 @@ const startTimer = () => {
 }
 
 const getData = async() => {
-    if (!sign.value.signature || Number(new Date()) - sign.value.time > 10 * 60 * 1000) {
+    if (!sign.value.signature || (Number(new Date()) - sign.value.time > 10 * 60 * 1000)) {
         if (lock.value) {
             return
         }
