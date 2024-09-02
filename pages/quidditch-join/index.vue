@@ -187,7 +187,7 @@ const showList = ref([
         name: 'Rivalz',
         img: RIVALZ,
         points: '50K Lumoz Points',
-        rewards: '400K RIZ',
+        rewards: '$5K worth of $RIZ',
         coming: false,
         url: 'https://app.galxe.com/quest/RivalzNetwork/GC7dotxHLH'
     },
