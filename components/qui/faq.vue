@@ -73,9 +73,16 @@ const activeName = ref(1)
   background: linear-gradient(90deg, #F0AF60 0%, #FAE79B 43.5%, #EAA352 100%);
   cursor: pointer;
   background-size: 100% 100%;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.2rem;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (min-width: 1024px) {
+  .qui-faq .el-collapse-item__header {
+    line-height: 2rem;
+  }
 }
 .qui-faq .el-collapse-item__content {
   background: #23232266;

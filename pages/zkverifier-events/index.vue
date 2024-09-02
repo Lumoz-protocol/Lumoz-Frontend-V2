@@ -30,13 +30,31 @@
                 </div>
             </div>
             <div class="grid lg:grid-cols-2 container mx-auto mt-12">
-                <div class="p-8 qui-zk-card h-36 flex items-center justify-between">
-                    <div class="w-12 h-12 rounded-full bg-[#4C2F1E] flex items-center justify-center" style="border: 1.5px solid var(--2, #F0AF60);">
+                <div class="p-8 qui-zk-card h-44 flex items-center justify-between relative">
+                    <!-- <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-20 absolute right-2 top-0 cursor-pointer hvr-grow" @click="goTo('https://docs.lumoz.org/setup-zkverifier-node/setup-node/build-your-own')" alt=""> -->
+                    <div class="w-14 h-14 rounded-full bg-[#4C2F1E] flex items-center justify-center" style="border: 1.5px solid var(--2, #F0AF60);">
                         <img src="@/assets/img/quidditch/lumoz.svg" class="w-8 h-8" alt="">
                     </div>
                     <div class="quiSlideShine flex-1 pl-8">
-                        <div class="text-xl">{{ $t('zkv.d1') }}</div>
-                        <div class="flex items-center mt-2">
+                        <div class="text-2xl">{{ $t('zkv.d1') }}</div>
+                        <div class="flex items-center mt-4">
+                            Reward Pool: <img src="@/assets/img/quidditch/flash.svg" class="w-6" alt=""> 2.5M {{ $t('zkv.points') }}
+                        </div>
+                    </div>
+                    <!-- <div v-if="walletStore.account">
+                        <QuiButton v-if="!user.is_run_naas_node" :type="3" class="w-30" @click="goTo('https://quidditch-zkverifiers.lumoz.org/my-node')">{{ $t('zkv.go') }}</QuiButton>
+                        <img v-else src="@/assets/img/quidditch/check.svg" alt="">
+                    </div> -->
+                    <div class="quiSlideShine">Comming Soon</div>
+                </div>
+                <div class="p-8 qui-zk-card h-44 flex items-center justify-between relative">
+                    <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-20 absolute right-2 top-0 cursor-pointer hvr-grow" @click="goTo('https://docs.lumoz.org/setup-zkverifier-node/setup-node/build-your-own')" alt="">
+                    <div class="w-14 h-14 rounded-full bg-[#4C2F1E] flex items-center justify-center" style="border: 1.5px solid var(--2, #F0AF60);">
+                        <img src="@/assets/img/quidditch/lumoz.svg" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="quiSlideShine flex-1 pl-8">
+                        <div class="text-2xl">{{ $t('zkv.d2') }}</div>
+                        <div class="flex items-center mt-4">
                             {{ $t('zkv.rewards') }}: <img src="@/assets/img/quidditch/flash.svg" class="w-6" alt="">+20 {{ $t('zkv.points') }}
                         </div>
                     </div>
@@ -45,33 +63,35 @@
                         <img v-else src="@/assets/img/quidditch/check.svg" alt="">
                     </div>
                 </div>
-                <div class="p-8 qui-zk-card h-36 flex items-center justify-between">
-                    <div class="w-12 h-12 rounded-full bg-[#4C2F1E] flex items-center justify-center" style="border: 1.5px solid var(--2, #F0AF60);">
+                <div class="p-8 qui-zk-card h-44 flex items-center justify-between relative">
+                    <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-20 absolute right-2 top-0 cursor-pointer hvr-grow" @click="goTo('https://docs.lumoz.org/delegate-licenses')" alt="">
+                    <div class="w-14 h-14 rounded-full bg-[#4C2F1E] flex items-center justify-center" style="border: 1.5px solid var(--2, #F0AF60);">
                         <img src="@/assets/img/quidditch/lumoz.svg" class="w-8 h-8" alt="">
                     </div>
                     <div class="quiSlideShine flex-1 pl-8">
-                        <div class="text-xl">{{ $t('zkv.d2') }}</div>
-                        <div class="flex items-center mt-2">
+                        <div class="text-2xl">{{ $t('zkv.d3') }}</div>
+                        <div class="flex items-center mt-4">
                             {{ $t('zkv.rewards') }}: <img src="@/assets/img/quidditch/flash.svg" class="w-6" alt="">+10 {{ $t('zkv.points') }}
                         </div>
                     </div>
                     <div v-if="walletStore.account">
-                        <QuiButton v-if="!user.is_staked_licenses" :type="3" class="w-30" @click="goTo('https://quidditch-zkverifiers.lumoz.org/staking?tab=delegate')">{{ $t('zkv.go') }}</QuiButton>
+                        <QuiButton v-if="!user.is_staked_licenses" :type="3" class="w-30" @click="goTo('https://quidditch-zkverifiers.lumoz.org/my-node')">{{ $t('zkv.go') }}</QuiButton>
                         <img v-else src="@/assets/img/quidditch/check.svg" alt="">
                     </div>
                 </div>
-                <div class="p-8 qui-zk-card h-36 flex items-center justify-between">
-                    <div class="w-12 h-12 rounded-full bg-[#4C2F1E] flex items-center justify-center" style="border: 1.5px solid var(--2, #F0AF60);">
+                <div class="p-8 qui-zk-card h-44 flex items-center justify-between relative">
+                    <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-20 absolute right-2 top-0 cursor-pointer hvr-grow" @click="goTo('https://docs.lumoz.org/staking')" alt="">
+                    <div class="w-14 h-14 rounded-full bg-[#4C2F1E] flex items-center justify-center" style="border: 1.5px solid var(--2, #F0AF60);">
                         <img src="@/assets/img/quidditch/lumoz.svg" class="w-8 h-8" alt="">
                     </div>
                     <div class="quiSlideShine flex-1 pl-8">
-                        <div class="text-xl">{{ $t('zkv.d3') }}</div>
-                        <div class="flex items-center mt-2">
+                        <div class="text-2xl">{{ $t('zkv.d4') }}</div>
+                        <div class="flex items-center mt-4">
                             {{ $t('zkv.rewards') }}: <img src="@/assets/img/quidditch/flash.svg" class="w-6" alt="">+10 {{ $t('zkv.points') }}
                         </div>
                     </div>
                     <div v-if="walletStore.account">
-                        <QuiButton v-if="!user.is_staked_esmoz" :type="3" @click="goTo('https://quidditch-zkverifiers.lumoz.org/staking')" class="w-30">{{ $t('zkv.go') }}</QuiButton>
+                        <QuiButton v-if="!user.is_staked_esmoz" :type="3" class="w-30" @click="goTo('https://quidditch-zkverifiers.lumoz.org/my-node')">{{ $t('zkv.go') }}</QuiButton>
                         <img v-else src="@/assets/img/quidditch/check.svg" alt="">
                     </div>
                 </div>

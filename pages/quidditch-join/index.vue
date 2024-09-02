@@ -2,24 +2,24 @@
     <div class="quidditch-bg -mt-18">
         <div class="quidditch-bg-inner-2">
             <div class="h-18"></div>
-            <div class="flex items-center justify-center text-2xl lg:text-5xl quiSlideShine pt-4 lg:pt-12">
+            <div class="flex items-center justify-center text-2xl lg:text-5xl quiSlideShine pt-4 lg:pt-8">
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" style="transform: rotate(180deg);" alt="">
                 <div class="mx-4 text-center">
                     <div>{{ $t('qui.joint') }}</div>
                 </div>
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" alt="">
             </div>
-            <div class="quiSlideShine lg:(w-3/5 ml-1/5 mt-8 text-base) text-center mt-4 text-sm">
+            <div class="quiSlideShine lg:(w-3/5 ml-1/5 text-base) text-center mt-4 text-sm">
                 {{ $t('qui.joinc') }}
             </div>
-            <div class="flex items-center justify-center text-2xl lg:text-5xl quiSlideShine pt-4 lg:pt-12">
+            <div class="flex items-center justify-center text-2xl lg:text-5xl quiSlideShine pt-12 lg:pt-16">
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" style="transform: rotate(180deg);" alt="">
                 <div class="mx-4 text-center">
                     <div>{{ $t('qui.join2') }}</div>
                 </div>
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" alt="">
             </div>
-            <div class="container mx-auto mt-4 lg:mt-8 relative">
+            <div class="container mx-auto relative">
                 <div class="qui-wallet-box flex items-start flex-col justify-center">
                     <div class="lg:ml-1/20 qui-wallet-box-tag font-bold h-16 lg:h-20 text-[#4C2F1E] text-base lg:text-2xl flex items-center justify-start pl-4 pb-4 mt-15">
                         Link Rewards: +10 Points <img src="@/assets/img/quidditch/flash.svg" class="ml-2 w-6 lg:w-8" alt="">
@@ -55,26 +55,25 @@
                 <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-36 absolute right-1/8 top-1/15 bottom-0 cursor-pointer hvr-grow" @click="toTutorial" alt="">
                 <img src="@/assets/img/quidditch/rol.avif" class="hidden lg:block w-1/5 absolute right-1/8 left-2/5 ml-8 bottom-0" alt="">
             </div>
-            <div class="mt-16 mb-8 flex items-center justify-center text-2xl lg:text-5xl quiSlideShine">
+            <div class="mt-16  flex items-center justify-center text-2xl lg:text-5xl quiSlideShine">
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" style="transform: rotate(180deg);" alt="">
                 <div class="mx-4">{{ $t('qui.events') }}</div>
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" alt="">
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 container mx-auto gap-4 xl:gap-8">
-                <div class="qui-card hvr-grow p-1 cursor-pointer w-2/3 md:w-full mx-auto lg:w-full" v-for="item in showList" :key="item.name" @click="goTo(item.url)">
+            <div class="quiSlideShine lg:(w-3/5 ml-1/5 my-8 text-base) text-center my-4 text-sm">{{ $t('qui.eventsc') }}</div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 container mx-auto gap-2 xl:gap-8">
+                <div class="qui-card hvr-grow p-1 cursor-pointer lg:w-2/3 md:w-full mx-auto lg:w-full" v-for="item in showList" :key="item.name" @click="goTo(item.url)">
                     <div class="qui-card-inner h-full px-4">
-                        <div class="pt-4 text-lg text-center quiSlideShine mb-4">{{ item.name }} X Lumoz</div>
-                        <div class="flex items-center justify-center relative qui-card-round-box w-1/2 ml-1/4">
-                            <img :src="item.img" class="w-1/2 rounded-full" alt="">
+                        <div class="pt-4 text-sm lg:text-lg text-center quiSlideShine mb-4">{{ item.name }} {{ item.notJoin ? '' : 'X Lumoz' }}</div>
+                        <div class="flex items-center justify-center relative qui-card-round-box w-2/5 ml-3/10">
+                            <img :src="item.img" class="w-2/3 rounded-full" :class="item.imgf ? 'p-3 bg-black' : ''" alt="">
                         </div>
-                        <div class="quiSlideShine text-center mt-2 h-6">{{ item.coming ? 'Coming Soon' : 'Join Now!' }}</div>
-                        <div class="text-center quiSlideShine mt-4">
-                            <img src="@/assets/img/quidditch/devide.png" alt="">
-                            <div>{{ item.des }}</div>
+                        <div class="quiSlideShine text-center mt-2 text-sm lg:text-base">{{ item.coming ? 'Coming Soon' : 'Join Now!' }}</div>
+                        <div class="text-center quiSlideShine mt-2">
                             <img src="@/assets/img/quidditch/devide.png" alt="">
                         </div>
-                        <div class="quiSlideShine flex items-center justify-center my-4 text-lg">
-                            <img src="@/assets/img/quidditch/coin.svg" class="h-4 w-4 mr-2" alt="">
+                        <div class="quiSlideShine flex items-center justify-center mb-2 text-xl">
+                            <img src="@/assets/img/quidditch/flash.svg" class="h-6 mr-2" alt="">
                             {{ item.points }}
                         </div>
                     </div>
@@ -85,7 +84,7 @@
                 <div class="mx-4">{{ $t('qui.faq.title') }}</div>
                 <img src="@/assets/img/quidditch/arrow.png" class="h-3 lg:h-5" alt="">
             </div>
-            <div class="h-200 container mx-auto">
+            <div class="h-160 container mx-auto">
                 <QuiFaq />
             </div>
         </div>
@@ -96,19 +95,27 @@ import OKX from '@/assets/img/quidditch/okx.webp'
 import GATE from '@/assets/img/quidditch/gate.webp'
 import C98 from '@/assets/img/quidditch/c98.webp'
 import BIT from '@/assets/img/quidditch/bit.webp'
+import LUMOZ from '@/assets/img/quidditch/lumoz.svg'
 
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
 import { CONFIG } from '~/constants/networks'
 import { getAdjustedIsoString } from '@/libs/utils'
 import { getQuidditchTgBindStatus, quidditchTgBind } from '~/api/api'
-const router = useRouter()
 
 const showList = ref([
     {
+        name: 'Lumoz zkVerifier Node',
+        notJoin: true,
+        img: LUMOZ,
+        points: '3M Lumoz Points',
+        imgf: true,
+        coming: false,
+        url: 'https://lumoz.org/zkverifier-events'
+    },
+    {
         name: 'OKX Wallet',
         img: OKX,
-        des: 'Participate in the joint event of Lumoz and OKX Wallet to earn rewards.',
         points: '4M Lumoz Points',
         coming: true,
         url: ''
@@ -116,7 +123,6 @@ const showList = ref([
     {
         name: 'Bitget Wallet',
         img: BIT,
-        des: 'Participate in the joint event of Lumoz and Bitget Wallet to earn rewards.',
         points: '4M Lumoz Points',
         coming: true,
         url: ''
@@ -124,7 +130,6 @@ const showList = ref([
     {
         name: 'Gate Wallet',
         img: GATE,
-        des: 'Participate in the joint event of Lumoz and Gate Wallet to earn rewards.',
         points: '1M Lumoz Points',
         coming: false,
         url: 'https://gate.io/web3/tasks/detail?id=75&network=EVM'
@@ -132,7 +137,6 @@ const showList = ref([
     {
         name: 'Coin98 Wallet',
         img: C98,
-        des: 'Participate in the joint event of Lumoz and Coin98 Wallet to earn rewards.',
         points: '500K Lumoz Points',
         coming: true,
         url: ''

@@ -237,6 +237,7 @@ export default {
     connect1: 'Step1: Connect your wallet',
     connect2: 'Step2: Connect your Telegram',
     events: 'Events',
+    eventsc: 'Join the collaborative event between Lumoz and partners to unlock exclusive rewards.',
     faq: {
       title: 'FAQ',
       t1: '1. How can I earn Lumoz Points and other rewards through the game?',
@@ -258,9 +259,10 @@ export default {
   zkv: {
     title: 'zkVerifier Events',
     content: 'Join the zkVerifier event to experience running a node, staking, and delegating for a chance to win big rewards.',
-    d1: 'Run a node ',
-    d2: 'Delegate your testnet license',
-    d3: 'Stake your MOZ',
+    d1: 'Run a node with NaaS',
+    d2: 'Run a node ',
+    d3: 'Delegate your testnet license',
+    d4: 'Stake your MOZ',
     rewards: 'Rewards',
     points: 'Points',
     go: 'Go'
