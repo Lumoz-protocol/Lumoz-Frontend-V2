@@ -96,6 +96,15 @@ import GATE from '@/assets/img/quidditch/gate.webp'
 import C98 from '@/assets/img/quidditch/c98.webp'
 import BIT from '@/assets/img/quidditch/bit.webp'
 import LUMOZ from '@/assets/img/quidditch/lumoz.svg'
+import MERLIN from '@/assets/img/networks/merlin.jpg'
+import M39 from '@/assets/img/eco/39.avif'
+import M48 from '@/assets/img/eco/48.avif'
+import TP from '@/assets/img/quidditch/tp.avif'
+import INTRACT from '@/assets/img/quidditch/intract.avif'
+import HST from '@/assets/img/quidditch/hst.avif'
+import RIVALZ from '@/assets/img/quidditch/rivalz.avif'
+import MICRO3 from '@/assets/img/quidditch/micro3.avif'
+import AVALON from '@/assets/img/quidditch/avalon.avif'
 
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
@@ -140,7 +149,77 @@ const showList = ref([
         points: '500K Lumoz Points',
         coming: true,
         url: ''
-    }
+    },
+    {
+        name: 'TokenPocket Wallet',
+        img: TP,
+        points: '100K Lumoz Points',
+        coming: false,
+        url: 'https://app.galxe.com/quest/TokenPocket/GCCG1txhKZ'
+    },
+    {
+        name: 'Merlin',
+        img: MERLIN,
+        points: '100K Lumoz Points',
+        coming: false,
+        url: 'https://app.galxe.com/quest/MerlinChain/GCcxKtxwUE'
+    },
+    {
+        name: 'Intract',
+        img: INTRACT,
+        points: '100K Lumoz Points',
+        coming: false,
+        url: 'https://www.intract.io/quest/66cda0a54af02b13b2d43c77'
+    },
+    {
+        name: 'Holdstation',
+        img: HST,
+        points: '50K Lumoz Points',
+        coming: false,
+        url: 'https://app.galxe.com/quest/Holdstation/GC271txp56'
+    },
+    {
+        name: 'Rivalz',
+        img: RIVALZ,
+        points: '50K Lumoz Points',
+        coming: false,
+        url: 'https://app.galxe.com/quest/RivalzNetwork/GC7dotxHLH'
+    },
+    {
+        name: 'NodeOps',
+        img: M39,
+        points: '50K Lumoz Points',
+        coming: false,
+        url: 'https://www.intract.io/quest/66c7204b9dd6b359e5e6bded'
+    },
+    {
+        name: 'DeAgent',
+        img: M48,
+        points: '50K Lumoz Points',
+        coming: false,
+        url: 'https://deagent.ai'
+    },
+    {
+        name: 'Micro3',
+        img: MICRO3,
+        points: '20K Lumoz Points',
+        coming: false,
+        url: 'https://micro3.io/quest/quidditch-convergence-lumoz-x-micro3-956e57c3'
+    },
+    {
+        name: 'Avalon Labs',
+        img: AVALON,
+        points: '50K Lumoz Points',
+        coming: false,
+        url: 'https://app.galxe.com/quest/mSFiZx6jLKUhJYa2872s7a/GCUDptxcvA'
+    },
+    // {
+    //     name: 'Aelf',
+    //     img: C98,
+    //     points: '20K Lumoz Points',
+    //     coming: false,
+    //     url: 'https://zealy.io/cw/aelf/questboard/2e41346a-5118-4ad0-8002-1f6a6178cd7f'
+    // }
 ])
 
 const binded = ref(false)
