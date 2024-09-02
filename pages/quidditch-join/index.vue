@@ -136,8 +136,8 @@ const showList = ref([
         name: 'Bitget Wallet',
         img: BIT,
         points: '4M Lumoz Points',
-        coming: true,
-        url: ''
+        coming: false,
+        url: 'https://share.bwb.site/taskPage?uuid=44ce3b5c-4340-4170-b369-00dba4f87f7e&_nocache=true&_needChain=ton'
     },
     {
         name: 'Gate Wallet',
