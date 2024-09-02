@@ -72,9 +72,12 @@
                         <div class="text-center quiSlideShine mt-2">
                             <img src="@/assets/img/quidditch/devide.png" alt="">
                         </div>
-                        <div class="quiSlideShine flex items-center justify-center mb-2 text-xl">
-                            <img src="@/assets/img/quidditch/flash.svg" class="h-6 mr-2" alt="">
+                        <div class="quiSlideShine flex items-center justify-center mb-2">
+                            <img src="@/assets/img/quidditch/flash.svg" class="h-5 mr-2" alt="">
                             {{ item.points }}
+                        </div>
+                        <div v-if="item.rewards" class="quiSlideShine text-center pb-2">
+                            {{ item.rewards }}
                         </div>
                     </div>
                 </div>
@@ -161,6 +164,7 @@ const showList = ref([
         name: 'Merlin',
         img: MERLIN,
         points: '100K Lumoz Points',
+        rewards: '5K MERL',
         coming: false,
         url: 'https://app.galxe.com/quest/MerlinChain/GCcxKtxwUE'
     },
@@ -175,6 +179,7 @@ const showList = ref([
         name: 'Holdstation',
         img: HST,
         points: '50K Lumoz Points',
+        rewards: '3 * Holdstation Chests / User',
         coming: false,
         url: 'https://app.galxe.com/quest/Holdstation/GC271txp56'
     },
@@ -182,6 +187,7 @@ const showList = ref([
         name: 'Rivalz',
         img: RIVALZ,
         points: '50K Lumoz Points',
+        rewards: '400K RIZ',
         coming: false,
         url: 'https://app.galxe.com/quest/RivalzNetwork/GC7dotxHLH'
     },
@@ -189,6 +195,7 @@ const showList = ref([
         name: 'NodeOps',
         img: M39,
         points: '50K Lumoz Points',
+        rewards: '50K NodePoints',
         coming: false,
         url: 'https://www.intract.io/quest/66c7204b9dd6b359e5e6bded'
     },
@@ -196,8 +203,9 @@ const showList = ref([
         name: 'DeAgent',
         img: M48,
         points: '50K Lumoz Points',
+        rewards: '1M DA',
         coming: false,
-        url: 'https://deagent.ai'
+        url: 'https://deagent.ai/reward'
     },
     {
         name: 'Micro3',
@@ -210,6 +218,7 @@ const showList = ref([
         name: 'Avalon Labs',
         img: AVALON,
         points: '50K Lumoz Points',
+        rewards: '25k Avalon Points',
         coming: false,
         url: 'https://app.galxe.com/quest/mSFiZx6jLKUhJYa2872s7a/GCUDptxcvA'
     },

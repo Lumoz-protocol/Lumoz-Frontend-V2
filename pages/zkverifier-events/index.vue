@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div v-if="walletStore.account">
-                        <QuiButton v-if="!user.is_staked_licenses" :type="3" class="w-30" @click="goTo('https://quidditch-zkverifiers.lumoz.org/my-node')">{{ $t('zkv.go') }}</QuiButton>
+                        <QuiButton v-if="!user.is_staked_licenses" :type="3" class="w-30" @click="goTo('https://quidditch-zkverifiers.lumoz.org/staking?tab=delegate')">{{ $t('zkv.go') }}</QuiButton>
                         <img v-else src="@/assets/img/quidditch/check.svg" alt="">
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div v-if="walletStore.account">
-                        <QuiButton v-if="!user.is_staked_esmoz" :type="3" class="w-30" @click="goTo('https://quidditch-zkverifiers.lumoz.org/my-node')">{{ $t('zkv.go') }}</QuiButton>
+                        <QuiButton v-if="!user.is_staked_esmoz" :type="3" class="w-30" @click="goTo('https://quidditch-zkverifiers.lumoz.org/staking')">{{ $t('zkv.go') }}</QuiButton>
                         <img v-else src="@/assets/img/quidditch/check.svg" alt="">
                     </div>
                 </div>
