@@ -108,6 +108,8 @@ import HST from '@/assets/img/quidditch/hst.avif'
 import RIVALZ from '@/assets/img/quidditch/rivalz.avif'
 import MICRO3 from '@/assets/img/quidditch/micro3.avif'
 import AVALON from '@/assets/img/quidditch/avalon.avif'
+import M10 from '@/assets/img/quidditch/10.jpeg'
+import M11 from '@/assets/img/quidditch/11.jpeg'
 
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
@@ -222,13 +224,22 @@ const showList = ref([
         coming: false,
         url: 'https://app.galxe.com/quest/mSFiZx6jLKUhJYa2872s7a/GCUDptxcvA'
     },
-    // {
-    //     name: 'Aelf',
-    //     img: C98,
-    //     points: '20K Lumoz Points',
-    //     coming: false,
-    //     url: 'https://zealy.io/cw/aelf/questboard/2e41346a-5118-4ad0-8002-1f6a6178cd7f'
-    // }
+    {
+        name: 'REVOX',
+        img: M10,
+        points: '100K Lumoz Points',
+        rewards: '10M REVOX Points',
+        coming: false,
+        url: 'https://app.galxe.com/quest/readon/GCnAStxmz4'
+    },
+    {
+        name: 'Halo.Social',
+        img: M11,
+        points: '50K Lumoz Points',
+        rewards: '50K XP',
+        coming: false,
+        url: 'https://app.galxe.com/quest/HaloDotSocial/GCsREtxRG3'
+    }
 ])
 
 const binded = ref(false)
