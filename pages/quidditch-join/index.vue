@@ -132,7 +132,7 @@ const showList = ref([
         img: OKX,
         points: '4M Lumoz Points',
         coming: true,
-        url: 'https://x.com/okxweb3/status/1830920192764809641?s=46&t=XmyWrhiIxH3cBJwDJuvKEA'
+        url: 'https://app.galxe.com/quest/OKXWEB3/GCnhStxmNA'
     },
     {
         name: 'Bitget Wallet',
