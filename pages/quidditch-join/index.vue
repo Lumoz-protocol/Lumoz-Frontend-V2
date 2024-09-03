@@ -131,7 +131,7 @@ const showList = ref([
         name: 'OKX Wallet',
         img: OKX,
         points: '4M Lumoz Points',
-        coming: true,
+        coming: false,
         url: ''
     },
     {
@@ -139,7 +139,7 @@ const showList = ref([
         img: BIT,
         points: '4M Lumoz Points',
         coming: false,
-        url: 'https://share.bwb.site/taskPage?uuid=44ce3b5c-4340-4170-b369-00dba4f87f7e&_nocache=true&_needChain=ton'
+        url: 'https://x.com/okxweb3/status/1830920192764809641?s=46&t=XmyWrhiIxH3cBJwDJuvKEA'
     },
     {
         name: 'Gate Wallet',
