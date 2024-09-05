@@ -246,7 +246,7 @@ const showList = ref([
     {
         name: 'XPLUS',
         img: M14,
-        points: '50K Lumoz Points',
+        points: '20K Lumoz Points',
         coming: false,
         url: 'https://t.co/D0U6X0Lu1E'
     },
