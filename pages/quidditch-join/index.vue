@@ -113,6 +113,8 @@ import M11 from '@/assets/img/quidditch/11.jpeg'
 import M13 from '@/assets/img/quidditch/13.png'
 import M14 from '@/assets/img/quidditch/14.png'
 import M15 from '@/assets/img/quidditch/15.jpg'
+import M16 from '@/assets/img/quidditch/16.jpg'
+import M17 from '@/assets/img/quidditch/17.jpg'
 
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
@@ -264,6 +266,21 @@ const showList = ref([
         rewards: '400U $ELF',
         coming: false,
         url: 'https://zealy.io/cw/aelf/questboard/2e41346a-5118-4ad0-8002-1f6a6178cd7f'
+    },
+    {
+        name: 'Contentos',
+        img: M16,
+        points: '50K Lumoz Points',
+        rewards: '$1200 $COS',
+        coming: false,
+        url: 'https://taskon.xyz/campaign/detail/75972110'
+    },
+    {
+        name: 'Delphinus',
+        img: M17,
+        points: '50K Lumoz Points',
+        coming: false,
+        url: 'https://app.galxe.com/quest/DelphinusLab/GCoMQtxaef'
     }
 ])
 
