@@ -244,14 +244,14 @@ const showList = ref([
     },
     {
         name: 'XPLUS',
-        img: M11,
+        img: M14,
         points: '50K Lumoz Points',
         coming: false,
         url: 'https://t.co/D0U6X0Lu1E'
     },
     {
         name: 'Kima',
-        img: M11,
+        img: M13,
         points: '100K Lumoz Points',
         coming: false,
         url: 'https://kimanetwork.rep3.gg/quest/Kima%20X%20Lumoz'
