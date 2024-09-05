@@ -112,6 +112,7 @@ import M10 from '@/assets/img/quidditch/10.jpeg'
 import M11 from '@/assets/img/quidditch/11.jpeg'
 import M13 from '@/assets/img/quidditch/13.png'
 import M14 from '@/assets/img/quidditch/14.png'
+import M15 from '@/assets/img/quidditch/15.jpg'
 
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
@@ -154,8 +155,8 @@ const showList = ref([
         name: 'Coin98 Wallet',
         img: C98,
         points: '500K Lumoz Points',
-        coming: true,
-        url: ''
+        coming: false,
+        url: 'https://app.galxe.com/quest/4mCJFjuFniAkrtUZVC29DM/GCCwEtx8Sh'
     },
     {
         name: 'TokenPocket Wallet',
@@ -255,6 +256,14 @@ const showList = ref([
         points: '100K Lumoz Points',
         coming: false,
         url: 'https://kimanetwork.rep3.gg/quest/Kima%20X%20Lumoz'
+    },
+    {
+        name: 'Aelf',
+        img: M15,
+        points: '20K Lumoz Points',
+        rewards: '400U $ELF',
+        coming: false,
+        url: 'https://zealy.io/cw/aelf/questboard/2e41346a-5118-4ad0-8002-1f6a6178cd7f'
     }
 ])
 
