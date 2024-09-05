@@ -110,6 +110,8 @@ import MICRO3 from '@/assets/img/quidditch/micro3.avif'
 import AVALON from '@/assets/img/quidditch/avalon.avif'
 import M10 from '@/assets/img/quidditch/10.jpeg'
 import M11 from '@/assets/img/quidditch/11.jpeg'
+import M13 from '@/assets/img/quidditch/13.png'
+import M14 from '@/assets/img/quidditch/14.png'
 
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
@@ -239,6 +241,20 @@ const showList = ref([
         rewards: '50K XP',
         coming: false,
         url: 'https://app.galxe.com/quest/HaloDotSocial/GCsREtxRG3'
+    },
+    {
+        name: 'XPLUS',
+        img: M11,
+        points: '50K Lumoz Points',
+        coming: false,
+        url: 'https://t.co/D0U6X0Lu1E'
+    },
+    {
+        name: 'Kima',
+        img: M11,
+        points: '100K Lumoz Points',
+        coming: false,
+        url: 'https://kimanetwork.rep3.gg/quest/Kima%20X%20Lumoz'
     }
 ])
 
