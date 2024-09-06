@@ -115,6 +115,8 @@ import M14 from '@/assets/img/quidditch/14.png'
 import M15 from '@/assets/img/quidditch/15.jpg'
 import M16 from '@/assets/img/quidditch/16.jpg'
 import M17 from '@/assets/img/quidditch/17.jpg'
+import M19 from '@/assets/img/quidditch/19.png'
+import M20 from '@/assets/img/quidditch/20.jpg'
 
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
@@ -174,6 +176,21 @@ const showList = ref([
         rewards: '5K MERL',
         coming: false,
         url: 'https://app.galxe.com/quest/MerlinChain/GCcxKtxwUE'
+    },
+    {
+        name: 'OrbiterFinance',
+        img: M19,
+        points: '100K Lumoz Points',
+        coming: false,
+        url: 'https://app.galxe.com/quest/OrbiterFinance/GCwwitxNBU'
+    },
+    {
+        name: 'DIN',
+        img: M20,
+        points: '100K Lumoz Points',
+        rewards: '100 free DIN Nodes',
+        coming: false,
+        url: 'https://app.galxe.com/quest/DIN'
     },
     {
         name: 'Intract',
