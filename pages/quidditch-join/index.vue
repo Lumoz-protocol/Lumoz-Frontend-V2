@@ -190,7 +190,7 @@ const showList = ref([
         points: '100K Lumoz Points',
         rewards: '100 free DIN Nodes',
         coming: false,
-        url: 'https://app.galxe.com/quest/DIN'
+        url: 'https://app.galxe.com/quest/DIN/GCc9itxFrE'
     },
     {
         name: 'Intract',
