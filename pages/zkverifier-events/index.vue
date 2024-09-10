@@ -38,7 +38,7 @@
                     <div class="quiSlideShine flex-1 pl-8">
                         <div class="text-2xl">{{ $t('zkv.d1') }}</div>
                         <div class="flex items-center mt-4">
-                            Reward Pool: <img src="@/assets/img/quidditch/flash.svg" class="w-6" alt=""> 2.5M {{ $t('zkv.points') }}
+                            Reward Pool: <img src="@/assets/img/quidditch/flash.svg" class="w-6" alt=""> 2M {{ $t('zkv.points') }}
                         </div>
                     </div>
                     <!-- <div v-if="walletStore.account">
@@ -46,6 +46,23 @@
                         <img v-else src="@/assets/img/quidditch/check.svg" alt="">
                     </div> -->
                     <div class="quiSlideShine">Comming Soon</div>
+                </div>
+                 <div class="p-8 qui-zk-card h-44 flex items-center justify-between relative">
+                    <!-- <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-20 absolute right-2 top-0 cursor-pointer hvr-grow" @click="goTo('https://docs.lumoz.org/setup-zkverifier-node/setup-node/build-your-own')" alt=""> -->
+                    <div class="w-14 h-14 rounded-full bg-[#fff] flex items-center justify-center" style="border: 1.5px solid var(--2, #F0AF60);">
+                        <img src="@/assets/img/quidditch/21.png" class="w-8 h-8" alt="">
+                    </div>
+                    <div class="quiSlideShine flex-1 pl-8">
+                        <div class="text-2xl">{{ $t('zkv.d5') }}</div>
+                        <div class="flex items-center mt-4">
+                            Reward Pool: <img src="@/assets/img/quidditch/flash.svg" class="w-6" alt=""> 500K {{ $t('zkv.points') }}
+                        </div>
+                    </div>
+                    <QuiButton v-if="!user.is_run_naas_node" :type="3" class="w-30" @click="goTo('https://www.intract.io/quest/66dfe5d8aa47289c3cc59e0f?utm_source=dashboard')">{{ $t('zkv.go') }}</QuiButton>
+                    <!-- <div v-if="walletStore.account">
+                        
+                        <img v-else src="@/assets/img/quidditch/check.svg" alt="">
+                    </div> -->
                 </div>
                 <div class="p-8 qui-zk-card h-44 flex items-center justify-between relative">
                     <img src="@/assets/img/quidditch/badge.avif" class="hidden lg:block w-20 absolute right-2 top-0 cursor-pointer hvr-grow" @click="goTo('https://docs.lumoz.org/setup-zkverifier-node/setup-node/build-your-own')" alt="">

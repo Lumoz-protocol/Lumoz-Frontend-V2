@@ -263,6 +263,7 @@ export default {
     d2: 'Run a node ',
     d3: 'Delegate your testnet license',
     d4: 'Stake your MOZ',
+    d5: 'InfStones(NaaS) & Lumoz Points Airdrop',
     rewards: 'Rewards',
     points: 'Points',
     go: 'Go'
