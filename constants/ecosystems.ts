@@ -318,6 +318,12 @@ const getEcosystems = () => {
         category: 'Miners&Hardware'
       },
       {
+        name: 'EaseFlow',
+        url: 'https://easeflow.io',
+        img: M43,
+        category: 'Node-as-a-Service'
+      },
+      {
         name: 'Infstones',
         url: 'https://infstones.com',
         img: M40,
@@ -333,12 +339,6 @@ const getEcosystems = () => {
         name: 'Bware Labs',
         url: 'https://bwarelabs.com',
         img: M41,
-        category: 'Node-as-a-Service'
-      },
-      {
-        name: 'EaseFlow',
-        url: 'https://easeflow.io',
-        img: M43,
         category: 'Node-as-a-Service'
       },
       {
