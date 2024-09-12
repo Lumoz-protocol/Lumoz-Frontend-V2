@@ -117,6 +117,9 @@ import M16 from '@/assets/img/quidditch/16.jpg'
 import M17 from '@/assets/img/quidditch/17.jpg'
 import M19 from '@/assets/img/quidditch/19.png'
 import M20 from '@/assets/img/quidditch/20.jpg'
+import M22 from '@/assets/img/quidditch/22.jpg'
+import M23 from '@/assets/img/quidditch/23.jpg'
+import M24 from '@/assets/img/quidditch/24.jpg'
 
 import { formatAddress } from '@/libs/utils'
 import { useWalletStore } from '@/stores'
@@ -191,6 +194,21 @@ const showList = ref([
         rewards: '100 free DIN Nodes',
         coming: false,
         url: 'https://app.galxe.com/quest/DIN/GCc9itxFrE'
+    },
+    {
+        name: 'SpaceID',
+        img: M23,
+        points: '100K Lumoz Points',
+        rewards: '$500 worth of $ID',
+        coming: false,
+        url: 'https://app.galxe.com/quest/spaceid/GCGTetxeQK'
+    },
+    {
+        name: 'oooo',
+        img: M24,
+        points: '100K Lumoz Points',
+        coming: false,
+        url: 'https://bridge.oooo.money/goooo'
     },
     {
         name: 'Intract',
@@ -298,6 +316,14 @@ const showList = ref([
         points: '50K Lumoz Points',
         coming: false,
         url: 'https://app.galxe.com/quest/DelphinusLab/GCoMQtxaef'
+    },
+    {
+        name: 'SatoshiVM',
+        img: M22,
+        points: '50K Lumoz Points',
+        rewards: '1000U SAVM token',
+        coming: false,
+        url: 'https://soquest.xyz/space/satoshiVM/campaign/wgTYy6kWu8'
     }
 ])
 
