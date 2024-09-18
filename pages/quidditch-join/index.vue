@@ -168,7 +168,7 @@ const showList = ref([
     {
         name: 'DeAgent',
         img: M48,
-        points: '50K Lumoz Points',
+        points: '200K Lumoz Points',
         rewards: '200K DA',
         coming: false,
         url: 'https://deagent.ai/reward'
