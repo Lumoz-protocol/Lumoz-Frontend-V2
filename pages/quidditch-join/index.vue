@@ -166,6 +166,14 @@ const showList = ref([
         url: 'https://app.galxe.com/quest/4mCJFjuFniAkrtUZVC29DM/GCCwEtx8Sh'
     },
     {
+        name: 'DeAgent',
+        img: M48,
+        points: '50K Lumoz Points',
+        rewards: '200K DA',
+        coming: false,
+        url: 'https://deagent.ai/reward'
+    },
+    {
         name: 'TokenPocket Wallet',
         img: TP,
         points: '100K Lumoz Points',
@@ -240,14 +248,6 @@ const showList = ref([
         rewards: '50K NodePoints',
         coming: false,
         url: 'https://www.intract.io/quest/66c7204b9dd6b359e5e6bded'
-    },
-    {
-        name: 'DeAgent',
-        img: M48,
-        points: '50K Lumoz Points',
-        rewards: '1M DA',
-        coming: false,
-        url: 'https://deagent.ai/reward'
     },
     {
         name: 'Micro3',
