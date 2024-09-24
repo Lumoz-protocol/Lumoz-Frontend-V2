@@ -7,10 +7,19 @@ import OXKIMG from '@/assets/img/networks/okx.png'
 import C98 from '@/assets/img/networks/c98.png'
 import GATE from '@/assets/img/networks/gate.webp'
 import BITGET from '@/assets/img/networks/bitget.webp'
+import BYBIT from '@/assets/img/networks/bybit.webp'
 
 const { disconnect } = useDisconnect()
 
-let customWallets = [] 
+let customWallets = []
+if (!window.bybitWallet) {
+  customWallets.push({
+    id: "Bybit Wallet",
+    name: "Bybit Wallet",
+    image_url: BYBIT,
+    desktop_link: 'https://bybit-web3.github.io/getting-started#installation'
+  })
+}
 if (!window.okxwallet) {
   customWallets.push({
     id: "OKX Wallet",
