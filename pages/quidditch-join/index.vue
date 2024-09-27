@@ -23,7 +23,7 @@
                 <div class="qui-wallet-box flex items-start flex-col justify-center relative text-[#60361B]">
                     <div class="absolute top-0 right-0 lg:(right-2/5 top-1/6) flex items-center text-lg">
                         <span class="lg:mt-0 pt-4 lg:pt-0">Check your points at 👉</span>
-                        <img src="@/assets/img/quidditch/points.svg" class="hidden lg:block w-24 lg:w-30 cursor-pointer hvr-grow" @click="toTutorial" alt="">
+                        <img src="@/assets/img/quidditch/points.svg" class="hidden lg:block w-24 lg:w-30 cursor-pointer hvr-grow z-2" @click="toTutorial" alt="">
                     </div>
                     <div class="text-center text-4xl lg:text-6xl w-full lg:w-2/3 mt-24 lg:mt-12">
                         Lumoz Quidditch
@@ -31,7 +31,7 @@
                     <div class="text-center text-4xl w-full lg:text-6xl lg:w-2/3">has ended.</div>
                     <div class="text-center text-2xl w-full lg:text-4xl lg:w-2/3 mt-8">Thanks for participating!</div>
                 </div>
-                <img src="@/assets/img/quidditch/2.avif" class="hidden lg:block absolute top-1/8 left-9/20 ml-4 bottom-0 h-4/5 rounded-lg"  style="" alt="">
+                <img src="@/assets/img/quidditch/2.avif" class="hidden lg:block absolute top-1/8 left-9/20 ml-4 bottom-0 h-4/5 rounded-lg z-1"  style="" alt="">
                 <!-- <img src="@/assets/img/quidditch/rol.avif" class="hidden lg:block w-1/5 absolute right-1/8 left-2/5 ml-8 bottom-0" alt=""> -->
             </div>
             <!-- <div class="mt-16  flex items-center justify-center text-2xl lg:text-5xl quiSlideShine">
