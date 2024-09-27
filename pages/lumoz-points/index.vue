@@ -1,11 +1,7 @@
 <template>
   <div class="container mx-auto">
-    <a href="https://dragon-slayer.zkfair.io" target="_blank" class="w-full cursor-pointer hvr-grow relative">
-      <img src="@/assets/img/points/dragon.avif" class="w-full" alt="">
-      <div class="absolute bottom-8 left-2 lg:(bottom-22 left-4)">
-        <!-- <div class="lg:text-4xl font-bold">{{ $t('points.dragon') }}</div>
-        <div class="lg:text-xl lg:mt-2">{{ $t('points.dragont') }}</div> -->
-      </div>
+    <a target="_blank" class="w-full relative">
+      <img src="@/assets/img/points/qui.avif" class="w-full mt-10 rounded-lg" alt="">
     </a>
     <div class="points-box mt-8">
       <div class="text-center h-1/4 flex items-center justify-center text-xs md:text-2xl font-bold text-primary-900">{{ $t('points.points') }}</div>
@@ -32,6 +28,33 @@
       </div>
     </div>
     <div class="grid grid-cols-2 mt-8 gap-8">
+      <div class="phase-box points-outer">
+        <div class="py-4 px-8 phase-inner1 relative">
+          <div class="phase-box-left absolute left-0 top-0 bottom-0 h-full w-12"></div>
+          <div class="phase-box-right absolute right-0 top-0 bottom-0 h-full w-12"></div>
+          <div class="flex flex-col items-center justify-center">
+            <div class="text-xl lg:text-2xl">
+              {{ $t('points.qui') }}
+            </div>
+            <div class="h-16 flex items-center justify-center">
+              <!-- <HomeButton @click="to('https://dragon-slayer.zkfair.io')" light class="w-32" :word="$t('points.more')" /> -->
+            </div>
+            <div class="flex items-center">
+              <!-- <CountUp
+                :end-val="Number(info.nodes_campaign || 0)"
+                :duration="2"
+                :decimal-places="0"
+                :delay="2"
+                class="text-xl lg:text-3xl font-bold mr-4"
+              ></CountUp>
+              <div class="text-text-dark">{{ $t('points.p') }}</div> -->
+              <div class="text-xl lg:text-3xl font-bold">
+                Counting...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="phase-box points-outer">
         <div class="py-4 px-8 phase-inner1 relative">
           <div class="phase-box-left absolute left-0 top-0 bottom-0 h-full w-12"></div>

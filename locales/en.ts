@@ -155,6 +155,7 @@ export default {
     d: 'Alpha & Pre Alpha',
     validator: 'Validator Rewards',
     miner: 'Miner Rewards',
+    qui: 'Quidditch Testnet',
     zkv: 'zkVerifier Nodes Campaign',
     more: 'Get More'
   },
