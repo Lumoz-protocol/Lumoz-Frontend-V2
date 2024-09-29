@@ -8,14 +8,10 @@
       <div v-if="active" class="flex items-center justify-center flex-col">
         <div class="typed-out text-2xl md:text-4xl lg:text-6xl py-4 font-bold text-center">{{ $t('home.banner.title') }}</div>
         <div class="typed-out-1s lg:text-2xl py-4 text-primary-900 text-center">{{ $t('home.banner.content') }}</div>
-        <HomeRemindBox class="md:ml-12" />
-        <div class="qui-start-button-bg text-[#FFE072] text-lg font-bold mt-8 cursor-pointer hvr-grow" @click="openGame">
-          <div class="qui-start-button-bg-inner px-4 py-2 flex items-center justify-center" style="font-family: 'IrishGrover-Regular-Bold', sans-serif">
-            <img src="@/assets/img/quidditch/start-button-arrow.png" class="w-6 mr-4" alt="">
-            Join In
-            <img src="@/assets/img/quidditch/start-button-arrow.png" class="w-6 ml-4" style="transform: rotate(180deg);" alt="">
-          </div>
-        </div>
+        <HomeRemindBox />
+        <ColorButton @click="to"  class="mt-4 w-40 animate__animated animate__fadeIn animate__delay-2s text-black">
+          {{ $t('header.node') }}
+        </ColorButton>
       </div>
     </div>
     <div class="fade-edges-s w-full mt-4">
