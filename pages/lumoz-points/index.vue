@@ -40,17 +40,14 @@
               <!-- <HomeButton @click="to('https://dragon-slayer.zkfair.io')" light class="w-32" :word="$t('points.more')" /> -->
             </div>
             <div class="flex items-center">
-              <!-- <CountUp
-                :end-val="Number(info.nodes_campaign || 0)"
+              <CountUp
+                :end-val="Number(quidditch || 0)"
                 :duration="2"
                 :decimal-places="0"
                 :delay="2"
                 class="text-xl lg:text-3xl font-bold mr-4"
               ></CountUp>
-              <div class="text-text-dark">{{ $t('points.p') }}</div> -->
-              <div class="text-xl lg:text-3xl font-bold">
-                Counting...
-              </div>
+              <div class="text-text-dark">{{ $t('points.p') }}</div>
             </div>
           </div>
         </div>
@@ -208,7 +205,10 @@ const data = {
   miner_alpha_gpu: 0,
   miner_pre_alpha: 0,
   validator_alpha: 0,
-  validator_pre_alpha: 0
+  validator_pre_alpha: 0,
+  quidditch_miniapp: 0,
+  quidditch_onchain:0,
+  quidditch_project: 0
 }
 const info = ref(JSON.parse(JSON.stringify(data)))
 
@@ -239,6 +239,13 @@ const getData = async() => {
     info.value = data
   }
 }
+
+const quidditch = computed(() => {
+  const _info = info.value
+  return  _info.quidditch_miniapp +
+          _info.quidditch_onchain +
+          _info.quidditch_project
+})
 
 const user = computed(() => {
   const _info = info.value
