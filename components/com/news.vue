@@ -9,13 +9,24 @@
       <div class="py-4 lg:(py-10) text-3xl lg:text-4xl font-bold home-arc-1">{{ $t('com.news.title') }}</div>
       <div class="mt-10 p-8">
         <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-8 ">
+          <div class="flex items-center justify-center">
+            <HomeBox hide class="px-20 lg:px-0 xl:(w-96 px-0)">
+              <a class="flex flex-col justif text-black h-full" target="_blank" href="https://hackernoon.com/lumoz-leading-zk-pow-algorithm-zk-computation-efficiency-improved-by-50percent">
+                <div class="text-xl mt-8 pl-4 font-bold">{{ $t('com.news.t3') }}</div>
+                <div class="text-xl px-4 mb-4 xl:text-xl mt-4 xl:mt-12">
+                  <img src="@/assets/img/com/n3.jpg" alt="">
+                </div>
+                <div class="px-4 font-bold">2024-10-01</div>
+              </a>
+            </HomeBox>
+          </div>
           
           <div class="flex items-center justify-center">
             <HomeBox hide class="px-20 lg:px-0 xl:(w-96 px-0)">
               <a class="flex flex-col justif text-black h-full" target="_blank" href="https://coinmarketcap.com/community/articles/6620cd0b5cbc554af5aa0dc7/">
                 <div class="text-xl mt-8 pl-4 font-bold">{{ $t('com.news.t2') }}</div>
                 <div class="text-xl px-4 mb-4 xl:text-xl mt-4 xl:mt-12">
-                  <img src="@/assets/img/com/n2.avif" alt="">
+                  <img src="@/assets/img/com/n2.jpg" alt="">
                 </div>
                 <div class="px-4 font-bold">2024-04-18</div>
               </a>

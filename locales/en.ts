@@ -124,7 +124,8 @@ export default {
       title: 'IN THE NEWS',
       title1: 'NEWS',
       t1: 'Blockchain scaling infra provider Lumoz raises token round at $120 million valuation',
-      t2: 'Lumoz Supports Op Stack + ZK Fraud Proof.Initiating a New Paradigm in L2 Architecture'
+      t2: 'Lumoz Supports Op Stack + ZK Fraud Proof.Initiating a New Paradigm in L2 Architecture',
+      t3: 'Lumoz: Leading ZK-PoW Algorithm, ZK Computation Efficiency Improved by 50%'
     },
     why: {
       title: 'Why Choose Lumoz?',
