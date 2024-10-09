@@ -49,7 +49,7 @@
               ></CountUp>
               <div class="text-text-dark">{{ $t('points.p') }}</div>
               -->
-              <div class="text-2xl font-bold">Counting...</div>
+              <div class="text-2xl">Counting...</div>
             </div>
           </div>
         </div>
