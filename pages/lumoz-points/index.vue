@@ -40,7 +40,7 @@
               <!-- <HomeButton @click="to('https://dragon-slayer.zkfair.io')" light class="w-32" :word="$t('points.more')" /> -->
             </div>
             <div class="flex items-center">
-              <!-- <CountUp
+              <CountUp
                 :end-val="Number(quidditch || 0)"
                 :duration="2"
                 :decimal-places="0"
@@ -48,8 +48,8 @@
                 class="text-xl lg:text-3xl font-bold mr-4"
               ></CountUp>
               <div class="text-text-dark">{{ $t('points.p') }}</div>
-              -->
-              <div class="text-2xl">Counting...</div>
+             
+              <!-- <div class="text-2xl">Counting...</div> -->
             </div>
           </div>
         </div>
