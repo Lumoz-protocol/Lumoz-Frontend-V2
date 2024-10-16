@@ -38,9 +38,6 @@ const props = withDefaults(
   }
 )
 
-const openGame = () => {
-  router.push('/quidditch-join')
-}
 
 const to = () => {
   window.open('https://node.lumoz.org')

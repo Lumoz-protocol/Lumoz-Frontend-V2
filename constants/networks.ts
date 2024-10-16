@@ -29,16 +29,10 @@ const getConfig = () => {
   switch(NETWORK) {
     case 'testnet':
       return {
-        zkvApi: 'https://alpha-zkrollup-service.lumoz.org/quidditch-testnet/',
-        quidditchApi: 'https://alpha-zkrollup-service.lumoz.org/quidditch-testnet-api/',
-        bot_name: 'qianyikexin_bot',
         DATA_API: 'https://api.lumoz.org/lumoz-rollup/api/'
       }
     case 'mainnet':
       return {
-        zkvApi: 'https://quidditch-zkverifiers-api.lumoz.org/',
-        quidditchApi: 'https://quidditch-api.lumoz.org/',
-        bot_name: 'Lumoz_Quidditch_Bot',
         DATA_API: 'https://api.lumoz.org/lumoz-rollup/api/'
       }
   }

@@ -2,9 +2,6 @@
   <div class="fixed z-10 top-0 left-0 right-0 h-20 bg-filter flex items-center justify-between px-4">
     <CommonLogo />
     <div class="hidden xl:flex items-center h-full">
-      <div class="qui-button py-2 px-8 font-bai text-sm mr-8 cursor-pointer opacity-85 hover:opacity-100 hvr-grow" @click="router.push('/quidditch-join')">
-        Quidditch
-      </div>
       <CommonSingleNavItem v-for="item in singleMenus" :key="item.name" :item="item" @click="hideMenu" />
       <CommonNavItems v-for="item in menus" :key="item.name" :name="item.name" :hide-status="navHide">
         <CommonNavItem
@@ -25,9 +22,6 @@
       <HomeButton @click="toLaunch" class="ml-8" :word="$t('header.launch')" />
     </div>
     <div class="xl:hidden relative">
-      <div class="qui-button py-2 px-8 font-bai text-sm mr-8 cursor-pointer opacity-85 hover:opacity-100 hvr-grow" @click="router.push('/quidditch-join')">
-        Quidditch
-      </div>
       <img
         src="@/assets/img/icon/menu.svg"
         class="w-6 mr-2 cursor-pointer hvr-bounce-in"
