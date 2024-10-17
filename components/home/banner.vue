@@ -4,14 +4,14 @@
     <source src="@/assets/img/home/banner.mp4" type="video/mp4">
   </video>
   <div class="absolute left-0 right-0 top-0 bottom-0 flex flex-col items-center justify-center home-banner-box">
-    <div class="h-full w-full flex justify-center items-start pt-30 lg:pt-40">
+    <div class="h-full w-full flex justify-center items-start pt-30 lg:pt-45">
       <div v-if="active" class="flex items-center justify-center flex-col">
         <div class="typed-out text-2xl md:text-4xl lg:text-6xl py-4 font-bold text-center">{{ $t('home.banner.title') }}</div>
         <div class="typed-out-1s lg:text-2xl py-4 text-primary-900 text-center">{{ $t('home.banner.content') }}</div>
-        <HomeRemindBox />
+        <!-- <HomeRemindBox />
         <ColorButton @click="to"  class="mt-4 w-40 animate__animated animate__fadeIn animate__delay-2s text-black">
           {{ $t('header.node') }}
-        </ColorButton>
+        </ColorButton> -->
       </div>
     </div>
     <div class="fade-edges-s w-full mt-4">
