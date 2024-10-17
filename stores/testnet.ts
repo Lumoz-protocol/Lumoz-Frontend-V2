@@ -1,25 +1,7 @@
-import M1 from '@/assets/img/rollups/1.avif'
-import M2 from '@/assets/img/rollups/2.avif'
-import M3 from '@/assets/img/rollups/3.avif'
-import M4 from '@/assets/img/rollups/4.avif'
-import M5 from '@/assets/img/rollups/5.avif'
-import M6 from '@/assets/img/rollups/6.avif'
-import M7 from '@/assets/img/rollups/7.avif'
-import M8 from '@/assets/img/rollups/8.avif'
-import M9 from '@/assets/img/rollups/9.avif'
-import M10 from '@/assets/img/rollups/10.avif'
-import M11 from '@/assets/img/rollups/11.avif'
-import M12 from '@/assets/img/rollups/12.avif'
-import M13 from '@/assets/img/rollups/13.avif'
-import M14 from '@/assets/img/rollups/14.avif'
-import M15 from '@/assets/img/rollups/15.avif'
-import M16 from '@/assets/img/rollups/16.avif'
-
-
 export const TESTLIST = [
   {
       "name": "Lumoz Public zkEVM V2",
-      "img": M1,
+    //   "img": M1,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -27,7 +9,7 @@ export const TESTLIST = [
   },
   {
       "name": "CB zkEVM",
-      "img": M2,
+    //   "img": M2,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -35,7 +17,7 @@ export const TESTLIST = [
   },
   {
       "name": "LAW Chain",
-      "img": M3,
+    //   "img": M3,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -43,7 +25,7 @@ export const TESTLIST = [
   },
   {
       "name": "XThrill",
-      "img": M4,
+    //   "img": M4,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -51,7 +33,7 @@ export const TESTLIST = [
   },
   {
       "name": "SoQuest zkEVM",
-      "img": M5,
+    //   "img": M5,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -59,7 +41,7 @@ export const TESTLIST = [
   },
   {
       "name": "ReadON Content Test Chain",
-      "img": M6,
+    //   "img": M6,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -67,7 +49,7 @@ export const TESTLIST = [
   },
   {
       "name": "Relation",
-      "img": M7,
+    //   "img": M7,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -75,7 +57,7 @@ export const TESTLIST = [
   },
   {
       "name": "VIP3",
-      "img": M8,
+    //   "img": M8,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -83,7 +65,7 @@ export const TESTLIST = [
   },
   {
       "name": "DeBox",
-      "img": M9,
+    //   "img": M9,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -91,7 +73,7 @@ export const TESTLIST = [
   },
   {
       "name": "ODX zkEVM Testnet",
-      "img": M10,
+    //   "img": M10,
       "layer1": "Goerli",
       "zkevmType": "Polygon zkEVM",
       "da": "Goerli",
@@ -99,7 +81,7 @@ export const TESTLIST = [
   },
   {
       "name": "aaww",
-      "img": M11,
+    //   "img": M11,
       "layer1": "Goerli",
       "zkevmType": "Polygon zkEVM",
       "da": "Goerli",
@@ -107,7 +89,7 @@ export const TESTLIST = [
   },
   {
       "name": "Public zkSync V2",
-      "img": M12,
+    //   "img": M12,
       "layer1": "Goerli",
       "zkevmType": "zkSync",
       "da": "Goerli",
@@ -115,7 +97,7 @@ export const TESTLIST = [
   },
   {
       "name": "Decibling",
-      "img": M13,
+    //   "img": M13,
       "layer1": "Goerli",
       "zkevmType": "zkSync",
       "da": "Goerli",
@@ -123,7 +105,7 @@ export const TESTLIST = [
   },
   {
       "name": "Polygon CDK DEMO",
-      "img": M14,
+    //   "img": M14,
       "layer1": "Goerli",
       "zkevmType": "Polygon zkEVM",
       "da": "Goerli",
@@ -131,7 +113,7 @@ export const TESTLIST = [
   },
   {
       "name": "StarkSport Rollup",
-      "img": M15,
+    //   "img": M15,
       "layer1": "Lumoz",
       "zkevmType": "Polygon zkEVM",
       "da": "Lumoz Testnet",
@@ -139,7 +121,7 @@ export const TESTLIST = [
   },
   {
       "name": "Public Scroll",
-      "img": M16,
+    //   "img": M16,
       "layer1": "Goerli",
       "zkevmType": "Scroll",
       "da": "Goerli",
