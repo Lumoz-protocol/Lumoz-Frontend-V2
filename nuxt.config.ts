@@ -1,9 +1,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['@/assets/style/index.less', 'animate.css/animate.css','hover.css/less/hover.less'],
+
   typescript: {
     shim: false
   },
+
   modules: [
     'nuxt-windicss',
     '@pinia/nuxt',
@@ -11,16 +13,21 @@ export default defineNuxtConfig({
     '@fullpage/nuxt-fullpage',
     '@nuxtjs/i18n',
   ],
+
   plugins: [
     { src: '~/plugins/gtag.client.ts', mode: 'client' }
   ],
+
   i18n: {
     vueI18n: './i18n.config.ts'
   },
+
   build: {
-    transpile: ['echarts']
+    transpile: ['echarts', 'vue-countup-v3']
   },
+
   elementPlus: { themes: ['dark'] },
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -40,5 +47,7 @@ export default defineNuxtConfig({
         }
       ]
     }
-  }
+  },
+
+  compatibilityDate: '2024-10-17'
 })

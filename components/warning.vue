@@ -96,7 +96,6 @@ watch(() => dialog.value, () => {
             setTimeout(() => {
                 try {
                     const element = document.getElementById('warning-details');
-                    console.log(element)
                     element.addEventListener('scroll', function(event) {
                         if (element.scrollHeight - element.scrollTop === element.clientHeight) {
                             bottom.value = true
