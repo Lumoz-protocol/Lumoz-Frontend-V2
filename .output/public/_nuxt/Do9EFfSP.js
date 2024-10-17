@@ -1,0 +1,1 @@
+import{m as e,o,c as n,t as r,z as a}from"./DM9ixgD_.js";const p=e({__name:"button",props:{word:{default:""},light:{type:Boolean,default:!1}},setup(s){return(t,l)=>(o(),n("button",{class:a(["home-button-corner px-4 py-1.5 hvr-bounce-in",t.light?"home-button-corner-light text-white":"home-button-corner text-black"])},r(t.word),3))}});export{p as _};
