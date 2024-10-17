@@ -1,0 +1,4 @@
+const colorButton_vue_vue_type_style_index_0_lang = `.home-lighter-button-corner{background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='181' height='42' fill='none' viewBox='0 0 181 42'%3E%3Cpath fill='url(%23a)' d='M13.182 1.275A6 6 0 0 1 16.88 0H174.5a6 6 0 0 1 6 6v22.75a6 6 0 0 1-2.529 4.894l-10.222 7.25A6 6 0 0 1 164.277 42H6.5a6 6 0 0 1-6-6V14.123a6 6 0 0 1 2.302-4.725z'/%3E%3Cdefs%3E%3ClinearGradient id='a' x1='.5' x2='180.5' y1='21' y2='21' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%235CD3BC'/%3E%3Cstop offset='.23' stop-color='%2352EFBE'/%3E%3Cstop offset='.6' stop-color='%23FFA5A9'/%3E%3Cstop offset='1' stop-color='%23EEC02D'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") no-repeat;background-size:100% 100%}`;
+
+export { colorButton_vue_vue_type_style_index_0_lang as c };
+//# sourceMappingURL=color-button-styles-1.mjs-B12dK8Nb.mjs.map
